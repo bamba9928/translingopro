@@ -196,14 +196,30 @@ fabric.properties
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -219,26 +235,40 @@ fabric.properties
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Particle template
 # Compiled output #
@@ -271,12 +301,14 @@ out
 
 [Bb]uild/
 [Oo]bj/
+*.o
 [Dd]ebug*/
 [Rr]elease*/
 *.mode*
 *.app/
 *.pyc
 .svn/
+*.log
 
 # IDE files which should
 # be ignored
@@ -399,6 +431,7 @@ Cargo.lock
 **/*.rs.bk
 
 # MSVC Windows builds of rustc generate these, which store debugging information
+*.pdb
 
 ### HOL template
 *Script
@@ -482,6 +515,7 @@ Cargo.lock
 #SharePoint Framework (SPFx)
 # Logs
 logs
+*.log
 npm-debug.log*
 
 # Dependency directories
@@ -498,6 +532,7 @@ temp
 coverage
 
 # OSX
+.DS_Store
 
 # Visual Studio files
 .ntvs_analysis.dat
@@ -552,6 +587,7 @@ obj
 ### GNOMEShellExtension template
 # Ignored files for GNOME extension git repository
 
+*.zip
 
 ### Zsh template
 # Zsh compiled script + zrecompile backup
@@ -604,6 +640,7 @@ zsdoc/data
 ## Dependency directory
 ## Commenting this out is preferred by some people, see
 ## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
+node_modules
 
 # Book build output
 _book
@@ -611,6 +648,7 @@ _book
 # eBook build output
 *.epub
 *.mobi
+*.pdf
 
 ### Yii2 template
 # yii console commands
@@ -630,6 +668,7 @@ nbproject
 .settings
 
 # windows thumbnail cache
+Thumbs.db
 
 # composer vendor dir
 /vendor
@@ -638,6 +677,7 @@ nbproject
 composer.phar
 
 # Mac DS_Store Files
+.DS_Store
 
 # phpunit itself is not needed
 phpunit.phar
@@ -752,6 +792,7 @@ __pypackages__/
 # Managed by Composer
 /app/bootstrap.php.cache
 /var/bootstrap.php.cache
+/bin/*
 !bin/console
 !bin/symfony_requirements
 /vendor/
@@ -762,6 +803,7 @@ __pypackages__/
 
 # PHPUnit
 /app/phpunit.xml
+/phpunit.xml
 
 # Build data
 /build/
@@ -846,6 +888,7 @@ bin-release/
 .project/
 
 .FlexUnitSettings
+.externalToolBuilders
 .model
 
 ### VisualStudio template
@@ -856,6 +899,7 @@ bin-release/
 
 # User-specific files
 *.rsuser
+*.suo
 *.user
 *.userosscache
 *.sln.docstates
@@ -878,6 +922,7 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 [Bb]in/
+[Oo]bj/
 [Ll]og/
 [Ll]ogs/
 
@@ -921,10 +966,12 @@ StyleCopReport.xml
 *_i.c
 *_p.c
 *_h.h
+*.ilk
 *.meta
 *.obj
 *.iobj
 *.pch
+*.pdb
 *.ipdb
 *.pgc
 *.pgd
@@ -933,8 +980,10 @@ StyleCopReport.xml
 *.tlb
 *.tli
 *.tlh
+*.tmp
 *.tmp_proj
 *_wpftmp.csproj
+*.log
 *.tlog
 *.vspscc
 *.vssscc
@@ -947,8 +996,12 @@ StyleCopReport.xml
 _Chutzpah*
 
 # Visual C++ cache files
+ipch/
+*.aps
 *.ncb
 *.opendb
+*.opensdf
+*.sdf
 *.cachefile
 *.VC.db
 *.VC.VC.opendb
@@ -1073,6 +1126,7 @@ _pkginfo.txt
 # Others
 ClientBin/
 ~$*
+*~
 *.dbmdl
 *.dbproj.schemaview
 *.jfm
@@ -1122,6 +1176,7 @@ FakesAssemblies/
 *.GhostDoc.xml
 
 # Node.js Tools for Visual Studio
+.ntvs_analysis.dat
 node_modules/
 
 # Visual Studio 6 build log
@@ -1141,6 +1196,8 @@ node_modules/
 *.dsp
 
 # Visual Studio 6 technical files
+*.ncb
+*.aps
 
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
@@ -1161,6 +1218,8 @@ paket-files/
 .cr/personal
 
 # Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
 
 # Cake - Uncomment if you are using it
 # tools/**
@@ -1212,8 +1271,15 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
 # Local History for Visual Studio Code
+.history/
 
 # Windows Installer files from build outputs
 *.cab
@@ -1247,14 +1313,30 @@ modules/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -1270,28 +1352,44 @@ modules/
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### ForceDotCom template
+.project
+.settings
 salesforce.schema
 Referenced Packages
 
@@ -1301,7 +1399,9 @@ Referenced Packages
 /deps
 /doc
 /.fetch
+erl_crash.dump
 *.ez
+*.beam
 /config/*.secret.exs
 .elixir_ls/
 
@@ -1316,6 +1416,8 @@ Referenced Packages
 *.d
 *.dep
 # Object files
+*.o
+*.obj
 *.OBJ
 
 # Listing Files
@@ -1350,6 +1452,8 @@ Referenced Packages
 *._IA
 *.__[Ii]
 *._[Ii][Ii]
+*.SCR
+*.scr
 
 # project
 *.uvgui.*
@@ -1368,54 +1472,71 @@ Referenced Packages
 /node_modules/
 
 # Ignore php dependecies resolved by composer
+/vendor/
 
 # Optionally ignore lock files
 # composer.lock
 # yarn.lock
 
 # Logs
+logs
+*.log
+npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 ### SenchaTouch template
 # Build and Release Folders
 archive/
+build/
 
 # sass cache folder
 resources/sass/.sass-cache/
 
 ### C template
 # Prerequisites
+*.d
 
 # Object files
+*.o
 *.ko
+*.obj
 *.elf
 
 # Linker output
+*.ilk
+*.map
 *.exp
 
 # Precompiled Headers
 *.gch
+*.pch
 
 # Libraries
+*.lib
 *.a
 *.la
 *.lo
 
 # Shared objects (inc. Windows DLLs)
+*.dll
+*.so
 *.so.*
 *.dylib
 
 # Executables
 *.exe
 *.out
+*.app
 *.i*86
 *.x86_64
+*.hex
 
 # Debug files
 *.dSYM/
 *.su
 *.idb
+*.pdb
 
 # Kernel Module Compile Results
 *.mod*
@@ -1428,12 +1549,20 @@ dkms.conf
 
 ### D template
 # Compiled Object files
+*.o
+*.obj
 
 # Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
 # Compiled Static libraries
+*.a
+*.lib
 
 # Executables
+*.exe
 
 # DUB
 .dub
@@ -1442,6 +1571,7 @@ __dummy.html
 docs/
 
 # Code coverage
+*.lst
 
 ### pH7CMS template
 _test/*
@@ -1459,8 +1589,11 @@ _protected/data/cache/pH7_cache/*
 _protected/data/cache/pH7_static/*
 _protected/data/cache/pH7tpl_cache/*
 _protected/data/cache/pH7tpl_compile/*
+*.log
+*.tmp
 
 ## Gettext ##
+*.mo
 
 ### MdBook template
 book
@@ -1481,12 +1614,15 @@ Debug
 
 # Generated files
 *.workspace
+*.log
 *.bmk
 *.brk
 *.cfg
 *.dbg
 *.dct
 *.dlt
+*.hex
+*.lst
 *.dic
 *_callertable.txt
 *.user.dic
@@ -1498,8 +1634,10 @@ Debug
 
 ### PlayFramework template
 # Ignore Play! working directory #
+bin/
 /db
 .eclipse
+/lib/
 /logs/
 /modules
 /project/project
@@ -1510,6 +1648,7 @@ test-result
 server.pid
 *.eml
 /dist/
+.cache
 
 ### Lithium template
 libraries/*
@@ -1536,14 +1675,30 @@ resources/tmp/*
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -1559,26 +1714,40 @@ resources/tmp/*
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Metalsmith template
 # gitignore template for the Metalsmith, a simple, pluggable static site generator
@@ -1629,6 +1798,7 @@ vignettes/*.pdf
 .Renviron
 
 # pkgdown site
+docs/
 
 # translation temp files
 po/*~
@@ -1637,7 +1807,17 @@ po/*~
 rsconnect/
 
 ### V template
+*.exe
+*.o
+*.so
 *.tmp.c
+*.exp
+*.ilk
+*.pdb
+*.dll
+*.lib
+*.bak
+*.out
 
 ### Prepros template
 # Config Prepros files to ignore
@@ -1655,6 +1835,7 @@ prepros.config
 /**/out/
 
 ### Beef template
+build/
 recovery/
 BeefSpace_User.toml
 
@@ -1675,6 +1856,8 @@ Export/
 *.cyfit
 *.rpt
 *.svd
+*.log
+*.zip
 
 ### QtCreator template
 # gitignore for Qt Creator like IDE for pure C/C++ project without Qt
@@ -1710,6 +1893,7 @@ Export/
 
 
 ### Firebase template
+.idea
 **/node_modules/*
 **/.firebaserc
 
@@ -1743,6 +1927,7 @@ Export/
 # The silent upgrade scripts aren't needed.
 /silentUpgrade*.php
 # Logs files can safely be ignored.
+*.log
 # Ignore the new upload directories.
 /upload/*
 !/upload/index.html
@@ -1753,14 +1938,30 @@ Export/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -1776,26 +1977,40 @@ Export/
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Amplify template
 # AWS Amplify
@@ -1804,6 +2019,9 @@ amplify/.config/local-*
 amplify/mock-data
 amplify/backend/amplify-meta.json
 amplify/backend/awscloudformation
+build/
+dist/
+node_modules/
 aws-exports.js
 awsconfiguration.json
 amplifyconfiguration.json
@@ -1854,18 +2072,26 @@ Brewfile.lock.json
 #
 
 # Delphi compiler-generated binaries (safe to delete)
+*.exe
+*.dll
 *.bpl
 *.bpi
 *.dcp
+*.so
 *.apk
 *.drc
+*.map
 *.dres
 *.rsm
 *.tds
 *.dcu
+*.lib
+*.a
+*.o
 *.ocx
 
 # Delphi autogenerated files (duplicated info)
+*.cfg
 *.hpp
 *Resource.rc
 
@@ -1885,17 +2111,21 @@ __recovery/
 *.stat
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
+modules/
 
 ### NuxtJS template
 # Generated dirs
+dist
 .nuxt
 .nuxt-*
 .output
 .gen
 
 # Node dependencies
+node_modules
 
 # System files
+*.log
 
 ### CUDA template
 *.i
@@ -1927,7 +2157,9 @@ tests/source/units/auto-tests/
 **/nbproject/private/
 **/nbproject/Makefile-*.mk
 **/nbproject/Package-*.bash
+build/
 nbbuild/
+dist/
 nbdist/
 .nb-gradle/
 
@@ -2025,6 +2257,7 @@ resources/tablet/native/androidtab/values/widgetids.xml
 # NPM dependencies folder which gets created for apps using the "Nitro" Cordova integration
 # when you choose NOT to use a globally installed Cordova SDK by unchecking
 # `Project Settings>Application>Cordova Settings>Use globally installed Cordova version`.
+node_modules
 
 # When using the "Nitro" Cordova integration, the Cordova `plugins` and `platforms`
 # directories can be ignored as with any Cordova project.
@@ -2039,10 +2272,44 @@ resources/i18n/
 velocity.log
 
 # A Logger FFI that gets bundled with each project and is auto-generated by Visualizer with each build.
+resources/customlibs/jsSrc/android/com/konylabs/ffi/N_KonyLogger.java
+resources/customlibs/jsSrc/tabrcandroid/com/konylabs/ffi/N_KonyLogger.java
+resources/customlibs/jsSrc/kiosk/KonyLogger.js
+resources/customlibs/jsSrc/kiosk/KonyLogger.xml
+resources/customlibs/jsSrc/windows8/KonyLogger.js
+resources/customlibs/jsSrc/windows8/KonyLogger.xml
+resources/customlibs/jsSrc/winmobile/KonyLogger.js
+resources/customlibs/jsSrc/winmobile/KonyLogger.xml
+resources/customlibs/jsSrc/winphone8/KonyLogger.js
+resources/customlibs/jsSrc/winphone8/KonyLogger.xml
+resources/customlibs/jsSrc/winphone81s/KonyLogger.js
+resources/customlibs/jsSrc/winphone81s/KonyLogger.xml
+resources/customlibs/jsXml/KonyLogger.js
+resources/customlibs/jsXml/KonyLogger.xml
 
 # A Single Sign-On FFI that gets bundled with each project and is auto-generated by Visualizer with each build.
+resources/customlibs/jsSrc/kiosk/SSOFFI.js
+resources/customlibs/jsSrc/kiosk/SSOFFI.xml
+resources/customlibs/jsSrc/windows8/SSOFFI.js
+resources/customlibs/jsSrc/windows8/SSOFFI.xml
+resources/customlibs/jsSrc/winmobile/SSOFFI.js
+resources/customlibs/jsSrc/winmobile/SSOFFI.xml
+resources/customlibs/jsSrc/winphone8/SSOFFI.js
+resources/customlibs/jsSrc/winphone8/SSOFFI.xml
+resources/customlibs/jsSrc/winphone81s/SSOFFI.js
+resources/customlibs/jsSrc/winphone81s/SSOFFI.xml
+resources/customlibs/jsXml/SSOFFI.js
+resources/customlibs/jsXml/SSOFFI.xml
 
 # A utility FFI that gets bundled with each project and is auto-generated by Visualizer with each build.
+resources/customlibs/jsSrc/android/com/konylabs/ffi/ND_binary_util.java
+resources/customlibs/jsSrc/android/com/konylabs/ffi/N_binarydata.java
+resources/customlibs/jsSrc/tabrcandroid/com/konylabs/ffi/ND_binary_util.java
+resources/customlibs/jsSrc/tabrcandroid/com/konylabs/ffi/N_binarydata.java
+resources/customlibs/jsXml/binary.util.js
+resources/customlibs/jsXml/binary.util.xml
+resources/customlibs/jsXml/binarydata.js
+resources/customlibs/jsXml/binarydata.xml
 
 # Auto-generated project setting files. Generated the first time you save project settings, even if no changes were made.
 /_clouddata/
@@ -2057,19 +2324,24 @@ velocity.log
 /*_files/
 
 ### Ballerina template
+*.class
+*.log
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
+*.jar
 *.war
 *.ear
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+.idea
 *.iml
 *.ipr
+*.iws
 
 # generated files
 target
@@ -2079,17 +2351,22 @@ results
 /compiler/ballerina-lang/src/main/resources/grammar/BallerinaLexer.tokens
 /tool-plugins/intellij/src/main/antlr/org/ballerinalang/plugins/idea/grammar/BallerinaLexer.tokens
 /composer/modules/web/dist-electron/
+velocity.log
 /composer/modules/web/dist-electron
 
 # gradle
 .gradle
+build/
 gradle-app.setting
 !gradle-wrapper.jar
 .gradletasknamecache
 
 # mac
+.DS_Store
 
 .classpath
+.project
+.settings
 .vscode
 
 ### Nanoc template
@@ -2113,15 +2390,23 @@ crash.log
 # only prefixed by an `at`.
 
 #Build Directories
+[Dd]ebug/
+[Rr]elease/
 
 #Build Results
+*.o
+*.d
 *.eep
+*.elf
+*.hex
+*.map
 *.srec
 
 #User Specific Files
 *.atsuo
 
 ### Xill template
+.project
 .xlib
 testit-reports/
 .generated-tests/
@@ -2133,14 +2418,30 @@ xill.properties
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -2156,26 +2457,40 @@ xill.properties
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Audio template
 *.aif
@@ -2193,6 +2508,7 @@ xill.properties
 
 ### Ada template
 # Object file
+*.o
 
 # Ada Library Information
 *.ali
@@ -2206,14 +2522,30 @@ secring.*
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -2229,30 +2561,45 @@ secring.*
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### venv template
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
 [Bb]in
 [Ii]nclude
 [Ll]ib
@@ -2260,6 +2607,7 @@ secring.*
 [Ll]ocal
 [Ss]cripts
 pyvenv.cfg
+.venv
 pip-selfcheck.json
 
 ### Snapcraft template
@@ -2286,6 +2634,7 @@ repl-temp-*
 *.rsc
 *.int
 *.lk
+*.zip
 
 ### ForgeGradle template
 # Minecraft client/server files
@@ -2321,8 +2670,10 @@ wp-config.php
 /wp-content/uploads/
 
 # Log files
+*.log
 
 # htaccess
+/.htaccess
 
 # All plugins
 #
@@ -2339,6 +2690,7 @@ wp-config.php
 
 ### DotnetCore template
 # .NET Core build folders
+bin/
 obj/
 
 # Common node modules locations
@@ -2360,6 +2712,7 @@ compiled/
 *.zo
 
 # Dependency tracking files
+*.dep
 
 ### Test template
 ### Ignore all files that could be used to test your code and
@@ -2476,14 +2829,30 @@ replit.nix
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -2499,26 +2868,40 @@ replit.nix
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### DotSettings template
 *.DotSettings
@@ -2526,15 +2909,22 @@ replit.nix
 ### SwiftPM template
 Packages
 .build/
+xcuserdata
 DerivedData/
 *.xcodeproj
 
 
 ### Finale template
+*.bak
 *.db
 *.avi
+*.pdf
 *.ps
+*.mid
 *.midi
+*.mp3
+*.aif
+*.wav
 # Some versions of Finale have a bug and randomly save extra copies of
 # the music source as "<Filename> copy.mus"
 *copy.mus
@@ -2543,6 +2933,8 @@ DerivedData/
 # Dependencies
 .psci_modules
 .spago
+bower_components
+node_modules
 
 # Generated files
 .psci
@@ -2558,9 +2950,11 @@ output
 # Object files
 hsptmp*
 packfile
+obj
 *.ax
 
 # Binaries
+*.exe
 *.dpm
 
 ### TLA+ template
@@ -2579,6 +2973,7 @@ packfile
 *.toolbox/**/*.cfg
 
 # PlusCal
+*.old
 
 # LaTex output
 *.toolbox/*aux
@@ -2586,9 +2981,12 @@ packfile
 *.toolbox/*.pdf
 *.toolbox/*.tex
 *aux
+*.log
+*.pdf
 *.tex
 
 # Vim backup file
+*~
 
 ### Grails template
 # .gitignore for Grails 1.2 and 1.3
@@ -2623,9 +3021,11 @@ packfile
 /web-app/plugins
 
 # "temporary" build files
+/target
 
 ### Janet template
 # Compiled binaries
+build/
 
 # Dependency directory
 jpm_tree/
@@ -2633,6 +3033,7 @@ jpm_tree/
 ### xmake template
 # Xmake cache
 .xmake/
+build/
 
 ### KDiff3 template
 *.BACKUP.*
@@ -2653,6 +3054,7 @@ jpm_tree/
 # Stata dataset and output files
 *.dta
 *.gph
+*.log
 *.smcl
 *.stpr
 *.stsem
@@ -2672,11 +3074,14 @@ jpm_tree/
 # *.tif
 
 ### Phalcon template
+/cache/
 /config/development/
 
 ### PAWN template
 # Compiled Bytecode, precompiled output and assembly
 *.amx
+*.lst
+*.asm
 
 # Vendor directory for dependencies
 dependencies/
@@ -2741,11 +3146,13 @@ string_table.txt
 *.tcLS
 
 # Type library declarations
+*.tlb
 
 # Log files
 *.tcLogs
 
 # Backup files
+*.bak
 
 ### NodeChakraTimeTravelDebug template
 # gitignore template for NodeChakra Time Travel Debug
@@ -2756,11 +3163,13 @@ string_table.txt
 _ttd_log_
 
 ### Linux template
+*~
 
 # temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*
 
 # KDE directory preferences
+.directory
 
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
@@ -2796,6 +3205,7 @@ compile_commands.json
 *.3gp
 *.asf
 *.asx
+*.avi
 *.flv
 *.mkv
 *.mov
@@ -2823,6 +3233,12 @@ files/*
 !files/empty
 
 ## IDE files and folders
+.cache
+.project
+.settings
+nbproject
+.idea
+.DS_Store
 _notes
 .svn
 
@@ -2845,6 +3261,7 @@ app/webroot/theme/PROJECT/Pages/*
 app/webroot/theme/PROJECT/Pages/empty
 
 ### Patch template
+*.orig
 *.rej
 
 ### Cloud9 template
@@ -2853,6 +3270,8 @@ app/webroot/theme/PROJECT/Pages/empty
 .c9
 
 ### ReScript template
+/node_modules/
+/lib/
 .bsb.lock
 
 ### LTspice template
@@ -2860,8 +3279,10 @@ app/webroot/theme/PROJECT/Pages/empty
 # website: https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html
 
 # Logfile
+*.log
 
 # Simulation Outputs
+*.raw
 *.fft
 
 # Netlist
@@ -2887,6 +3308,7 @@ Workflows/VCO@*
 Actions/test/*
 
 # All packages, resources, configurations, policies and Workflows
+**/Packages/
 **/Resources/
 **/Configurations/
 **/Workflows/
@@ -2900,6 +3322,8 @@ Actions/test/*
 # Files generated by ROOT, observed with v6.xy
 
 *.pcm
+*.so
+*.d
 
 
 
@@ -2928,7 +3352,10 @@ Actions/test/*
 *.yxwv
 *.yxft
 *.yxbe
+*.bak
 *.pcxml
+*.log
+*.bin
 *.yxlang
 CASS.ini
 
@@ -2966,14 +3393,30 @@ iOSInjectionProject/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -2989,28 +3432,43 @@ iOSInjectionProject/
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Processing template
+.DS_Store
 applet
 application.linux-arm64
 application.linux-armv6hf
@@ -3019,6 +3477,7 @@ application.linux64
 application.windows32
 application.windows64
 application.macosx
+out
 
 ### Smalltalk template
 # changes file
@@ -3064,6 +3523,7 @@ github-*.zip
 ### Batch template
 # BatchFiles
 *.bat
+*.cmd
 *.btm
 
 ### Docpress template
@@ -3074,10 +3534,13 @@ _docpress/
 ### SeamGen template
 /bootstrap/data
 /bootstrap/tmp
+/classes/
+/dist/
 /exploded-archives/
 /test-build/
 /test-output/
 /test-report/
+/target/
 temp-testng-customsuite.xml
 
 # based on http://stackoverflow.com/a/8865858/422476 I am removing inline comments
@@ -3099,6 +3562,9 @@ temp-testng-customsuite.xml
 ### Salesforce template
 # GitIgnore for Salesforce Projects
 # Project Settings and MetaData
+.project
+.settings/
+.metadata
 build.properties
 config
 
@@ -3106,12 +3572,24 @@ config
 apex-scripts/log
 
 # Eclipse specific
+salesforce.schema
+Referenced Packages
+bin/
+tmp/
 config/
+*.tmp
+*.bak
+local.properties
+.settings
 .loadpath
+.classpath
 *.cache
 
 # Illuminated Cloud (IntelliJ IDEA)
 IlluminatedCloud
+out
+.idea
+*.iml
 
 # Mavensmate
 *.sublime-project
@@ -3138,13 +3616,22 @@ TestsResultsCache.xml
 
 ### C++ template
 # Prerequisites
+*.d
 
 # Compiled Object files
 *.slo
+*.lo
+*.o
+*.obj
 
 # Precompiled Headers
+*.gch
+*.pch
 
 # Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
 # Fortran module files
 *.mod
@@ -3152,8 +3639,14 @@ TestsResultsCache.xml
 
 # Compiled Static libraries
 *.lai
+*.la
+*.a
+*.lib
 
 # Executables
+*.exe
+*.out
+*.app
 
 ### Meteor template
 # gitignore template for the Meteor framework
@@ -3170,6 +3663,11 @@ mup.json
 mup.js
 
 ### SwiftPackageManager template
+Packages
+.build/
+xcuserdata
+DerivedData/
+*.xcodeproj
 
 
 ### Concrete5 template
@@ -3243,6 +3741,7 @@ nwjc.exe
 payload.exe
 
 ### Maven template
+target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -3256,13 +3755,17 @@ buildNumber.properties
 
 # Eclipse m2e generated files
 # Eclipse Core
+.project
 # JDT-specific (Eclipse Java Development Tools)
+.classpath
 
 ### MonoDevelop template
 #User Specific
+*.userprefs
 *.usertasks
 
 #Mono Project Files
+*.pidb
 *.resources
 test-results/
 
@@ -3271,9 +3774,15 @@ test-results/
 /.mf
 
 ### VisualStudioCode template
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 !.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
+.history/
 
 # Built Visual Studio Code Extensions
 *.vsix
@@ -3282,6 +3791,7 @@ test-results/
 /.buildpath
 /.cache
 /.metadata
+/.project
 /.settings
 /.vscode
 atlassian*
@@ -3289,6 +3799,7 @@ atlassian*
 /robots.txt
 /pub/robots.txt
 /sitemap
+/sitemap.xml
 /pub/sitemap
 /pub/sitemap.xml
 /.idea
@@ -3305,6 +3816,7 @@ atlassian*
 /lib/internal/flex/varien/.flexLibProperties
 /lib/internal/flex/varien/.project
 /lib/internal/flex/varien/.settings
+/node_modules
 /.grunt
 /Gruntfile.js
 /package.json
@@ -3339,26 +3851,59 @@ atlassian*
 /pub/static/*
 !/pub/static/.htaccess
 
+/var/*
+!/var/.htaccess
+/vendor/*
 !/vendor/.htaccess
 /generated/*
 !/generated/.htaccess
+.DS_Store
 
 ### Magento1 template
 # gitignore template for Magento v1 projects
 #
 # It is recommended that you use `Magento.gitignore` as this is the latest version
 
+/PATCH_*.sh
 
+/app/etc/local.xml
 
+/media/*
+!/media/.htaccess
 
+!/media/customer
+/media/customer/*
+!/media/customer/.htaccess
 
+!/media/dhl
+/media/dhl/*
+!/media/dhl/logo.jpg
 
+!/media/downloadable
+/media/downloadable/*
+!/media/downloadable/.htaccess
 
+!/media/xmlconnect
+/media/xmlconnect/*
 
+!/media/xmlconnect/custom
+/media/xmlconnect/custom/*
+!/media/xmlconnect/custom/ok.gif
 
+!/media/xmlconnect/original
+/media/xmlconnect/original/*
+!/media/xmlconnect/original/ok.gif
 
+!/media/xmlconnect/system
+/media/xmlconnect/system/*
+!/media/xmlconnect/system/ok.gif
 
+/var/*
+!/var/.htaccess
 
+!/var/package
+/var/package/*
+!/var/package/*.xml
 
 
 ### Go template
@@ -3366,12 +3911,17 @@ atlassian*
 # https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
 #
 # Binaries for programs and plugins
+*.exe
 *.exe~
+*.dll
+*.so
+*.dylib
 
 # Test binary, built with `go test -c`
 *.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
+*.out
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
@@ -3391,6 +3941,8 @@ bin/RhoBundle
 bin/tmp
 bin/target
 bin/*.ap_
+*.o
+*.jar
 
 ### 1C-Bitrix template
 # core
@@ -3401,16 +3953,22 @@ bin/*.ap_
 
 # other files
 test.php
+*.zip
 *.gzip
 *.gz
 *.tgz
 *.tar
 *.gz.[0-9]
 *.sql
+*.log
+*.mp3
+*.exe
+*.db
 *.csv
 *.xml
 *.psd
 *.[oa]
+*~
 
 ### FlaxEngine template
 # Ignore Flax project files
@@ -3426,9 +3984,35 @@ Screenshots/
 *.sln
 
 # Ignore thumbnails created by Windows
+Thumbs.db
 
 # Ignore files built by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
 [Tt]est[Rr]esult*
+.vs/
 
 # Ignore Nuget packages folder
 packages/
@@ -3441,15 +4025,29 @@ packages/
 
 # Java defaults (https://github.com/github/gitignore/blob/master/Java.gitignore) #
 # --- #
+*.class
 # Package Files #
+*.jar
+*.war
+*.ear
 # --- #
 # Eclipse-specific (https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore) #
 # --- #
 *.pydevproject
+.metadata
 bin/**
 tmp/**
 tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
 # You may want to remove the sharp symbols here if you are using Maven
+.project
+.classpath
 # External tool builders
 .externalToolBuilders/
 # Locally stored "Eclipse launch configurations"
@@ -3457,17 +4055,21 @@ tmp/**/*
 # CDT-specific
 .cproject
 # PDT-specific
+.buildpath
 # --------------- #
 # Studio-specific #
 # --------------- #
 .studio/
 flows/
+target/
 **/*.mflow
 catalog/
 reports/
 .mule/
 
 ### OpenCart template
+.htaccess
+/config.php
 admin/config.php
 
 !index.html
@@ -3492,8 +4094,10 @@ vqmod/mods.cache
 *.yo
 
 ### Haskell template
+dist
 dist-*
 cabal-dev
+*.o
 *.hi
 *.hie
 *.chi
@@ -3517,20 +4121,26 @@ cabal.project.local~
 ### ROS2 template
 install/
 log/
+build/
 
 # Ignore generated docs
 *.dox
 *.wikidoc
 
 # eclipse stuff
+.project
+.cproject
 
 # qcreator stuff
 CMakeLists.txt.user
 
 srv/_*.py
 *.pcd
+*.pyc
 qtcreator-*
+*.user
 
+*~
 
 # Emacs
 .#*
@@ -3542,8 +4152,11 @@ AMENT_IGNORE
 ### Prestashop template
 # Cache, temp and personal files
 
+/.htaccess
+*.log
 
 # Cache
+/cache/*
 !/cache/.htaccess
 !/cache/cachefs/index.php
 !/cache/deprecated.txt
@@ -3601,8 +4214,10 @@ AMENT_IGNORE
 !/img/tmp/index.php
 
 # Upload
+/upload/*
 !/upload/.htaccess
 
+/vendor/*
 /docs/phpdoc-sf/
 /composer.lock
 *.hot-update.js
@@ -3661,6 +4276,8 @@ themes/*/
 # Vendors and dependencies
 
 bower_components/
+node_modules/
+composer.phar
 php-cs-fixer
 .grunt/*
 
@@ -3680,6 +4297,7 @@ themes/default-bootstrap/modules/*/mails/*
 # MISC
 
 *sitemap.xml
+/robots.txt
 
 # Symfony
 
@@ -3687,11 +4305,23 @@ themes/default-bootstrap/modules/*/mails/*
 /app/Resources/geoip/GeoLite2-City.mmdb
 /app/Resources/translations/*
 !/app/Resources/translations/default
+/app/config/parameters.yml
 /app/config/parameters.php
+/build/
+/phpunit.xml
+/var/*
 !/var/cache
+/var/cache/*
+!var/cache/.gitkeep
 !/var/logs
+/var/logs/*
+!var/logs/.gitkeep
 !/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
 !var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
 
 
 ### Toit template
@@ -3716,7 +4346,9 @@ Builds/
 # website: https://getnikola.com/
 
 .doit.db
+*.py[cod]
 cache/
+output/
 
 ### Turbo template
 # Turborepo task cache
@@ -3727,14 +4359,30 @@ cache/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -3750,26 +4398,40 @@ cache/
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### SlickEdit template
 # SlickEdit workspace and project files are ignored by default because
@@ -3786,6 +4448,7 @@ cache/
 
 ### Emacs template
 # -*- mode: gitignore; -*-
+*~
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
@@ -3816,6 +4479,7 @@ tramp
 
 # cask packages
 .cask/
+dist/
 
 # Flycheck
 flycheck_*.el
@@ -3839,9 +4503,11 @@ jspm_packages
 ### Ember template
 # see https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/gitignore
 # compiled output
+/dist
 /tmp
 
 # dependencies
+/node_modules
 /bower_components
 
 # misc
@@ -3858,23 +4524,30 @@ testem.log
 
 # Temporary files
 *.000
+*.bak
+*.bck
 *.kicad_pcb-bak
 *.kicad_sch-bak
 *-backups
 *.kicad_prl
 *.sch-bak
+*~
 _autosave-*
+*.tmp
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
 
 # Netlist files (exported from Eeschema)
+*.net
 
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
 
 # Exported BOM files
+*.xml
+*.csv
 
 ### Swift template
 # Xcode
@@ -3889,10 +4562,16 @@ xcuserdata/
 *.xccheckout
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
 *.moved-aside
+*.pbxuser
 !default.pbxuser
+*.mode1v3
 !default.mode1v3
+*.mode2v3
 !default.mode2v3
+*.perspectivev3
 !default.perspectivev3
 
 ## Obj-C/Swift specific
@@ -3919,6 +4598,7 @@ playground.xcworkspace
 # hence it is not needed unless you have added a package configuration file to your project
 # .swiftpm
 
+.build/
 
 # CocoaPods
 #
@@ -3959,73 +4639,168 @@ fastlane/test_output
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
+iOSInjectionProject/
 
 ### ASPNETCore template
 ## Ignore Visual Studio temporary files, build results, and
 ## files generated by popular Visual Studio add-ons.
 
 # User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
 
 # Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
 
 # Visual Studio 2015 cache/options directory
+.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
 # MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
 
 # NUNIT
+*.VisualState.xml
+TestResult.xml
 
 # Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
 
 # DNX
+project.lock.json
+project.fragment.lock.json
+artifacts/
 
+*_i.c
+*_p.c
 *_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
 
 # Chutzpah Test files
+_Chutzpah*
 
 # Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
 
 # Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
 
 # TFS 2012 Local Workspace
+$tf/
 
 # Guidance Automation Toolkit
+*.gpState
 
 # ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
 
 # JustCode is a .NET coding add-in
 .JustCode
 
 # TeamCity is a build add-in
+_TeamCity*
 
 # DotCover is a Code Coverage Tool
+*.dotCover
 
 # Visual Studio code coverage results
+*.coverage
+*.coveragexml
 
 # NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
 
 # MightyMoose
+*.mm.*
+AutoTest.Net/
 
 # Web workbench (sass)
+.sass-cache/
 
 # Installshield output folder
+[Ee]xpress/
 
 # DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
 
 # Click-Once directory
+publish/
 
 # Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
 # TODO: Comment the next line if you want to checkin your web deploy settings
 # but database connection strings (with potential passwords) will be unencrypted
+*.pubxml
+*.publishproj
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
 # checkin your Azure Web App publish settings, but sensitive information contained
 # in these scripts will be unencrypted
+PublishScripts/
 
 # NuGet Packages
+*.nupkg
 # The packages folder can be ignored because of Package Restore
 **/packages/*
 # except build/, which is used as an MSBuild target.
@@ -4033,57 +4808,105 @@ fastlane/test_output
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
 # NuGet v3's project.json files produces more ignoreable files
+*.nuget.props
+*.nuget.targets
 
 # Microsoft Azure Build Output
+csx/
+*.build.csdef
 
 # Microsoft Azure Emulator
+ecf/
+rcf/
 
 # Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
+*.[Cc]ache
 # but keep track of directories ending in .cache
 !*.[Cc]ache/
 
 # Others
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+node_modules/
+orleans.codegen.cs
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
 #bower_components/
 
 # RIA/Silverlight projects
+Generated_Code/
 
 # Backup & report files from converting an old project file
 # to a newer Visual Studio version. Backup files are not needed,
 # because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
 
 # SQL Server files
+*.mdf
+*.ldf
 
 # Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
 
 # Microsoft Fakes
+FakesAssemblies/
 
 # GhostDoc plugin setting file
+*.GhostDoc.xml
 
 # Node.js Tools for Visual Studio
+.ntvs_analysis.dat
 
 # Visual Studio 6 build log
+*.plg
 
 # Visual Studio 6 workspace options file
+*.opt
 
 # Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
 
 # Paket dependency manager
+.paket/paket.exe
+paket-files/
 
 # FAKE - F# Make
+.fake/
 
 # JetBrains Rider
 .idea/
+*.sln.iml
 
 # CodeRush
 .cr/
 
 # Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
 
 # Cake - Uncomment if you are using it
 # tools/
@@ -4093,14 +4916,30 @@ fastlane/test_output
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -4116,46 +4955,76 @@ fastlane/test_output
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### uVision template
 # git ignore file for Keil µVision Project
 
 # µVision 5 and µVision 4 Project screen layout file
+*.uvguix.*
+*.uvgui.*
 
 # Listing Files
+*.i
+*.lst
 *.m51
 *.m66
+*.map
 
 # Object Files
 *.axf
 *.b[0-2][0-9]
 *.b3[0-1]
+*.bak
+*.build_log.htm
 *.crf
+*.d
+*.dep
+*.elf
 *.htm
 *.iex
+*.lnp
+*.o
+*.obj
+*.sbr
 
 # Firmware Files
+*.bin
 *.h86
+*.hex
 
 # Build Files
 .bat
@@ -4173,14 +5042,30 @@ JLinkLog.txt
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -4196,26 +5081,40 @@ JLinkLog.txt
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### GitHubPages template
 # This .gitignore is appropriate for repositories deployed to GitHub Pages and using
@@ -4223,10 +5122,12 @@ JLinkLog.txt
 
 # Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
 _site/
+.sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
 # Additional Ruby/bundler ignore for when you run: bundle install
+/vendor
 
 # Specific ignore for GitHub Pages
 # GitHub Pages will always use its own deployed version of pages-gem
@@ -4237,11 +5138,18 @@ Gemfile.lock
 
 ### Lazarus template
 # Lazarus compiler-generated binaries (safe to delete)
+*.exe
+*.dll
+*.so
+*.dylib
 *.lrs
 *.res
 *.compiled
+*.dbg
 *.ppu
+*.o
 *.or
+*.a
 
 # Lazarus autogenerated files (duplicated info)
 *.rst
@@ -4254,19 +5162,24 @@ Gemfile.lock
 # Lazarus backups and unit output folders.
 # These can be changed by user in Lazarus/project options.
 backup/
+*.bak
+lib/
 
 # Application bundle for Mac OS
+*.app/
 
 ### MeteorJS template
 # default meteor build and local packages
 .meteor/local
 
 # meteor settings file
+settings.json
 
 # meteor build output files
 *.tar.gz
 
 # general swp files from vim
+*.swp
 
 ### vcpkg template
 # Vcpkg
@@ -4281,6 +5194,7 @@ vcpkg_installed/
 # Cocos Creator Projects
 #/////////////////////////////////////////////////////////////////////////////
 
+build/
 library/
 temp/
 local/
@@ -4290,6 +5204,7 @@ jsb-link/
 web-desktop/
 web-mobile/
 runtime/
+build/
 jsb/
 export/
 
@@ -4297,19 +5212,27 @@ export/
 # Logs and databases
 #/////////////////////////////////////////////////////////////////////////////
 
+*.log
+*.sql
 *.sqlite
 
 #/////////////////////////////////////////////////////////////////////////////
 # files for debugger
 #/////////////////////////////////////////////////////////////////////////////
 
+*.sln
+*.csproj
+*.pidb
 *.unityproj
+*.suo
 
 #/////////////////////////////////////////////////////////////////////////////
 # OS generated files
 #/////////////////////////////////////////////////////////////////////////////
 
+.DS_Store
 ehthumbs.db
+Thumbs.db
 
 #/////////////////////////////////////////////////////////////////////////////
 # exvim files
@@ -4336,6 +5259,7 @@ quick_gen_project_*_autogen.sh.meta
 # webstorm files
 #/////////////////////////////////////////////////////////////////////////////
 
+.idea/
 
 #/////////////////////////////////////////////////////////////////////////////
 # VSCode files
@@ -4360,98 +5284,241 @@ xtend-gen/
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
 
 # Mono auto generated files
+mono_crash.*
 
 # Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
+.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
 # Visual Studio 2017 auto generated files
+Generated\ Files/
 
 # MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
 
 # NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
 
 # Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
 
 # Benchmark Results
+BenchmarkDotNet.Artifacts/
 
 # .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
 
 # ASP.NET Scaffolding
+ScaffoldingReadMe.txt
 
 # StyleCop
+StyleCopReport.xml
 
 # Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
 
 # Chutzpah Test files
+_Chutzpah*
 
 # Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
 
 # Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
 
 # Visual Studio Trace Files
+*.e2e
 
 # TFS 2012 Local Workspace
+$tf/
 
 # Guidance Automation Toolkit
+*.gpState
 
 # ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
 
 # TeamCity is a build add-in
+_TeamCity*
 
 # DotCover is a Code Coverage Tool
+*.dotCover
 
 # AxoCover is a Code Coverage Tool
+.axoCover/*
+!.axoCover/settings.json
 
 # Coverlet is a free, cross platform Code Coverage Tool
+coverage*.json
+coverage*.xml
+coverage*.info
 
 # Visual Studio code coverage results
+*.coverage
+*.coveragexml
 
 # NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
 
 # MightyMoose
+*.mm.*
+AutoTest.Net/
 
 # Web workbench (sass)
+.sass-cache/
 
 # Installshield output folder
+[Ee]xpress/
 
 # DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
 
 # Click-Once directory
+publish/
 
 # Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
 # Note: Comment the next line if you want to checkin your web deploy settings,
 # but database connection strings (with potential passwords) will be unencrypted
+*.pubxml
+*.publishproj
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
 # checkin your Azure Web App publish settings, but sensitive information contained
 # in these scripts will be unencrypted
+PublishScripts/
 
 # NuGet Packages
+*.nupkg
 # NuGet Symbol Packages
+*.snupkg
 # The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
 
 # Microsoft Azure Build Output
+csx/
+*.build.csdef
 
 # Microsoft Azure Emulator
+ecf/
+rcf/
 
 # Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.appxbundle
+*.appxupload
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
+*.[Cc]ache
 # but keep track of directories ending in .cache
+!?*.[Cc]ache/
 
 # Others
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
 
 # Including strong name files can present a security risk
 # (https://github.com/github/gitignore/pull/2483#issue-259490424)
@@ -4462,88 +5529,163 @@ xtend-gen/
 #bower_components/
 
 # RIA/Silverlight projects
+Generated_Code/
 
 # Backup & report files from converting an old project file
 # to a newer Visual Studio version. Backup files are not needed,
 # because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.rptproj.bak
 
 # SQL Server files
+*.mdf
+*.ldf
+*.ndf
 
 # Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+*.rptproj.rsuser
+*- [Bb]ackup.rdl
+*- [Bb]ackup ([0-9]).rdl
+*- [Bb]ackup ([0-9][0-9]).rdl
 
 # Microsoft Fakes
+FakesAssemblies/
 
 # GhostDoc plugin setting file
+*.GhostDoc.xml
 
 # Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+node_modules/
 
 # Visual Studio 6 build log
+*.plg
 
 # Visual Studio 6 workspace options file
+*.opt
 
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
+*.vbw
 
 # Visual Studio 6 auto-generated project file (contains which files were open etc.)
+*.vbp
 
 # Visual Studio 6 workspace and project file (working project files containing files to include in project)
+*.dsw
+*.dsp
 
 # Visual Studio 6 technical files
+*.ncb
+*.aps
 
 # Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
 
 # Paket dependency manager
+.paket/paket.exe
+paket-files/
 
 # FAKE - F# Make
+.fake/
 
 # CodeRush personal settings
+.cr/personal
 
 # Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
 
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config
 
 # Tabs Studio
+*.tss
 
 # Telerik's JustMock configuration file
+*.jmconfig
 
 # BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
 
 # OpenCover UI analysis results
+OpenCover/
 
 # Azure Stream Analytics local run output
+ASALocalRun/
 
 # MSBuild Binary and Structured Log
+*.binlog
 
 # NVidia Nsight GPU debugger configuration file
+*.nvuser
 
 # MFractors (Xamarin productivity tool) working folder
+.mfractor/
 
 # Local History for Visual Studio
+.localhistory/
 
 # Visual Studio History (VSHistory) files
+.vshistory/
 
 # BeatPulse healthcheck temp database
+healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
+MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
+.ionide/
 
 # Fody - auto-generated XML schema
+FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
 # Local History for Visual Studio Code
+.history/
 
 # Windows Installer files from build outputs
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
 # JetBrains Rider
+*.sln.iml
 
 ### MavensMate template
 #Sublime Text exclusions
+*.sublime-workspace
+*.sublime-project
+*.sublime-settings
 
 #MavensMate exclusions
 config/*
+mm.log
 
 #OPTIONAL Apex scripts exclusion
 # - Rule 1 excludes the contents of the apex-scripts folder
@@ -4555,12 +5697,15 @@ apex-scripts/*
 
 ### macOS template
 # General
+.DS_Store
+.AppleDouble
 .LSOverride
 
 # Icon must end with two \r
 Icon
 
 # Thumbnails
+._*
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
@@ -4579,6 +5724,8 @@ Temporary Items
 .apdisk
 
 ### Composer template
+composer.phar
+/vendor/
 
 # Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
@@ -4595,29 +5742,49 @@ __generated__
 
 ### JabRef template
 # JabRef - https://www.jabref.org/
+*.bak
 *.sav
 
 ### LSspice template
 ### LTspice ###
+*.raw
 
 ### NCrunch template
 # NCrunch
 *.ncrunch*.user
+_NCrunch_*
 *.crunch.xml
+nCrunchTemp_*
 
 ### PyCharm template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -4633,30 +5800,45 @@ __generated__
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Coq template
 .*.aux
 .*.d
+*.a
 *.cma
 *.cmi
 *.cmo
@@ -4671,6 +5853,7 @@ __generated__
 *.mllib.d
 *.mlpack.d
 *.native
+*.o
 *.v.d
 *.vio
 *.vo
@@ -4700,8 +5883,11 @@ time-of-build-both.log
 time-of-build-pretty.log
 
 ### GWT template
+*.class
 
 # Package Files #
+*.jar
+*.war
 
 # gwt caches and compiled units #
 war/gwt_bree/
@@ -4735,6 +5921,7 @@ docs/_book
 test/
 
 ### Sass template
+.sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
@@ -4742,6 +5929,7 @@ test/
 ### Text template
 *.doc
 *.docx
+*.log
 *.msg
 *.pages
 *.rtf
@@ -4851,6 +6039,7 @@ Manifest.toml
 */CMakeCache.txt
 */Makefile
 */cmake_install.cmake
+.DS_Store
 
 ### Remix+Arc template
 /server/index.js
@@ -4859,6 +6048,10 @@ sam.json
 sam.yaml
 
 ### Django template
+*.log
+*.pot
+*.pyc
+__pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -4876,6 +6069,7 @@ media
 #########
 #Exclude all
 #########
+*
 !*/
 !.gitignore
 ###########################################################################
@@ -4961,6 +6155,8 @@ media
 
 ### HomeAssistant template
 # Files with personal details
+*.crt
+*.csr
 *.key
 .cloud
 .google.token
@@ -4990,6 +6186,8 @@ webostv.conf
 tts
 
 # automatically downloaded dependencies
+deps
+lib
 
 # Log files
 home-assistant.log
@@ -5008,6 +6206,7 @@ custom_components
 .data/
 
 # used for ADF styles caching
+temp/
 
 # default output directories
 classes/
@@ -5019,6 +6218,7 @@ cwallet.sso.lck
 
 ### NextJS template
 # dependencies
+/node_modules
 /.pnp
 .pnp.js
 
@@ -5033,14 +6233,20 @@ cwallet.sso.lck
 /build
 
 # misc
+.DS_Store
+*.pem
 
 # debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
 .env*.local
 
 # vercel
+.vercel
 
 # typescript
 *.tsbuildinfo
@@ -5054,6 +6260,7 @@ next-env.d.ts
 pkg/*
 
 # Should run on multiple platforms so don't check in
+Gemfile.lock
 
 # Tests
 spec/fixtures/*
@@ -5068,6 +6275,7 @@ vendor/*
 ################################################################
 
 # Log files
+*.log
 panic*.log.*
 
 # OpenAccess database lock files
@@ -5096,28 +6304,60 @@ lsys.o
 lpfg.log
 
 # Precompiled Headers
+*.gch
+*.pch
 
 # Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
 # Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
 # Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
 
 # Executables
+*.exe
+*.out
+*.app
 
 ### CLion+iml template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -5133,26 +6373,40 @@ lpfg.log
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Compression template
 
@@ -5164,6 +6418,7 @@ lpfg.log
 # Old compressor for QNX4 OS. The compression algorithm is a modified LZSS, with an adaptive Huffman coding.
 *.F
 # GNU Zip, the primary compression format used by Unix-like systems. The compression algorithm is DEFLATE.
+*.gz
 # An alternate LZMA algorithm implementation, with support for checksums and ident bytes.
 *.lz
 # The LZMA compression algorithm as used by 7-Zip
@@ -5207,6 +6462,7 @@ EWARM/**/List
 EWARM/**/Exe
 
 # Autogenerated project files
+*.dep
 *.ewt
 
 # Autogenerated folder for debugger
@@ -5238,11 +6494,16 @@ devdata.db
 data/*
 
 # Packages
+*.egg
 *.egg-info
+dist
+build
 
 # Installer logs
+pip-log.txt
 
 # Unit test / coverage reports
+.coverage
 .tox
 
 ### fastlane template
@@ -5270,18 +6531,37 @@ data/*
 
 ### Fortran template
 # Prerequisites
+*.d
 
 # Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
 # Precompiled Headers
+*.gch
+*.pch
 
 # Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
 # Fortran module files
+*.mod
+*.smod
 
 # Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
 
 # Executables
+*.exe
+*.out
+*.app
 
 ### Vagrant template
 # General
@@ -5302,6 +6582,10 @@ data/*
 
 ### OctoberCms template
 /bootstrap/compiled.php
+/vendor
+composer.phar
+.DS_Store
+.idea
 .env
 .env.*.php
 .env.php
@@ -5315,12 +6599,14 @@ sftp-config.json
 selenium.php
 
 # for netbeans compiler
+nbproject
 
 ### Vaadin template
 .vaadin-designer
 .designer
 
 ### OxidEshop template
+/vendor
 
 !/source
 /source/*
@@ -5363,6 +6649,8 @@ selenium.php
 /typo3_src
 /typo3_src-*
 /Packages
+/.htaccess
+/index.php
 # Ignore temp directory.
 /typo3temp/
 
@@ -5376,26 +6664,43 @@ _projects
 .crossbar/node.pid
 
 ### XamarinStudio template
+bin/
+obj/
+*.userprefs
 .packages
 
 ### Archives template
 # It's better to unpack these files and commit the raw source because
 # git has its own built in compression methods.
 *.7z
+*.jar
 *.rar
+*.zip
+*.gz
+*.gzip
+*.tgz
 *.bzip
 *.bzip2
+*.bz2
+*.xz
+*.lzma
+*.cab
 *.xar
 
 # Packing-only formats
 *.iso
+*.tar
 
 # Package management formats
 *.dmg
 *.xpi
 *.gem
+*.egg
 *.deb
 *.rpm
+*.msi
+*.msm
+*.msp
 *.txz
 
 ### Less template
@@ -5403,20 +6708,46 @@ _projects
 
 ### UnrealEngine template
 # Visual Studio 2015 user specific files
+.vs/
 
 # Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
 # Precompiled Headers
+*.gch
+*.pch
 
 # Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
 # Fortran module files
+*.mod
 
 # Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
 
 # Executables
+*.exe
+*.out
+*.app
+*.ipa
 
 # These project files can be generated by the engine
+*.xcodeproj
+*.xcworkspace
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
 *.VC.opendb
 
 # Precompiled Assets
@@ -5474,6 +6805,7 @@ csrc/
 
 # Log file - the following switch allows to specify the file that will be
 # used to write all messages from simulation:  -l <filename>
+*.log
 
 # Coverage results (generated with urg) and database location.  The
 # following switch can also be used:  urg -dir <coverage_directory>.vdb
@@ -5493,14 +6825,17 @@ vc_hdrs.h
 .docusaurus
 
 # Docusaurus Build Directory
+/build/
 
 ### Elisp template
 # Compiled
+*.elc
 
 # Packaging
 .cask
 
 # Backup files
+*~
 
 # Undo-tree save-files
 *.~undo-tree
@@ -5551,6 +6886,7 @@ postProcessing
 # Needed when C++ code is built using the OpenFOAM library, since it does not
 # use a "normal" build tool (make, cmake, ..).
 lnInclude
+*.dep
 linux*
 Darwin*
 
@@ -5559,6 +6895,7 @@ Darwin*
 !constant/thermophysicalProperties
 !constant/turbulenceProperties
 !system/
+!.gitignore
 
 ### TarmaInstallMate template
 # Workspace files
@@ -5566,6 +6903,7 @@ Darwin*
 *.iw9
 
 # Build log files
+*.log
 
 ### DotfilesSh template
 local-patch
@@ -5580,11 +6918,16 @@ patched-src
 .phpunit.cache
 
 # PHPUnit
+/app/phpunit.xml
+/phpunit.xml
 
 # Build data
+/build/
 
 ### Gatsby template
+node_modules/
 
+.cache/
 public
 
 src/gatsby-types.d.ts
@@ -5594,6 +6937,7 @@ assets/_combinedfiles/
 assets/_resampled/
 assets/Uploads/
 silverstripe-cache/
+.env
 vendor/
 resources/
 themes/simple/
@@ -5601,13 +6945,19 @@ public/resources/
 
 ### SolidityTruffle template
 # depedencies
+node_modules
 
 # testing
+coverage
 
 # production
+build
 build_webpack
 
 # misc
+.DS_Store
+.env
+npm-debug.log
 .truffle-solidity-loader
 .vagrant/**
 blockchain/geth/**
@@ -5644,6 +6994,7 @@ sccprj/
 codegen/
 
 # Simulink autosave extension
+*.autosave
 
 # Simulink cache files
 *.slxc
@@ -5657,6 +7008,7 @@ octave-workspace
 *~.xml
 
 # Dynamic plugins .dll
+bin/
 
 ### Vertx template
 # Vertx cache directory
@@ -5665,18 +7017,24 @@ octave-workspace
 ### Android template
 # Gradle files
 .gradle/
+build/
 
 # Local configuration file (sdk path, etc)
+local.properties
 
 # Log/OS Files
+*.log
 
 # Android Studio generated files and folders
 captures/
 .externalNativeBuild/
 .cxx/
+*.apk
 output.json
 
 # IntelliJ
+*.iml
+.idea/
 misc.xml
 deploymentTargetDropDown.xml
 render.experimental.xml
@@ -5698,6 +7056,7 @@ google-services.json
 *.jsc
 
 ### StdLib template
+/node_modules
 env.json
 
 ### SymphonyCMS template
@@ -5715,6 +7074,9 @@ infer-out
 ### ROS template
 devel/
 logs/
+build/
+bin/
+lib/
 msg_gen/
 srv_gen/
 msg/*Action.msg
@@ -5734,18 +7096,30 @@ devel_isolated/
 /cfg/*.py
 
 # Ignore generated docs
+*.dox
+*.wikidoc
 
 # eclipse stuff
+.project
+.cproject
 
 # qcreator stuff
+CMakeLists.txt.user
 
+srv/_*.py
+*.pcd
+*.pyc
+qtcreator-*
+*.user
 
 /planning/cfg
 /planning/docs
 /planning/src
 
+*~
 
 # Emacs
+.#*
 
 # Catkin custom files
 CATKIN_IGNORE
@@ -5755,6 +7129,9 @@ application/cache/*
 application/logs/*
 
 ### Assembler template
+*.exe
+*.o
+*.obj
 *.bc
 
 ### Zephir template
@@ -5763,6 +7140,9 @@ application/logs/*
 .libs/
 
 # Object files, generates by linker
+*.lo
+*.la
+*.o
 *.loT
 
 # Files generated by configure and Zephir,
@@ -5787,14 +7167,30 @@ ext/libtool
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -5810,30 +7206,45 @@ ext/libtool
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### MetaProgrammingSystem template
 workspace.xml
 junitvmwatcher*.properties
+build.properties
 
 # generated java classes and java source files
 #   manually add any custom artifacts that can't be generated from the models
@@ -5850,14 +7261,20 @@ junit*.properties
 
 ### Shopware template
 # PhpStorm-Project
+.idea/
 
 # Cache and logs
+/var/cache/*
+/var/log/*
 !var/cache/clear_cache.sh
 !var/log/clear_cache.sh
 
 /web/cache
 !web/cache/.gitkeep
 
+/bin/*
+!bin/console
+/vendor/
 
 # User provided content
 /media/archive/
@@ -5873,12 +7290,20 @@ junit*.properties
 
 # Caches/Proxies
 /tests/Shopware/TempFiles/
+/cache/
 
 # OS generated files
+.DS_Store
 .DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 Icon?
+ehthumbs.db
+Thumbs.db
 
 # SASS/SCSS cache
+.sass-cache/
 
 ### LiberoSOC template
 #Microsemi Libero SOC v11.5
@@ -5910,6 +7335,8 @@ designer/*/*
 
 ### Clean template
 # Binaries
+*.exe
+*.out
 
 # Project files
 *.prj
@@ -5924,7 +7351,9 @@ Clean System Files/
 
 ### Windows template
 # Windows thumbnail cache files
+Thumbs.db
 Thumbs.db:encryptable
+ehthumbs.db
 ehthumbs_vista.db
 
 # Dump file
@@ -5937,6 +7366,11 @@ ehthumbs_vista.db
 $RECYCLE.BIN/
 
 # Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
 # Windows shortcuts
 *.lnk
@@ -5944,17 +7378,25 @@ $RECYCLE.BIN/
 ### Angular template
 ## Angular ##
 # compiled output
+dist/
+tmp/
 app/**/*.js
 app/**/*.js.map
 
 # dependencies
+node_modules/
+bower_components/
 
 # IDEs and editors
+.idea/
 
 # misc
+.sass-cache/
 connect.lock/
 coverage/
 libpeerconnection.log/
+npm-debug.log
+testem.log
 typings/
 .angular/
 
@@ -5967,8 +7409,10 @@ e2e/*.map
 
 ### grunt template
 # Grunt usually compiles files inside this directory
+dist/
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
+.tmp/
 
 ### Blackbox template
 # https://github.com/StackExchange/blackbox
@@ -5981,6 +7425,7 @@ e2e/*.map
 .~lock.*#
 
 ### Ruby template
+*.gem
 *.rbc
 /.config
 /coverage/
@@ -6001,6 +7446,7 @@ e2e/*.map
 ## Specific to RubyMotion:
 .dat*
 .repl_history
+build/
 *.bridgesupport
 build-iPhoneOS/
 build-iPhoneSimulator/
@@ -6043,6 +7489,9 @@ typings
 ### Vuejs template
 # Recommended template: Node.gitignore
 
+node_modules/
+dist/
+npm-debug.log
 yarn-error.log
 
 ### direnv template
@@ -6050,8 +7499,11 @@ yarn-error.log
 .envrc
 
 ### Scala template
+*.class
+*.log
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
 ### Sonar template
 #Sonar generated dir
@@ -6059,10 +7511,13 @@ yarn-error.log
 
 ### Polymer template
 #Installed components via bower
+bower_components/
 
 #Installed modules via npm
+node_modules/
 
 #Polymer-cli builds
+build/
 
 ### Redis template
 # Ignore redis binary dump (dump.rdb) files
@@ -6076,7 +7531,14 @@ yarn-error.log
 
 ### Defold template
 /.internal
+/build
+.externalToolBuilders
+.DS_Store
+Thumbs.db
 .lock-wscript
+*.pyc
+.project
+.cproject
 builtins
 
 ### rust-analyzer template
@@ -6086,18 +7548,33 @@ rust-project.json
 
 ### AppceleratorTitanium template
 # Build folder and log file
+build/
 build.log
 
 ### AptanaStudio template
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
 .recommenders
 
 # External tool builders
+.externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
+*.launch
 
 # PyDev specific (Python IDE for Eclipse)
+*.pydevproject
 
 # CDT-specific (C/C++ Development Tooling)
+.cproject
 
 # CDT- autotools
 .autotools
@@ -6106,6 +7583,7 @@ build.log
 .factorypath
 
 # PDT-specific (PHP Development Tools)
+.buildpath
 
 # sbteclipse plugin
 .target
@@ -6123,6 +7601,7 @@ build.log
 .recommenders/
 
 # Annotation Processing
+.apt_generated/
 .apt_generated_test/
 
 # Scala IDE specific (Scala & Java development for Eclipse)
@@ -6152,6 +7631,8 @@ tmtags
 # LAMP Stack Base
 
 ### Testinfra template
+__pycache__/
+.pytest_cache/
 
 ### Nix template
 # Ignore build outputs from performing a nix-build or `nix build` command
@@ -6167,6 +7648,7 @@ js/tygh/core.js
 js/tygh/notifications_center.js
 js/tygh/bottom_panel.js
 js/core/npm-debug.log
+js/tygh/bottom_panel.js
 
 app/lib/composer.phar
 design/backend/css/twitterbootstrap.css
@@ -6190,6 +7672,7 @@ upgrades/*
 !upgrades/source_restore.php
 
 local_conf.php
+install/
 sph*.php
 get_addon.php
 get_addon/
@@ -6204,6 +7687,12 @@ _tools/migration/composer.lock
 _tools/migration/conf.php
 _tools/migration/vendor
 
+*.log
+*.sql
+*.bak
+*.swp
+*.orig
+*.tmp
 
 ### UiPath template
 # gitignore template for RPA development using UiPath Studio
@@ -6222,7 +7711,12 @@ _tools/migration/vendor
 /.idea/
 /.vscode/
 
+/node_modules
 
+.env
+*.orig
+*.pyc
+*.swp
 
 ### Archive template
 
@@ -6230,6 +7724,7 @@ _tools/migration/vendor
 
 ## Archiving only
 # The traditional archive format on Unix-like systems, now used mainly for the creation of static libraries.
+*.a
 *.ar
 # RPM files consist of metadata concatenated with (usually) a cpio archive. Newer RPM systems also support other archives, as cpio is becoming obsolete. cpio is also used with initramfs.
 *.cpio
@@ -6239,18 +7734,27 @@ _tools/migration/vendor
 # A system for storing multiple files. LBR archives typically contained files processed by SQ, or the archive itself was compressed with SQ. LBR archives that were compressed with SQ ended with the extension .LQR
 *.LBR
 # An archive format originally used mainly for archiving and distribution of the exact, nearly-exact, or custom-modified contents of an optical storage medium such as a CD-ROM or DVD-ROM. However, it can be used to archive the contents of other storage media, selected partitions, folders, and/or files. The resulting archive is typically optimized for convenient rendering to (re-)writable CD or DVD media.
+*.iso
 # A library format used primarily on the Commodore 64 and 128 lines of computers. This bears no resemblance to the DOS LBR format. While library files were quick to implement (a number of programs exist to work with them) they are crippled in that they cannot grow with use: once a file has been created it cannot be amended (files added, changed or deleted) without recreating the entire file.
 *.lbr
 # An archive format used by Mozilla for storing binary diffs. Used in conjunction with bzip2.
 *.mar
 # A common archive format used on Unix-like systems. Generally used in conjunction with compressors such as gzip, bzip2, compress or xz to create .tar.gz, .tar.bz2, .tar.Z or tar.xz files.
+*.tar
 
 # Package managers
 # Red Hat Package Manager
+*.rpm
 # Debian package
+*.deb
 # MicroSoft Installer
+*.msi
+*.msm
+*.msp
 # Mozilla package installer
+*.xpi
 # Ruby Package
+*.gem
 
 
 ### retool template
@@ -6258,13 +7762,20 @@ _tools
 
 ### Node template
 # Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 lerna-debug.log*
+.pnpm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data
 pids
+*.pid
 *.seed
 *.pid.lock
 
@@ -6272,27 +7783,33 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
+coverage
 *.lcov
 
 # nyc test coverage
 .nyc_output
 
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
 
 # Bower dependency directory (https://bower.io/)
+bower_components
 
 # node-waf configuration
+.lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
+node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
 # TypeScript cache
+*.tsbuildinfo
 
 # Optional npm cache directory
 .npm
@@ -6313,25 +7830,32 @@ web_modules/
 .node_repl_history
 
 # Output of 'npm pack'
+*.tgz
 
 # Yarn Integrity file
 .yarn-integrity
 
 # dotenv environment variable files
+.env
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
 
 # parcel-bundler cache (https://parceljs.org/)
+.cache
 .parcel-cache
 
 # Next.js build output
 .next
+out
 
 # Nuxt.js build / generate output
+.nuxt
+dist
 
 # Gatsby files
+.cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
@@ -6341,8 +7865,10 @@ web_modules/
 
 # vuepress v2.x temp and cache directory
 .temp
+.cache
 
 # Docusaurus cache and generated files
+.docusaurus
 
 # Serverless directories
 .serverless/
@@ -6354,6 +7880,7 @@ web_modules/
 .dynamodb/
 
 # TernJS port file
+.tern-port
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
@@ -6372,6 +7899,7 @@ web_modules/
 ## Zuken Global
 
 # log files
+*.log
 
 
 ## Schematic
@@ -6446,20 +7974,37 @@ web_modules/
 *.mdgn.lk
 
 ### JustCode template
+.JustCode
 
 ### AppCode+all template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -6475,28 +8020,56 @@ web_modules/
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Leiningen template
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+.cpcache/
 
 ### Svelte template
 # gitignore template for the SvelteKit, frontend web component framework
@@ -6507,6 +8080,7 @@ package
 
 ### Adobe template
 # Adobe Source Files
+*.psd
 *.ai
 *.indd
 *.prproj
@@ -6521,19 +8095,34 @@ package
 project.cfg
 
 # Shared libraries
+*.so
+*.dylib
+*.dll
 
 # Binary executables
+*.exe
+*.app
+*.out
 
 ### Autohotkey template
 # Windows image file caches
+Thumbs.db
+ehthumbs.db
 
 # Folder config file
+Desktop.ini
 
 # Recycle Bin used on file shares
+$RECYCLE.BIN/
 
 # Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
 # Windows shortcuts
+*.lnk
 
 # =========================
 # Operating System Files
@@ -6542,14 +8131,30 @@ project.cfg
 # OSX
 # =========================
 
+.DS_Store
+.AppleDouble
+.LSOverride
 
 # Thumbnails
+._*
 
 # Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
 
 # Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 ### MicrosoftOffice template
+*.tmp
 
 # Word temporary
 ~$*.doc*
@@ -6570,6 +8175,17 @@ Backup of *.doc*
 *.~vsd*
 
 ### ApacheHadoop template
+*.iml
+*.ipr
+*.iws
+*.orig
+*.rej
+.idea
+.svn
+.classpath
+.project
+.settings
+target
 hadoop-common-project/hadoop-kms/downloads/
 hadoop-hdfs-project/hadoop-hdfs/downloads
 hadoop-hdfs-project/hadoop-hdfs-httpfs/downloads
@@ -6577,7 +8193,12 @@ hadoop-common-project/hadoop-common/src/test/resources/contract-test-options.xml
 hadoop-tools/hadoop-openstack/src/test/resources/contract-test-options.xml
 
 ### Yeoman template
+node_modules/
+bower_components/
+*.log
 
+build/
+dist/
 
 ### Magic-xpa template
 # refer to http://www.magicsoftware.com/magic-xpa-application-platform
@@ -6588,6 +8209,7 @@ DataSourcesIndex.xml
 # ignores cross reference results stored in project directory
 *.XRF
 # ignores studio options and their backups
+*.opt
 *.optback
 # sometimes Magic creates backups of different xml files, not deleted on crashes
 *_BCK.xml
@@ -6595,6 +8217,7 @@ DataSourcesIndex.xml
 *.lock
 
 ### Ninja template
+.ninja_deps
 .ninja_log
 
 ### Flutter template
@@ -6604,8 +8227,11 @@ DataSourcesIndex.xml
 .flutter-plugins
 .flutter-plugins-dependencies
 .fvm/flutter_sdk
+.packages
 .pub-cache/
 .pub/
+build/
+coverage/
 lib/generated_plugin_registrant.dart
 # For library packages, don’t commit the pubspec.lock file.
 # Regenerating the pubspec.lock file lets you test your package against the latest compatible versions of its dependencies.
@@ -6662,35 +8288,76 @@ lib/generated_plugin_registrant.dart
 # ignore generated binaries
 # but not the data folder
 
+/bin/*
+!/bin/data/
 
 # general
 
+[Bb]uild/
+[Oo]bj/
+*.o
+[Dd]ebug*/
+[Rr]elease*/
+*.mode*
+*.app/
+*.pyc
+.svn/
+*.log
 
 # IDE files which should
 # be ignored
 
 # XCode
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.mode1v3
+*.mode2v3
 # XCode 4
+xcuserdata
+*.xcworkspace
 
 # Code::Blocks
+*.depend
+*.layout
 
 # Visual Studio
+*.sdf
+*.opensdf
+*.suo
+*.pdb
+*.ilk
+*.aps
+ipch/
 
 # Eclipse
+.metadata
+local.properties
+.externalToolBuilders
 
 # operating system
 
 # Linux
+*~
 # KDE
+.directory
+.AppleDouble
 
 # OSX
+.DS_Store
+*.swp
+*~.nib
 # Thumbnails
+._*
 
 # Windows
 # Image file caches
+Thumbs.db
 # Folder config file
+Desktop.ini
 
 # Android
+.csettings
 
 ### JupyterNotebooks template
 # gitignore template for Jupyter Notebooks
@@ -6766,9 +8433,23 @@ eagle.epf
 ### JBoss4 template
 # gitignore for JBoss v4 projects
 
+/server/all/data
+/server/all/log
+/server/all/tmp
+/server/all/work
+/server/default/data
+/server/default/log
+/server/default/tmp
+/server/default/work
+/server/minimal/data
+/server/minimal/log
+/server/minimal/tmp
+/server/minimal/work
 
 # Note:
 # there may be other directories that contain *.xml.failed or *.war.failed files
+/server/default/deploy/*.xml.failed
+/server/default/deploy/*.war.failed
 
 ### JBoss6 template
 # gitignore for JBoss v6 projects
@@ -6777,6 +8458,18 @@ eagle.epf
 # `/server/minimal/lib`, you should add an empty `.gitignore` or `.gitkeep` file
 # to the directory - otherwise you may have issues when starting the service.
 
+/server/all/data
+/server/all/log
+/server/all/tmp
+/server/all/work
+/server/default/data
+/server/default/log
+/server/default/tmp
+/server/default/work
+/server/minimal/data
+/server/minimal/log
+/server/minimal/tmp
+/server/minimal/work
 /server/jbossweb-standalone/data
 /server/jbossweb-standalone/log
 /server/jbossweb-standalone/tmp
@@ -6787,7 +8480,9 @@ eagle.epf
 /server/standard/work
 /server/default/deploy/*.jar.failed
 /server/default/deploy/*.jar.dodeploy
+/server/default/deploy/*.xml.failed
 /server/default/deploy/*.xml.dodeploy
+/server/default/deploy/*.war.failed
 /server/default/deploy/*.war.dodeploy
 
 
@@ -6829,6 +8524,7 @@ eagle.epf
 /.clwb/
 
 ### Joomla template
+/.htaccess
 /administrator/cache/*
 /administrator/components/com_actionlogs/*
 /administrator/components/com_admin/*
@@ -7215,6 +8911,8 @@ eagle.epf
 /administrator/templates/hathor/*
 /administrator/templates/isis/*
 /administrator/templates/system/*
+/bin/*
+/cache/*
 /cli/*
 /components/com_ajax/*
 /components/com_banners/*
@@ -7525,6 +9223,7 @@ eagle.epf
 /tmp/*
 /configuration.php
 /htaccess.txt
+/index.php
 /joomla.xml
 /LICENSE.txt
 /README.txt
@@ -7533,6 +9232,7 @@ eagle.epf
 
 ### librarian-chef template
 # librarian-chef - https://github.com/applicationsonline/librarian-chef
+.tmp/
 cookbooks/
 
 ### 1C template
@@ -7553,9 +9253,14 @@ src/**/renames.txt
 
 # Idris 1
 *.ibc
+*.o
 
 ### certificates template
+*.pem
+*.key
+*.crt
 *.cer
+*.der
 *.priv
 
 ### Genero4GL template
@@ -7580,6 +9285,7 @@ src/**/renames.txt
 *.4gi
 *.4ge
 *.frm
+*.err
 *.4bl
 *.4bo
 *.ec
@@ -7603,6 +9309,7 @@ documentation/
 # Recommended: Go.AllowList.gitignore
 
 # Ignore everything
+*
 
 # But not these files...
 !/.gitignore
@@ -7617,6 +9324,7 @@ documentation/
 # !Makefile
 
 # ...even if they are in subdirectories
+!*/
 
 ### Tower template
 # Tower.app - http://www.git-tower.com/
@@ -7624,9 +9332,18 @@ Icon.png
 
 ### IAR template
 # Compiled binaries
+*.o
+*.bin
+*.elf
+*.hex
+*.map
+*.out
+*.obj
 
 # Trash
+*.bak
 thumbs.db
+*.~*
 
 # IAR Settings
 **/settings/*.crun
@@ -7648,8 +9365,10 @@ thumbs.db
 **/Obj/*.pbi.*
 
 # IAR project "Debug" directory
+Debug/
 
 # IAR project "Release" directory
+Release/
 
 # IAR project settings directory
 settings/
@@ -7658,6 +9377,7 @@ settings/
 Backup*
 
 # IAR .dep files
+*.dep
 
 ### CVS template
 /CVS/*
@@ -7674,14 +9394,30 @@ Backup*
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -7697,29 +9433,53 @@ Backup*
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Qt template
 # C++ objects and libs
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.so.*
+*.dll
+*.dylib
 
 # Qt-es
 object_script.*.Release
@@ -7736,6 +9496,8 @@ moc_*.cpp
 moc_*.h
 qrc_*.cpp
 ui_*.h
+*.qmlc
+*.jsc
 Makefile*
 *build-*
 *.qm
@@ -7745,6 +9507,7 @@ Makefile*
 target_wrapper.*
 
 # QtCreator
+*.autosave
 
 # QtCreator Qml
 *.qmlproject.user
@@ -7754,6 +9517,7 @@ target_wrapper.*
 CMakeLists.txt.user*
 
 # QtCreator 4.8< compilation database
+compile_commands.json
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
@@ -7777,20 +9541,37 @@ tools/*
 yalc.lock
 
 ### SVN template
+.svn/
 
 ### WebStorm template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -7806,26 +9587,40 @@ yalc.lock
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### AppBuilder template
 .ab/
@@ -7835,52 +9630,108 @@ yalc.lock
 *.dat
 
 ### FlexBuilder template
+bin/
+bin-debug/
+bin-release/
 
 ### Plone template
+*.pyc
 *.pyo
 *.tmp*
+*.mo
+*.egg
 *.EGG
+*.egg-info
 *.EGG-INFO
 .*.cfg
+bin/
+build/
+develop-eggs/
+downloads/
+eggs/
 fake-eggs/
+parts/
+dist/
+var/
 
 ### Strapi template
 
+.env
 license.txt
 exports
+*.cache
+build
 .strapi-updater.json
 
 ############################
 # OS X
 ############################
 
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+._*
 
 ############################
 # Linux
 ############################
 
+*~
 
 
 ############################
 # Windows
 ############################
 
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
 
 
 ############################
 # Packages
 ############################
 
+*.7z
+*.csv
+*.dat
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
 *.com
+*.class
+*.dll
+*.exe
+*.o
+*.seed
+*.so
 *.swo
+*.swp
 *.swn
 *.swm
+*.out
+*.pid
 
 ############################
 # Logs and databases
 ############################
 
 .tmp
+*.log
+*.sql
+*.sqlite
 *.sqlite3
 
 
@@ -7890,6 +9741,8 @@ exports
 
 *#
 ssl
+.idea
+nbproject
 public/uploads/*
 !public/uploads/.gitkeep
 
@@ -7897,7 +9750,12 @@ public/uploads/*
 # Node.js
 ############################
 
+lib-cov
 lcov.info
+pids
+logs
+results
+node_modules
 .node_history
 
 ############################
@@ -7905,6 +9763,7 @@ lcov.info
 ############################
 
 testApp
+coverage
 
 ### LighthouseCI template
 # Lighthouse reports
@@ -7912,75 +9771,135 @@ testApp
 
 ### Solidity template
 # Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
 # Directory for instrumented libs generated by jscoverage/JSCover
+lib-cov
 
 # Coverage directory used by tools like istanbul
+coverage
+*.lcov
 
 # nyc test coverage
+.nyc_output
 
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
 
 # Bower dependency directory (https://bower.io/)
+bower_components
 
 # node-waf configuration
+.lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
 
 # Dependency directories
+node_modules/
+jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
 
 # TypeScript cache
+*.tsbuildinfo
 
 # Optional npm cache directory
+.npm
 
 # Optional eslint cache
+.eslintcache
 
 # Optional stylelint cache
+.stylelintcache
 
 # Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
 
 # Optional REPL history
+.node_repl_history
 
 # Output of 'npm pack'
+*.tgz
 
 # Yarn Integrity file
+.yarn-integrity
 
 # dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
 # parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
 
 # Next.js build output
+.next
+out
 
 # Nuxt.js build / generate output
+.nuxt
+dist
 
 # Gatsby files
+.cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
 # vuepress build output
+.vuepress/dist
 
 # vuepress v2.x temp and cache directory
+.temp
+.cache
 
 # Docusaurus cache and generated files
+.docusaurus
 
 # Serverless directories
+.serverless/
 
 # FuseBox cache
+.fusebox/
 
 # DynamoDB Local files
+.dynamodb/
 
 # TernJS port file
+.tern-port
 
 # Stores VSCode versions used for testing VSCode extensions
+.vscode-test
 
 # yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
 
 ### Terraform template
 # Local .terraform directories
@@ -7991,6 +9910,7 @@ testApp
 *.tfstate.*
 
 # Crash log files
+crash.log
 crash.*.log
 
 # Exclude all .tfvars files, which are likely to contain sensitive data, such as
@@ -8032,19 +9952,41 @@ config.local.fish
 ### VisualBasic template
 ## Ignore Visual Studio temporary files, build results, and
 ## files generated by popular Visual Studio add-ons.
+.DS_Store
+.Trashes
+*.vbw
 *.csi
+*.exp
+*.lib
 *.lvw
 *.dca
+*.scc
+*.tmp
+*.exe
+*.bat
+*.bak
+*.zip
+*.old
 *.enc
+*.key
 # Windows image file caches
+Thumbs.db
+ehthumbs.db
 
 # Folder config file
+Desktop.ini
 
 # Recycle Bin used on file shares
+$RECYCLE.BIN/
 
 # Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
 # Windows shortcuts
+*.lnk
 
 # =========================
 # Operating System Files
@@ -8053,15 +9995,33 @@ config.local.fish
 # OSX
 # =========================
 
+.DS_Store
+.AppleDouble
+.LSOverride
 
 # Thumbnails
+._*
 
 # Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
 
 # Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 ### DiskImage template
+*.dmg
+*.iso
 *.toast
+*.vcd
 
 ### Pimcore template
 # gitignore template for Pimcore CMS
@@ -8120,18 +10080,28 @@ config.local.fish
 
 ### Java template
 # Compiled class file
+*.class
 
 # Log file
+*.log
 
 # BlueJ files
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
 # Package Files #
+*.jar
+*.war
 *.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 replay_pid*
 
 ### Tye template
@@ -8140,10 +10110,12 @@ replay_pid*
 
 ### NesC template
 # telosB build folder
+build/
 
 ### B4X template
 **/Objects
 **/AutoBackups
+*.meta
 
 ### Espresso template
 *.esproj
@@ -8154,7 +10126,9 @@ replay_pid*
 # - CC65
 
 # Assembled binaries and object directories
+obj/
 a.out
+*.bin
 *.a26
 
 # Add in special Atari 7800-based binaries for good measure
@@ -8162,9 +10136,12 @@ a.out
 
 ### LaTeX template
 ## Core latex/pdflatex auxiliary files:
+*.aux
 *.lof
+*.log
 *.lot
 *.fls
+*.out
 *.toc
 *.fmt
 *.fot
@@ -8269,8 +10246,10 @@ acs-*.bib
 *.glo
 *.gls
 *.glsdefs
+*.lzo
 *.lzs
 *.slg
+*.slo
 *.sls
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
@@ -8416,11 +10395,14 @@ TSWLatexianTemp*
 
 ## Editors:
 # WinEdt
+*.bak
+*.sav
 
 # Texpad
 .texpadtmp
 
 # LyX
+*.lyx~
 
 # Kile
 *.backup
@@ -8461,6 +10443,7 @@ TSWLatexianTemp*
 # site/plugins/*
 
 # Temporary files
+/media/*
 !/media/index.html
 
 # Lock files
@@ -8489,18 +10472,37 @@ TSWLatexianTemp*
 
 ### For C++ language related files
 # Prerequisites
+*.d
 
 # Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
 # Precompiled Headers
+*.gch
+*.pch
 
 # Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
 # Fortran module files
+*.mod
+*.smod
 
 # Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
 
 # Executables
+*.exe
+*.out
+*.app
 
 
 ### For D10/DX Platform
@@ -8510,29 +10512,53 @@ TSWLatexianTemp*
 */**/*rtol/*
 *.make
 *.properties
+*.vpj
+*.vpw
 *.scan
 *.patl
 *.bakvpj
 *.bakvpw
+*.vpwhistu
+*.vtg
 *.pvs
 
 
 ### For Project Management Related files
 .bak*
+*.xml
+*.zip
+*.tar
+*.gz
 
 ### JetBrains+all template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -8548,26 +10574,40 @@ TSWLatexianTemp*
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Dframe template
 # Ignore files that are auto-generated
@@ -8584,6 +10624,8 @@ vendor
 !web/assets/.gitkeep
 
 # Ignore IDE
+.project
+.vscode/
 
 ### Logtalk template
 # gitignore template for LogTalk, a programming language that builds upon Prolog
@@ -8599,6 +10641,7 @@ logtalk_doclet_logs/
 
 # backend Prolog compiler temporary files
 .pl-history
+*.out
 *.xwam
 *.qo
 *.ql
@@ -8606,7 +10649,14 @@ logtalk_doclet_logs/
 *.po
 
 ### ArchLinuxPackages template
+*.tar
 *.tar.*
+*.jar
+*.exe
+*.msi
+*.zip
+*.tgz
+*.log
 *.log.*
 *.sig
 
@@ -8616,11 +10666,27 @@ src/
 ### Spark template
 *#*#
 *.#*
+*.iml
+*.ipr
+*.iws
+*.pyc
+*.pyo
+*.swp
+*~
+.DS_Store
+.cache
+.classpath
 .ensime
 .ensime_cache/
 .ensime_lucene
 .generated-mima*
+.idea/
+.idea_modules/
+.project
 .pydevproject
+.scala_dependencies
+.settings
+/lib/
 R-unit-tests.log
 R/unit-tests.out
 R/cran-check.out
@@ -8639,16 +10705,21 @@ conf/*.sh
 conf/*.xml
 conf/java-opts
 conf/slaves
+dependency-reduced-pom.xml
 derby.log
 dev/create-release/*final
 dev/create-release/*txt
 dev/pr-deps/
+dist/
 docs/_site
 docs/api
 sql/docs
 sql/site
 lib_managed/
 lint-r-report.log
+log/
+logs/
+out/
 project/boot/
 project/build/target/
 project/plugins/lib_managed/
@@ -8660,6 +10731,7 @@ python/deps
 python/test_coverage/coverage_data
 python/test_coverage/htmlcov
 python/pyspark/python
+reports/
 scalastyle-on-compile.generated.xml
 scalastyle-output.xml
 scalastyle.txt
@@ -8667,6 +10739,7 @@ spark-*-bin-*.tgz
 spark-tests.log
 src_managed/
 streaming-tests.log
+target/
 unit-tests.log
 work/
 docs/.jekyll-metadata
@@ -8680,7 +10753,9 @@ warehouse/
 spark-warehouse/
 
 # For R session data
+.RData
 .RHistory
+.Rhistory
 *.Rproj
 *.Rproj.*
 
@@ -8734,6 +10809,9 @@ studio_log*
 
 # No Binaries
 
+*.ttf
+*.ttc
+*.otf
 *.woff
 *.pfb
 *.pfa
@@ -8759,6 +10837,7 @@ site/cache/*
 
 ### ATS template
 # Compiled C Files
+*~
 *_?ats.c
 *_?ats.o
 
@@ -8777,6 +10856,8 @@ opa-debug-js
 *.dump
 *.api
 *.api-txt
+*.exe
+*.log
 
 ### Scheme template
 *.ss~
@@ -8790,6 +10871,16 @@ opa-debug-js
 ### VirtualEnv template
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
 
 ### Wyam template
 # Wyam Ignore - Based on https://wyam.io/docs/advanced/what_to_exclude_from_source_control
@@ -8800,6 +10891,7 @@ config.wyam.hash
 
 ### Dreamweaver template
 # DW Dreamweaver added files
+_notes
 _compareTemp
 configs/
 dwsync.xml
@@ -8862,6 +10954,7 @@ dw_php_codehinting.config
 
 ### Jsonnet template
 # Dependency directories
+vendor/
 
 
 ### Carthage template
@@ -8873,6 +10966,7 @@ dw_php_codehinting.config
 Carthage/Build
 
 ### DartEditor template
+.project
 .buildlog
 
 ### SCons template
@@ -8903,21 +10997,34 @@ config.log
 storybook-static/
 
 ### Executable template
+*.app
+*.bat
 *.cgi
+*.com
+*.exe
 *.gadget
+*.jar
 *.pif
 *.vb
 *.wsf
 
 ### CodeComposerStudio template
 
+tmp/
+*.tmp
+*.bak
 # Generated build artifact directories
+Debug/
+Release/
 Flash/
 RAM/
 # Generated build artifacts
 makefile
+*.map
 *.mk
+*.opt
 *.pp
+*.xml
 # Generated directories
 .config/
 .launches/
@@ -8931,6 +11038,7 @@ makefile
 /functions/\[\[path\]\].js.map
 
 ### FreeCad template
+*.pyc
 *.fcstd1
 *.FCStd1
 *.fcstd2
@@ -8947,6 +11055,7 @@ makefile
 .php-cs-fixer.php
 
 ### Fancy template
+*.rbc
 *.fyc
 
 ### SketchUp template
@@ -8954,17 +11063,21 @@ makefile
 
 ### ZendFramework template
 # Composer files
+composer.phar
+vendor/
 
 # Local configs
 config/autoload/*.local.php
 
 # Binary gettext files
+*.mo
 
 # Data
 data/logs/
 data/cache/
 data/sessions/
 data/tmp/
+temp/
 
 #Doctrine 2
 data/DoctrineORMModule/Proxy/
@@ -8980,37 +11093,79 @@ extras/documentation
 
 ### Flatpak template
 .flatpak-builder
+build
 build-dir
 repo
 
 ### SalesforceDX template
 # GitIgnore for Salesforce Projects
 # Project Settings and MetaData
+.project
+.settings/
+.metadata
+build.properties
+config
 
 # Apex Log as optional
+apex-scripts/log
 
 # Eclipse specific
+salesforce.schema
+Referenced Packages
+bin/
+tmp/
+config/
+*.tmp
+*.bak
+local.properties
+.settings
+.loadpath
+.classpath
+*.cache
 
 # Illuminated Cloud (IntelliJ IDEA)
+IlluminatedCloud
+out
+.idea
+*.iml
 
 # Mavensmate
+*.sublime-project
+*.sublime-settings
+*.sublime-workspace
+mm.log
 
 # Haoide SublimeText
+.config
+.deploy
+.history
 
 # OSX-specific exclusions
+.[dD][sS]_[sS]tore
 
 # The Welkin Suite specific
+**/.localHistory
 
+*.sfuo
 
+TestCache.xml
 
+TestsResultsCache.xml
 
 ### Lilypond template
+*.pdf
+*.ps
+*.midi
+*.mid
+*.log
+*~
 
 ### Packer template
 # Cache objects
 packer_cache/
 
 # Crash log
+crash.log
 
 # https://www.packer.io/guides/hcl/variables
 # Exclude all .pkrvars.hcl files, which are likely to contain sensitive data,
@@ -9028,14 +11183,30 @@ packer_cache/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -9051,40 +11222,70 @@ packer_cache/
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### PhpStorm+all template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -9100,31 +11301,46 @@ packer_cache/
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### esp-idf template
 # gitignore template for esp-idf, the official development framework for ESP32
 # https://github.com/espressif/esp-idf
 
+build/
 sdkconfig
 sdkconfig.old
 
@@ -9143,11 +11359,15 @@ user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
 #codeigniter 3
+application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
+/vendor/
 
 ### Ensime template
 # Ensime specific
+.ensime
+.ensime_cache/
 .ensime_lucene/
 
 ### Xojo template
@@ -9165,15 +11385,22 @@ Debug*/Debug*\ Libs
 
 ### Sdcc template
 # SDCC stuff
+*.lnk
+*.lst
+*.map
 *.mem
+*.rel
+*.rst
 *.sym
 
 ### Games template
 *.gam
 *.nes
 *.rom
+*.sav
 
 ### CircuitPython template
+.Trashes
 .metadata_never_index
 .fseventsd/
 boot_out.txt
@@ -9184,10 +11411,16 @@ boot_out.txt
 
 # [home]
 *.jou
+*.log
+*.debug
 *.str
+*.zip
+*.tmp
+*.rst
 *.os
 *.js
 *.pb
+*.dcp
 *.hwdef
 *.vds
 *.veo
@@ -9195,12 +11428,16 @@ boot_out.txt
 *.vdi
 *.dmp
 *.rpx
+*.rpt
 *_stub.v
 *_stub.vhdl
 *_funcsim.v
 *_funcsim.vhdl
+.project
 
 # [dir]
+*.cache
+.metadata
 *.data
 *.ipdefs
 .Xil
@@ -9266,6 +11503,7 @@ boot_out.txt
 */*/bd/*/ip/*/*.xml
 */*/*/bd/*/ip/*/*.xml
 
+*.c
 *.h
 *.vho
 *.html
@@ -9292,97 +11530,234 @@ waf3-*-*/
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
 
 # Mono auto generated files
+mono_crash.*
 
 # Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
+.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
 # Visual Studio 2017 auto generated files
+Generated\ Files/
 
 # MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
 
 # NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
 
 # Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
 
 # Benchmark Results
+BenchmarkDotNet.Artifacts/
 
 # .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
 
 # StyleCop
+StyleCopReport.xml
 
 # Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
 
 # Chutzpah Test files
+_Chutzpah*
 
 # Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
 
 # Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
 
 # Visual Studio Trace Files
+*.e2e
 
 # TFS 2012 Local Workspace
+$tf/
 
 # Guidance Automation Toolkit
+*.gpState
 
 # ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
 
 # TeamCity is a build add-in
+_TeamCity*
 
 # DotCover is a Code Coverage Tool
+*.dotCover
 
 # AxoCover is a Code Coverage Tool
+.axoCover/*
+!.axoCover/settings.json
 
 # Coverlet is a free, cross platform Code Coverage Tool
 coverage*[.json, .xml, .info]
 
 # Visual Studio code coverage results
+*.coverage
+*.coveragexml
 
 # NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
 
 # MightyMoose
+*.mm.*
+AutoTest.Net/
 
 # Web workbench (sass)
+.sass-cache/
 
 # Installshield output folder
+[Ee]xpress/
 
 # DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
 
 # Click-Once directory
+publish/
 
 # Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
 # Note: Comment the next line if you want to checkin your web deploy settings,
 # but database connection strings (with potential passwords) will be unencrypted
+*.pubxml
+*.publishproj
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
 # checkin your Azure Web App publish settings, but sensitive information contained
 # in these scripts will be unencrypted
+PublishScripts/
 
 # NuGet Packages
+*.nupkg
 # NuGet Symbol Packages
+*.snupkg
 # The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
 
 # Microsoft Azure Build Output
+csx/
+*.build.csdef
 
 # Microsoft Azure Emulator
+ecf/
+rcf/
 
 # Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.appxbundle
+*.appxupload
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
+*.[Cc]ache
 # but keep track of directories ending in .cache
+!?*.[Cc]ache/
 
 # Others
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
 
 # Including strong name files can present a security risk
 # (https://github.com/github/gitignore/pull/2483#issue-259490424)
@@ -9393,67 +11768,120 @@ coverage*[.json, .xml, .info]
 #bower_components/
 
 # RIA/Silverlight projects
+Generated_Code/
 
 # Backup & report files from converting an old project file
 # to a newer Visual Studio version. Backup files are not needed,
 # because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.rptproj.bak
 
 # SQL Server files
+*.mdf
+*.ldf
+*.ndf
 
 # Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+*.rptproj.rsuser
+*- [Bb]ackup.rdl
+*- [Bb]ackup ([0-9]).rdl
+*- [Bb]ackup ([0-9][0-9]).rdl
 
 # Microsoft Fakes
+FakesAssemblies/
 
 # GhostDoc plugin setting file
+*.GhostDoc.xml
 
 # Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+node_modules/
 
 # Visual Studio 6 build log
+*.plg
 
 # Visual Studio 6 workspace options file
+*.opt
 
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
+*.vbw
 
 # Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
 
 # Paket dependency manager
+.paket/paket.exe
+paket-files/
 
 # FAKE - F# Make
+.fake/
 
 # CodeRush personal settings
+.cr/personal
 
 # Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
 
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config
 
 # Tabs Studio
+*.tss
 
 # Telerik's JustMock configuration file
+*.jmconfig
 
 # BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
 
 # OpenCover UI analysis results
+OpenCover/
 
 # Azure Stream Analytics local run output
+ASALocalRun/
 
 # MSBuild Binary and Structured Log
+*.binlog
 
 # NVidia Nsight GPU debugger configuration file
+*.nvuser
 
 # MFractors (Xamarin productivity tool) working folder
+.mfractor/
 
 # Local History for Visual Studio
+.localhistory/
 
 # BeatPulse healthcheck temp database
+healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
+MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
+.ionide/
 
 ### Crystal template
 /docs/
+/lib/
+/bin/
 /.shards/
 *.dwarf
 
@@ -9465,6 +11893,7 @@ coverage*[.json, .xml, .info]
 # BlueJ: A Java IDE for programming beginners. http://bluej.org
 
 # Editor preferences for a class etc, see http://lists.bluej.org/pipermail/bluej-discuss/2003-May/002351.html
+*.ctxt
 
 # Duplicate of project file, see http://www.hs-owl.de/fb5/labor/it/de/if1/vl/IF1JavaOhneBluej.pdf, page 4
 bluej.pkh
@@ -9483,6 +11912,7 @@ Backup/*
 # Greenfoot: A BlueJ-based game IDE for programming beginners. http://bluej.org
 
 # Editor preferences for a class etc, see http://lists.bluej.org/pipermail/bluej-discuss/2003-May/002351.html
+*.ctxt
 
 # Project file. Continously checking it in destroys the project ocasionally (while merging etc.) because it changes completely at every compile. Instead, make a copy of the file after the first runtime and name it e.g. `project.example.greenfoot`. See http://bugs.bluej.org/greenfoot/ticket/409
 
@@ -9498,6 +11928,7 @@ data/
 ### IAREmbeddedWorkBench template
 # IAR C-STAT and C-RUN
 # Comment this out if you use C-Stat or C-Run to compile/analyze your project
+*.ewt
 
 # IAR Debugger files
 *.ewd
@@ -9506,6 +11937,14 @@ data/
 *.eww
 
 # IAR Settings
+**/settings/*.crun
+**/settings/*.dbgdt
+**/settings/*.cspy
+**/settings/*.cspy.*
+**/settings/*.xcl
+**/settings/*.dni
+**/settings/*.wsdt
+**/settings/*.wspos
 
 # IAR Debug Exe
 **/Debug/Exe/
@@ -9514,19 +11953,34 @@ data/
 **/Debug/List
 
 # IAR Debug Obj
+**/Obj/*.pbd
+**/Obj/*.pbd.*
+**/Obj/*.pbi
+**/Obj/*.pbi.*
 
 # Log files
 **.log
 
 # IAR backup files
+Backup*
 
 # IAR .dep files
+*.dep
 
 # Compiled Binaries
+*.bin
+*.elf
+*.hex
+*.map
 
 # Trash files
+*.bak
 
 ### Laravel template
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -9541,8 +11995,11 @@ public_html/storage
 public_html/hot
 
 storage/*.key
+.env
 Homestead.yaml
 Homestead.json
+/.vagrant
+.phpunit.result.cache
 
 ### Stylus template
 *.css
@@ -9554,6 +12011,14 @@ config.codekit3
 /min
 
 ### FreePascal template
+*.lps
+*.compiled
+*.[oa]
+*.ppu
+*.rst
+*.cgi
+*.exe
+*.log
 *.bak*
 fp.ini
 fp.cfg
@@ -9562,9 +12027,12 @@ fp.dsk
 ### BricxCC template
 # Bricx Command Center IDE
 # http://bricxcc.sourceforge.net
+*.bak
+*.sym
 
 ### now template
 .now
+.vercel
 
 ### Phoenix template
 # gitignore template for Phoenix projects
@@ -9573,8 +12041,10 @@ fp.dsk
 # Recommended template: Elixir.gitignore
 
 # Temporary files
+/tmp
 
 # Static artifacts
+/node_modules
 /assets/node_modules
 
 # Since we are building assets from web/static,
@@ -9594,6 +12064,7 @@ fp.dsk
 *.dsf.ext
 *.dsf.ext*
 *.emi
+*.opt
 *.stderr.txt
 
 ### Scrivener template
@@ -9630,6 +12101,7 @@ fp.dsk
 /ConvertLog.txt
 
 ### TYPO3-composer template
+/vendor
 /web/index.php
 /web/fileadmin/
 /web/FIRST_INSTALL
@@ -9641,6 +12113,7 @@ fp.dsk
 /web/typo3conf/l10n/
 /web/typo3conf/realurl_autoconf.php
 /web/typo3temp
+/web/uploads/
 
 ### JBoss template
 jboss/server/all/deploy/project.ext
@@ -9674,14 +12147,30 @@ jboss/server/minimal/work/**/*
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -9697,32 +12186,52 @@ jboss/server/minimal/work/**/*
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### pico8 template
 # exported file types
 *.p8.png
+*.png
+*.wav
+*.js
+*.html
+*.bin
 
 # demos folder
+demos/
 
 ### Snyk template
 # DeepCode
@@ -9755,14 +12264,30 @@ environment_run.sh.env
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -9778,60 +12303,125 @@ environment_run.sh.env
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Autotools template
 # http://www.gnu.org/software/automake
 
+Makefile.in
+/ar-lib
+/mdate-sh
+/py-compile
+/test-driver
+/ylwrap
+.deps/
+.dirstamp
 
 # http://www.gnu.org/software/autoconf
 
+autom4te.cache
+/autoscan.log
+/autoscan-*.log
+/aclocal.m4
+/compile
+/config.cache
+/config.guess
+/config.h.in
+/config.log
+/config.status
+/config.sub
+/configure
+/configure.scan
+/depcomp
+/install-sh
+/missing
+/stamp-h1
 
 # https://www.gnu.org/software/libtool/
 
+/ltmain.sh
 
 # http://www.gnu.org/software/texinfo
 
+/texinfo.tex
 
 # http://www.gnu.org/software/m4/
 
+m4/libtool.m4
+m4/ltoptions.m4
+m4/ltsugar.m4
+m4/ltversion.m4
+m4/lt~obsolete.m4
 
 # Generated Makefile
 # (meta build system like autotools,
 # can automatically generate from config.status script
 # (which is called by configure script))
+Makefile
 
 ### CoffeeScript template
+*.js
 
 ### OSX template
 # General
+.DS_Store
+.AppleDouble
+.LSOverride
 
 # Icon must end with two \r
+Icon
 
 # Thumbnails
+._*
 
 # Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 ### Hugo template
 # Generated files by hugo
@@ -9888,12 +12478,39 @@ JOB.OTL.OLD
 
 # Log files, typically tagfix or other auto generated logs that aren't useful
 # outside of the user that made them and clutter up the index.
+*.log
 
 ### Zig template
 .zig-cache/
 zig-out/
 
 ### JBoss-6-x template
+/server/all/data
+/server/all/log
+/server/all/tmp
+/server/all/work
+/server/default/data
+/server/default/log
+/server/default/tmp
+/server/default/work
+/server/minimal/data
+/server/minimal/log
+/server/minimal/tmp
+/server/minimal/work
+/server/jbossweb-standalone/data
+/server/jbossweb-standalone/log
+/server/jbossweb-standalone/tmp
+/server/jbossweb-standalone/work
+/server/standard/data
+/server/standard/log
+/server/standard/tmp
+/server/standard/work
+/server/default/deploy/*.jar.failed
+/server/default/deploy/*.jar.dodeploy
+/server/default/deploy/*.xml.failed
+/server/default/deploy/*.xml.dodeploy
+/server/default/deploy/*.war.failed
+/server/default/deploy/*.war.dodeploy
 
 
 # Important
@@ -9929,8 +12546,15 @@ local
 Mercury/
 Mercury.modules
 *.mh
+*.err
 *.init
+*.dll
+*.exe
+*.a
+*.so
+*.dylib
 *.beams
+*.d
 *.c_date
 
 ### LabVIEW template
@@ -9939,12 +12563,18 @@ Mercury.modules
 *.llb
 
 # Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
 
 # Executables
+*.exe
 
 # Metadata
 *.aliases
 *.lvlps
+.cache/
 
 ### SpecFlow template
 # Feature Files
@@ -9959,12 +12589,15 @@ Mercury.modules
 *_Enc.*
 
 ### CMake template
+CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
 Testing
+Makefile
 cmake_install.cmake
 install_manifest.txt
+compile_commands.json
 CTestTestfile.cmake
 _deps
 
@@ -9975,34 +12608,62 @@ _deps
 Prerequisites/
 
 ### Eclipse template
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
 # External tool builders
+.externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
+*.launch
 
 # PyDev specific (Python IDE for Eclipse)
+*.pydevproject
 
 # CDT-specific (C/C++ Development Tooling)
+.cproject
 
 # CDT- autotools
+.autotools
 
 # Java annotation processor (APT)
+.factorypath
 
 # PDT-specific (PHP Development Tools)
+.buildpath
 
 # sbteclipse plugin
+.target
 
 # Tern plugin
+.tern-project
 
 # TeXlipse plugin
+.texlipse
 
 # STS (Spring Tool Suite)
+.springBeans
 
 # Code Recommenders
+.recommenders/
 
 # Annotation Processing
+.apt_generated/
+.apt_generated_test/
 
 # Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
 
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
@@ -10014,6 +12675,7 @@ Prerequisites/
 
 ## Archiving and compression
 # Open source file format. Used by 7-Zip.
+*.7z
 # Mac OS X, restoration on different platforms is possible although not immediate 	Yes 	Based on 7z. Preserves Spotlight metadata, resource forks, owner/group information, dates and other data which would be otherwise lost with compression.
 *.s7z
 # Old archive versions only 	Proprietary format
@@ -10023,6 +12685,7 @@ Prerequisites/
 # A mainly Korean format designed for very large archives.
 *.alz
 # Android application package (variant of JAR file format).
+*.apk
 # ??
 *.arc
 # Originally DOS, now multiple
@@ -10034,11 +12697,13 @@ Prerequisites/
 # Proprietary format from the ZipTV Compression Components
 *.bh
 # The Microsoft Windows native archive format, which is also used by many commercial installers such as InstallShield and WISE.
+*.cab
 # Originally DOS, now DOS and Windows 	Created by Yaakov Gringeler; released last in 2003 (Compressia 1.0.0.1 beta), now apparently defunct. Free trial of 30 days lets user create and extract archives; after that it is possible to extract, but not to create.
 *.car
 # Open source file format.
 *.cfs
 # Compact Pro archive, a common archiver used on Mac platforms until about Mac OS 7.5.x. Competed with StuffIt; now obsolete.
+*.cpt
 # Windows, Unix-like, Mac OS X Open source file format. Files are compressed individually with either gzip, bzip2 or lzo.
 *.dar
 # DiskDoubler 	Mac OS 			obsolete
@@ -10046,8 +12711,11 @@ Prerequisites/
 # ??
 *.dgc
 # Apple Disk Image upports "Internet-enabled" disk images, which, once downloaded, are automatically decompressed, mounted, have the contents extracted, and thrown away. Currently, Safari is the only browser that supports this form of extraction; however, the images can be manually extracted as well. This format can also be password-protected or encrypted with 128-bit or 256-bit AES encryption.
+*.dmg
 # Enterprise Java Archive archive
+*.ear
 # ETSoft compressed archive
+*.egg
 # The predecessor of DGCA.
 *.gca
 # Originally DOS 	Yes, but may be covered by patents 	DOS era format; uses arithmetic/Markov coding
@@ -10057,6 +12725,7 @@ Prerequisites/
 # Produced by ICEOWS program. Excels at text file compression.
 *.ice
 # Java archive, compatible with ZIP files
+*.jar
 # Open sourced archiver with compression using the PAQ family of algorithms and optional encryption.
 *.kgb
 # Originally DOS, now multiple 	Multiple 	Yes 	The standard format on Amiga.
@@ -10079,6 +12748,7 @@ Prerequisites/
 # Used for data in games written using the Quadruple D library for Delphi. Uses byte pair compression.
 *.qda
 # A proprietary archive format, second in popularity to .zip files.
+*.rar
 # The format from a commercial archiving package. Odd among commercial packages in that they focus on incorporating experimental algorithms with the highest possible compression (at the expense of speed and memory), such as PAQ, PPMD and PPMZ (PPMD with unlimited-length strings), as well as a proprietary algorithms.
 *.rk
 # Self Dissolving ARChive 	Commodore 64, Commodore 128 	Commodore 64, Commodore 128 	Yes 	SDAs refer to Self Dissolving ARC files, and are based on the Commodore 64 and Commodore 128 versions of ARC, originally written by Chris Smeets. While the files share the same extension, they are not compatible between platforms. That is, an SDA created on a Commodore 64 but run on a Commodore 128 in Commodore 128 mode will crash the machine, and vice versa. The intended successor to SDA is SFX.
@@ -10098,6 +12768,8 @@ Prerequisites/
 # A royalty-free compressing format
 *.sqx
 # The "tarball" format combines tar archives with a file-based compression scheme (usually gzip). Commonly used for source and binary distribution on Unix-like platforms, widely available elsewhere.
+*.tar.gz
+*.tgz
 *.tar.Z
 *.tar.bz2
 *.tbz2
@@ -10115,14 +12787,17 @@ Prerequisites/
 # A high compression rate archive format originally for DOS.
 *.uha
 # Web Application archive (Java-based web app)
+*.war
 # File-based disk image format developed to deploy Microsoft Windows.
 *.wim
 # XAR
+*.xar
 # Native format of the Open Source KiriKiri Visual Novel engine. Uses combination of block splitting and zlib compression. The filenames and pathes are stored in UTF-16 format. For integrity check, the Adler-32 hashsum is used. For many commercial games, the files are encrypted (and decoded on runtime) via so-called "cxdec" module, which implements xor-based encryption.
 *.xp3
 # Yamazaki zipper archive. Compression format used in DeepFreezer archiver utility created by Yamazaki Satoshi. Read and write support exists in TUGZip, IZArc and ZipZag
 *.yz1
 # The most widely used compression format on Microsoft Windows. Commonly used on Macintosh and Unix systems as well.
+*.zip
 *.zipx
 # application/x-zoo 	zoo 	Multiple 	Multiple 	Yes
 *.zoo
@@ -10134,9 +12809,13 @@ Prerequisites/
 
 ### react template
 .DS_*
+*.log
+logs
 **/*.backup.*
 **/*.back.*
 
+node_modules
+bower_components
 
 *.sublime*
 
@@ -10147,6 +12826,9 @@ sketch
 ### PVS template
 # Ignore binary files
 pvsbin/
+bin/
+lib/
+*.bin
 .pvscontext
 # Ignore orphaned and old proofs
 orphaned-proofs.prf
@@ -10154,7 +12836,9 @@ orphaned-proofs.prf
 # Ignore compiled Lisp files
 *fasl
 # Ignore PVS dump files
+*.dmp
 # Ignore PVS log files
+*.log
 
 ### Terragrunt template
 # terragrunt cache directories
@@ -10175,40 +12859,69 @@ cypress/videos/*
 
 ### MATLAB template
 # Windows default autosave extension
+*.asv
 
 # OSX / *nix default autosave extension
+*.m~
 
 # Compiled MEX binaries (all platforms)
+*.mex*
 
 # Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
 
 # Generated helpsearch folders
+helpsearch*/
 
 # Simulink code generation folders
+slprj/
+sccprj/
 
 # Matlab code generation folders
+codegen/
 
 # Simulink autosave extension
+*.autosave
 
 # Simulink cache files
+*.slxc
 
 # Octave session info
+octave-workspace
 
 ### pydev template
+.pydevproject
 
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -10224,34 +12937,53 @@ cypress/videos/*
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### THEOS-Tweak template
+._*
+*.deb
 .debmake
 _
+obj
 .theos
+.DS_Store
 
 ### Wintersmith template
 contents/
+node_modules/
 plugins/
 templates/
 config.json
@@ -10260,11 +12992,21 @@ package.json
 
 ### OCaml template
 *.annot
+*.cmo
+*.cma
+*.cmi
+*.a
+*.o
+*.cmx
+*.cmxs
+*.cmxa
 
 # ocamlbuild working directory
+_build/
 
 # ocamlbuild targets
 *.byte
+*.native
 
 # oasis generated files
 setup.data
@@ -10281,8 +13023,11 @@ _opam/
 
 ### Database template
 *.accdb
+*.db
 *.dbf
 *.mdb
+*.pdb
+*.sqlite3
 *.db-shm
 *.db-wal
 
@@ -10293,12 +13038,15 @@ _opam/
 # Zig programming language
 
 zig-cache/
+zig-out/
+build/
 build-*/
 docgen_tmp/
 
 ### AnsibleTower template
 # Ansible runtime and backups
 *.original
+*.tmp
 *.bkp
 *.retry
 *.*~
@@ -10311,8 +13059,15 @@ roles/**
 *pwd*
 *pass*
 *password*
+*.txt
 
 # Exclude all binaries
+*.bin
+*.jar
+*.tar
+*.zip
+*.gzip
+*.tgz
 
 
 ### Remix+Netlify template
@@ -10321,6 +13076,10 @@ roles/**
 ### e2studio template
 # Modified gitignore for Renesas E2Studio (Built on eclipse): maintain all data needed by eclipse to setting up a workspace.
 
+.history
+*.tmp
+*.obj
+*.log
 history.index
 
 # E2 Studio Specific
@@ -10330,6 +13089,7 @@ HardwareDebug/src
 ### Pants template
 # Pants workspace files
 /.pants.*
+/dist/
 /.pids
 
 ### Perl template
@@ -10338,6 +13098,7 @@ HardwareDebug/src
 /META.yml
 /META.json
 /MYMETA.*
+*.o
 *.pm.tdy
 *.bs
 
@@ -10351,6 +13112,7 @@ nytprof.out
 /.build/
 
 # Module::Build
+_build/
 Build
 Build.bat
 
@@ -10365,8 +13127,10 @@ inc/
 /Makefile.old
 /MANIFEST.bak
 /pm_to_blib
+/*.zip
 
 # Carton
+local/
 
 ### AdventureGameStudio template
 # Built things
@@ -10388,6 +13152,7 @@ Game.agf.bak
 backup_acsprset.spr
 
 # Memory dumps
+*.dmp
 
 # Temporary files
 # temporarily created during sprite or room background compression
@@ -10395,6 +13160,7 @@ backup_acsprset.spr
 # temporary, main game data, before getting packed into exe
 game28.dta
 # temporary build of the game before being moved to Compiled/ folder
+*.exe
 
 # Log files
 warnings.log
@@ -10416,6 +13182,7 @@ warnings.log
 # .gitignore file.
 /*
 !/jobs
+!/.gitignore
 !/*.xml
 
 # Ignore all files in jobs subdirectories except for folders.
@@ -10460,11 +13227,13 @@ bootstrap.css
 bootstrap.js
 bootstrap.json
 bootstrap.jsonp
+build/
 classic.json
 classic.jsonp
 ext/
 modern.json
 modern.jsonp
+resources/sass/.sass-cache/
 resources/.arch-internal-preview.css
 .arch-internal-preview.css
 
@@ -10513,6 +13282,7 @@ resources/.arch-internal-preview.css
 /web/composer.json
 /web/composer.lock
 /web/example.gitignore
+/web/index.php
 /web/INSTALL.txt
 /web/LICENSE.txt
 /web/README.txt
@@ -10521,6 +13291,8 @@ resources/.arch-internal-preview.css
 /web/web.config
 
 # Ignore vendor dependencies and scripts
+/vendor
+/composer.phar
 /composer
 /robo.phar
 /robo
@@ -10534,14 +13306,30 @@ resources/.arch-internal-preview.css
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -10557,32 +13345,52 @@ resources/.arch-internal-preview.css
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### JGiven template
 jgiven-reports/
 
 ### Web template
 *.asp
+*.cer
+*.csr
+*.css
+*.htm
+*.html
+*.js
 *.jsp
 *.php
 *.rss
@@ -10598,6 +13406,9 @@ jgiven-reports/
 #########
 #Exclude all
 #########
+*
+!*/
+!.gitignore
 ###########################################################################
 ##	VIVADO
 ###########################################################################
@@ -10605,44 +13416,73 @@ jgiven-reports/
 #Source files:
 #########
 #Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
+!*.vhd
+!*.v
+!*.bd
+!*.edif
 #########
 #IP files
 #########
 #.xci: IP-core property file with core container disabled
+!*.xci
 #*.dcp (checkpoint files: better be ignored!)
 #!*.dcp
+!*.vds
+!*.pb
 #All bd comments and layout coordinates are stored within .ui
+!*.ui
+!*.ooc
 #########
 #System Generator
 #########
+!*.mdl
+!*.slx
+!*.bxml
 #########
 #Simulation logic analyzer
 #########
+!*.wcfg
+!*.coe
 #########
 #MIG
 #########
+!*.prj
+!*.mem
 #########
 #Project files
 #########
 #XPR  +  *.XML ? XPR (Files are merged into a single XPR file for 2014.1 version)
 #Do NOT ignore *.xpr files
+!*.xpr
 #Include *.xml files for 2013.4 or earlier version
+!*.xml
 #########
 #Constraint files
 #########
 #Do NOT ignore *.xdc files
+!*.xdc
 #########
 #TCL - files
 #########
+!*.tcl
 #########
 #Journal - files
 #########
+!*.jou
 #########
 #Reports
 #########
+!*.rpt
+!*.txt
+!*.vdi
 #########
 #C-files
 #########
+!*.c
+!*.h
+!*.elf
+!*.bmm
+!*.xmp
 
 ### Yii template
 assets/*
@@ -10659,12 +13499,14 @@ appengine-generated/
 ### Calabash template
 # Calabash / Cucumber
 rerun/
+reports/
 screenshots/
 screenshot*.png
 test-servers/
 
 # bundler
 .bundle
+vendor
 
 ### LemonStand template
 boot.php
@@ -10676,6 +13518,7 @@ install.php
 /init/*
 /logs/*
 /phproad/*
+/temp/*
 /uploaded/*
 /installer_files/*
 /modules/backend/*
@@ -10693,14 +13536,30 @@ install.php
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -10716,41 +13575,63 @@ install.php
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### GoodSync template
 _gsdata_
 
 ### Jekyll template
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 # Ignore folders generated by Bundler
 .bundle/
+vendor/
 
 ### Vapor template
 Config/secrets
 
 ### Xcode template
 ## User settings
+xcuserdata/
 
 ## Xcode 8 and earlier
+*.xcscmblueprint
+*.xccheckout
 
 ### CakePHP2 template
 # CakePHP 2
@@ -10762,40 +13643,66 @@ Config/secrets
 
 ### HyperledgerComposer template
 # Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
 # Directory for instrumented libs generated by jscoverage/JSCover
+lib-cov
 
 # Coverage directory used by tools like istanbul
+coverage
 
 # nyc test coverage
+.nyc_output
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
 
 # Bower dependency directory (https://bower.io/)
+bower_components
 
 # node-waf configuration
+.lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
 
 # Dependency directories
+node_modules/
+jspm_packages/
 
 # TypeScript v1 declaration files
+typings/
 
 # Optional npm cache directory
+.npm
 
 # Optional eslint cache
+.eslintcache
 
 # Optional REPL history
+.node_repl_history
 
 # Output of 'npm pack'
+*.tgz
 
 # Yarn Integrity file
+.yarn-integrity
 
 # dotenv environment variables file
+.env
 
 # next.js build output
+.next
 
 # Output of Hyperledger 'composer' tools
 *.bna
@@ -10806,9 +13713,13 @@ Config/secrets
 
 /config/app.php
 /config/.env
+/logs/*
+/tmp/*
+/vendor/*
 
 ### Metals template
 .metals/
+.bloop/
 project/**/metals.sbt
 
 ### Drupal8 template
@@ -10820,14 +13731,60 @@ project/**/metals.sbt
 # https://www.drupal.org/docs/develop/using-composer
 
 # Ignore configuration files that may contain sensitive information
+/web/sites/*/*settings*.php
+/web/sites/*/*services*.yml
 
 # Ignore paths that may contain user-generated content
+/web/sites/*/files
+/web/sites/*/public
+/web/sites/*/private
+/web/sites/*/files-public
+/web/sites/*/files-private
 
 # Ignore paths that may contain temporary files
+/web/sites/*/translations
+/web/sites/*/tmp
+/web/sites/*/cache
 
 # Ignore drupal core (if not versioning drupal sources)
+/web/vendor
+/web/core
+/web/modules/README.txt
+/web/profiles/README.txt
+/web/sites/development.services.yml
+/web/sites/example.settings.local.php
+/web/sites/example.sites.php
+/web/sites/README.txt
+/web/themes/README.txt
+/web/.csslintrc
+/web/.editorconfig
+/web/.eslintignore
+/web/.eslintrc.json
+/web/.gitattributes
+/web/.htaccess
+/web/.ht.router.php
+/web/autoload.php
+/web/composer.json
+/web/composer.lock
+/web/example.gitignore
+/web/index.php
+/web/INSTALL.txt
+/web/LICENSE.txt
+/web/README.txt
+/web/robots.txt
+/web/update.php
+/web/web.config
 
 # Ignore vendor dependencies and scripts
+/vendor
+/composer.phar
+/composer
+/robo.phar
+/robo
+/drush.phar
+/drush
+/drupal.phar
+/drupal
 
 ### Spreadsheet template
 *.xlr
@@ -10854,21 +13811,27 @@ robots.txt
 /CHANGELOG.txt
 /COPYRIGHT.txt
 /INSTALL*.txt
+/LICENSE.txt
 /MAINTAINERS.txt
 /UPGRADE.txt
+/README.txt
 sites/README.txt
 sites/all/libraries/README.txt
 sites/all/modules/README.txt
 sites/all/themes/README.txt
 
 # Ignore everything but the "sites" folder ( for non core developer )
+.htaccess
 web.config
 authorize.php
 cron.php
+index.php
+install.php
 update.php
 xmlrpc.php
 /includes
 /misc
+/modules
 /profiles
 /scripts
 /themes
@@ -10886,6 +13849,25 @@ ExportedFiles.xml
 [Mm]odel/[Dd]eployment
 
 # Ignore Visual Studio/IDE user/cache/build/tooling files generated by build process
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.sbr
+.vs/
+obj/
+[Rr]elease*/
+_ReSharper*/
 
 # Force include portal SupportFiles
 !Model/Portal/*/SupportFiles/[Bb]in/
@@ -10897,14 +13879,32 @@ ExportedFiles.xml
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
+xcuserdata/
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 
 ## Obj-C/Swift specific
+*.hmap
 
 ## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
 
 # CocoaPods
 #
@@ -10922,6 +13922,7 @@ ExportedFiles.xml
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
+Carthage/Build/
 
 # fastlane
 #
@@ -10930,14 +13931,20 @@ ExportedFiles.xml
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
 
 # Code Injection
 #
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
+iOSInjectionProject/
 
 ### Textpattern template
+.htaccess
 css.php
 rpc/
 sites/site*/admin/
@@ -10983,13 +13990,27 @@ mono_crash.*.json
 #Taken from zeha on GIST https://gist.github.com/zeha/5999375
 #Updated by Cristian Cristea (https://github.com/cristiancristea00)
 
+*.d
+*.pre
 *.p1
+*.lst
+*.sym
+*.obj
+*.o
 *.sdb
 *.obj.dmp
+*.mk
+*.map
+*.properties
 *.production
+*.debug
 html/
 nbproject/private/
 nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
 nbactions.xml
 nb-configuration.xml
 funclist
@@ -11008,31 +14029,65 @@ disassembly/
 .codio
 
 ### Compressed template
+*.7z
+*.deb
+*.gz
 *.pkg
+*.rar
+*.rpm
+*.sit
+*.sitx
+*.tar
+*.zip
+*.zipx
+*.tgz
 
 ### premake-gmake template
+Makefile
+*.make
+obj/
 
 ### Kotlin template
 # Compiled class file
+*.class
 
 # Log file
+*.log
 
 # BlueJ files
+*.ctxt
 
 # Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
 # Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
 
 ### Renpy template
 # Don't track content of these folders #
 ########################################
+cache/
 saves/
 
 
 # Compiled source #
 ###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
 *.rpyc
 *.rpymc
@@ -11072,12 +14127,22 @@ files.txt
 ### GGTS template
 # .gitignore generated by: grails integrate-with --git
 # current using for Grails 2.4.4
+*.iws
+*Db.properties
+*Db.script
+.settings
 stacktrace.log
+/*.zip
+/plugin.xml
 /*.log
 /*DB.*
 /cobertura.ser
+/target/
 /target-eclipse/
+/out/
 /.link_to_grails_plugins/
+/web-app/plugins
+/web-app/WEB-INF/classes
 
 ### StandardML template
 ## Ignore all SML/NJ Compiler Manager build directories
@@ -11089,10 +14154,15 @@ latex
 
 ### NotepadPP template
 # Notepad++ backups #
+*.bak
 
 ### CodeBlocks template
 # specific to CodeBlocks IDE
+*.layout
+*.depend
 # generated directories
+bin/
+obj/
 
 ### EiffelStudio template
 # The compilation directory
@@ -11121,6 +14191,7 @@ EIFGENs
 /bitrix/php_interface/dbconn.php
 
 #Exclude default file storage directory
+/upload/
 
 ### Altium template
 # Previews Folders
@@ -11146,56 +14217,105 @@ Project\ Outputs*/
 # .gitignore created from Groovy contributors in https://github.com/apache/groovy/blob/master/.gitignore
 
 user.gradle
+.gradle/
+target/
+build/
+out/
 
 *.DS_Store
+*.class
+*.swp
+*~
 
+.idea
+*.iml
+*.ipr
+*.iws
 .shelf
 
+.settings/
+.classpath
+.project
+bin/
 
 
 ### A-Frame template
+.DS_Store
 *.sw[mnop]
 
 # Logs
+logs
+*.log
+npm-debug.log*
 
 # Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
 # Directory for instrumented libs generated by jscoverage/JSCover
+lib-cov
 
 # Coverage directory used by tools like istanbul
+coverage
 
 # nyc test coverage
+.nyc_output
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
 
 # node-waf configuration
+.lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
 
 # Dependency directories
+node_modules
+jspm_packages
 
 # Optional npm cache directory
+.npm
 
 # Optional REPL history
+.node_repl_history
 
 ### Ionic3 template
 # Log an tmp data
+*~
 *.sw[mnpcod]
+*.log
+*.tmp
 *.tmp.*
+log.txt
 
 # NPM (Node Package Manager) files
+npm-debug.log*
+node_modules/
+tmp/
+temp/
 
 # Preprocessors cache files
 .sourcemaps/
+.sass-cache/
+.tmp/
+tmp/
+temp/
 hooks/
 
 # Ionic 3 plugins files
 platforms/
+plugins/
 plugins/android.json
 plugins/ios.json
 www/
 
 # Trash data
+$RECYCLE.BIN/
+.DS_Store
+Thumbs.db
 UserInterfaceState.xcuserstate
 
 ### Perl6 template
@@ -11216,20 +14336,20 @@ lib/.precomp
 # Common configure file
 /Application/Common/Conf/config.php
 
-### Example user template template
-### Example user template
-
-# IntelliJ project files
-gen
 ### CodeSniffer template
 # gitignore for the PHP Codesniffer framework
 # website: https://github.com/squizlabs/PHP_CodeSniffer
 #
 # Recommended template: PHP.gitignore
 
+/wpcs/*
 
 ### Remix template
+node_modules
+/.cache
+/build
 /public/build
+.env
 
 ### FuelPHP template
 # the composer package lock file and install directory
@@ -11239,6 +14359,7 @@ gen
 /fuel/vendor
 
 # the fuelphp document
+/docs/
 
 # you may install these packages with `oil package`.
 # http://fuelphp.com/docs/packages/oil/package.html
@@ -11255,10 +14376,32 @@ gen
 
 ### Python template
 # Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
 # C extensions
+*.so
 
 # Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -11267,12 +14410,33 @@ gen
 *.spec
 
 # Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
 
 # Translations
+*.mo
+*.pot
 
 # Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -11286,10 +14450,14 @@ docs/_build/
 
 # PyBuilder
 .pybuilder/
+target/
 
 # Jupyter Notebook
+.ipynb_checkpoints
 
 # IPython
+profile_default/
+ipython_config.py
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
@@ -11319,6 +14487,7 @@ docs/_build/
 .pdm.toml
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
 
 # Celery stuff
 celerybeat-schedule
@@ -11328,6 +14497,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.env
+.venv
 env/
 venv/
 ENV/
@@ -11367,6 +14538,7 @@ cython_debug/
 
 ### Joe template
 # File backups
+*~
 # Gets created when joe crashes
 DEADJOE
 
@@ -11378,33 +14550,58 @@ DEADJOE
 # website: https://lensstudio.snapchat.com/
 
 # macOS/IDE #
+.DS_Store
+.idea
 
 # js #
+node_modules
+yarn.lock
 
 # Python #
+__pycache__/
+*.py[cod]
+*$py.class
 [Bb]ackup*
 
 ### Momentics template
 # Built files
+x86/
 arm/
 arm-p/
 translations/*.qm
 
 # IDE settings
+.settings/
 
 ### CLion+all template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -11420,26 +14617,40 @@ translations/*.qm
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Ceylon template
 # build
@@ -11447,11 +14658,13 @@ modules
 test-modules
 
 # fat-jar build
+*.jar
 
 # Auto backup setting file
 .ceylon/config.old
 
 ### Qooxdoo template
+cache
 cache-downloads
 inspector
 api
@@ -11469,26 +14682,36 @@ Pods/
 # Ignore temp build directory for Pulumi
 # Info: https://www.pulumi.com/docs/
 
+.pulumi/
 
 ### Crashlytics template
 #Crashlytics
+crashlytics-build.properties
+com_crashlytics_export_strings.xml
+crashlytics.properties
+fabric.properties
 
 ### GIS template
 *.gpx
 *.kml
 
 ### Rails template
+*.rbc
 capybara-*.html
 .rspec
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /db/*.sqlite3-[0-9]*
 /public/system
+/coverage/
 /spec/tmp
+*.orig
 rerun.txt
 pickle-email-*.html
 
 # Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
 !/log/.keep
 !/tmp/.keep
 
@@ -11501,14 +14724,18 @@ config/master.key
 
 # dotenv, dotenv-rails
 # TODO Comment out these rules if environment variables can be committed
+.env
+.env*.local
 
 ## Environment normalization:
 /.bundle
+/vendor/bundle
 
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
 
 # if using bower-rails ignore default bower_components path bower.json files
 /vendor/assets/bower_components
@@ -11519,8 +14746,10 @@ bower.json
 .powenv
 
 # Ignore Byebug command history file.
+.byebug_history
 
 # Ignore node_modules
+node_modules/
 
 # Ignore precompiled javascript packs
 /public/packs
@@ -11529,6 +14758,8 @@ bower.json
 
 # Ignore yarn files
 /yarn-error.log
+yarn-debug.log*
+.yarn-integrity
 
 # Ignore uploaded files in development
 /storage/*
@@ -11536,28 +14767,55 @@ bower.json
 /public/uploads
 
 ### core template
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
 nupkg/
 
 # Visual Studio Code
+.vscode
 
 # Rider
+.idea
 
 # User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
 # Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
 [Oo]ut/
 msbuild.log
 msbuild.err
 msbuild.wrn
 
 # Visual Studio 2015
+.vs/
 
 
 ### Git template
 # Created by git for backups. To disable backups in Git:
 # $ git config --global mergetool.keepBackup false
+*.orig
 
 # Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
 *_BACKUP_*.txt
 *_BASE_*.txt
 *_LOCAL_*.txt
@@ -11590,13 +14848,28 @@ msbuild.wrn
 /[Aa]ssets/Plugins/Editor/JetBrains*
 
 # Visual Studio cache directory
+.vs/
 
 # Gradle cache directory
+.gradle/
 
 # Autogenerated VS/MD/Consulo solution and project files
 ExportedObj/
 .consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
 *.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -11607,10 +14880,13 @@ ExportedObj/
 sysinfo.txt
 
 # Builds
+*.apk
 *.aab
 *.unitypackage
+*.app
 
 # Crashlytics generated file
+crashlytics-build.properties
 
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
@@ -11625,6 +14901,7 @@ sysinfo.txt
 *.bit
 *.bld
 *.cmd_log
+*.drc
 *.ll
 *.lso
 *.msd
@@ -11634,7 +14911,9 @@ sysinfo.txt
 *.ngd
 *.ngr
 *.pad
+*.par
 *.pcf
+*.prj
 *.ptwx
 *.rbb
 *.rbd
@@ -11644,6 +14923,7 @@ sysinfo.txt
 *.twx
 *.unroutes
 *.ut
+*.xpi
 *.xst
 *_bitgen.xwbt
 *_envsettings.html
@@ -11685,21 +14965,35 @@ _ngo/
 _xmsgs/
 
 ### Ansible template
+*.retry
 
 ### dbt template
+target/
 dbt_modules/
 dbt_packages/
+logs/
 
 ### FlashBuilder template
 # Build and Release Folders
+bin/
+bin-debug/
+bin-release/
+.actionScriptProperties
 .flexConfig.xml
 
 # only for a non-library project
+.flexProperties
 
 # only for library project
+.flexLibProperties
 
 # Other files and folders
+.settings/
+.project/
 
+.FlexUnitSettings
+.externalToolBuilders
+.model
 
 
 ### SAM template
@@ -11707,6 +15001,7 @@ dbt_packages/
 # Info: https://aws.amazon.com/serverless/sam/
 # Docs: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-reference.html
 
+**/.aws-sam
 
 ### Valgrind template
 # Callgrind output files
@@ -11731,6 +15026,9 @@ bb.out.*
 # See https://www.dartlang.org/guides/libraries/private-files
 
 # Files and directories created by pub
+.dart_tool/
+.packages
+build/
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
 
@@ -11750,8 +15048,12 @@ doc/api/
 *.js.deps
 *.js.map
 
+.flutter-plugins
+.flutter-plugins-dependencies
 
 ### Remix+Vercel template
+.vercel
+.output
 /api/index.js
 /api/index.js.map
 
@@ -11760,14 +15062,30 @@ doc/api/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -11783,26 +15101,40 @@ doc/api/
 # *.ipr
 
 # CMake
+cmake-build-*/
 
 # Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # File-based project format
+*.iws
 
 # IntelliJ
+out/
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
+.idea/replstate.xml
 
 # SonarLint plugin
+.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
 ### Basic template
 # Apples Build
@@ -11810,6 +15142,7 @@ doc/api/
 *.apples
 
 # Initialized files
+*.exe
 *.ini
 *.basic
 
@@ -11858,6 +15191,7 @@ doc/api/
 # software binary files
 ### tbd
 
+/*
 !/*.gitignore
 ##
 !*.qpf
@@ -11865,6 +15199,8 @@ doc/api/
 !*.qws
 ##
 !*.bdf
+!*.vhd
+!*.v
 ##
 !*.ptf
 !*.bsf
@@ -11877,6 +15213,7 @@ doc/api/
 ##
 ## tbd
 
+!*.tcl
 
 ### Kentico template
 # gitignore template for using Kentico CMS
@@ -11961,8 +15298,11 @@ ConnectionStrings.config
 *.sas7bbak
 
 ### Backup template
+*.bak
 *.gho
 *.ori
+*.orig
+*.tmp
 
 ### InforCMS template
 # gitignore template for InforCRM (formerly SalesLogix)
@@ -11971,10 +15311,15 @@ ConnectionStrings.config
 # Recommended: VisualStudio.gitignore
 
 # Ignore model files that are auto-generated
+ModelIndex.xml
+ExportedFiles.xml
 
 # Ignore deployment files
+[Mm]odel/[Dd]eployment
 
 # Force include portal SupportFiles
+!Model/Portal/*/SupportFiles/[Bb]in/
+!Model/Portal/PortalTemplates/*/SupportFiles/[Bb]in
 
 ### easybook template
 # Destination directory of the various publications
@@ -11984,14 +15329,17 @@ Output
 # gitginore template for creating Snap packages
 # website: https://snapcraft.io/
 
+parts/
 prime/
 stage/
 *.snap
 
 # Snapcraft global state tracking data(automatically generated)
 # https://forum.snapcraft.io/t/location-to-save-global-state/768
+/snap/.snapcraft/
 
 # Source archive packed by `snapcraft cleanbuild` before pushing to the LXD container
+/*_source.tar.bz2
 
 ### Kobalt template
 .kobalt
@@ -12005,12 +15353,14 @@ kobaltBuild/
 *.stTheme.cache
 
 # Workspace files are user-specific
+*.sublime-workspace
 
 # Project files should be checked into the repository, unless a significant
 # proportion of contributors will probably not be using Sublime Text
 # *.sublime-project
 
 # SFTP configuration file
+sftp-config.json
 sftp-config-alt*.json
 
 # Package control specific files
@@ -12044,6 +15394,7 @@ Project\ Outputs*
 # Misc files generated by altium
 debug.log
 Status\ Report.txt
+*.PcbDoc.htm
 *.SchDocPreview
 *.PcbDocPreview
 
@@ -12054,27 +15405,37 @@ Status\ Report.txt
 # Covers files to be ignored for android development using Android Studio.
 
 # Built application files
+*.apk
 *.ap_
+*.aab
 
 # Files for the ART/Dalvik VM
 *.dex
 
 # Java class files
+*.class
 
 # Generated files
+bin/
 gen/
+out/
 
 # Gradle files
+.gradle
+.gradle/
+build/
 
 # Signing files
 .signing/
 
 # Local configuration file (sdk path, etc)
+local.properties
 
 # Proguard folder generated by Eclipse
 proguard/
 
 # Log Files
+*.log
 
 # Android Studio
 /*/build/
@@ -12082,9 +15443,15 @@ proguard/
 /*/out
 /*/*/build
 /*/*/production
+captures/
 .navigation/
+*.ipr
+*~
+*.swp
 
 # Keystore files
+*.jks
+*.keystore
 
 # Google Services (e.g. APIs or Firebase)
 # google-services.json
@@ -12096,8 +15463,12 @@ gen-external-apklibs
 .externalNativeBuild
 
 # NDK
+obj/
 
 # IntelliJ IDEA
+*.iml
+*.iws
+/out/
 
 # User-specific configurations
 .idea/caches/
@@ -12126,23 +15497,37 @@ gen-external-apklibs
 .idea/navEditor.xml
 
 # Legacy Eclipse project files
+.classpath
+.project
+.cproject
+.settings/
 
 # Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
 # Package Files #
+*.war
+*.ear
 
 # virtual machine crash logs (Reference: http://www.java.com/en/download/help/error_hotspot.xml)
+hs_err_pid*
 
 ## Plugin-specific files:
 
 # mpeltonen/sbt-idea plugin
+.idea_modules/
 
 # JIRA plugin
+atlassian-ide-plugin.xml
 
 # Mongo Explorer plugin
 .idea/mongoSettings.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 ### Geth template
 # .gitignore for Geth 0.4.16
@@ -12153,12 +15538,16 @@ gen-external-apklibs
 history
 
 # logs
+*.out
+*.log
 
 ### ChefCookbook template
 .vagrant
 /cookbooks
 
 # Bundler
+bin/*
+.bundle/*
 
 .kitchen/
 .kitchen.local.yml
@@ -12171,6 +15560,7 @@ history
 ### Move template
 # Generated by Move
 # will have compiled files
+build/
 
 # Remove possibly saving credentials to the git repository
 .aptos/
@@ -12178,7 +15568,15 @@ history
 ### fsharp template
 lib/debug
 lib/release
+Debug
+*.suo
+*.user
+obj
+bin
+/build/
+*.exe
 !.paket/paket.bootstrapper.exe
+.ionide/
 .fake
 
 ### Lua template
@@ -12187,22 +15585,48 @@ luac.out
 
 # luarocks build files
 *.src.rock
+*.zip
+*.tar.gz
 
 # Object files
+*.o
+*.os
+*.ko
+*.obj
+*.elf
 
 # Precompiled Headers
+*.gch
+*.pch
 
 # Libraries
+*.lib
+*.a
+*.la
+*.lo
 *.def
+*.exp
 
 # Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
 
 # Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
 
 
 ### CakePHP template
 # CakePHP 3
 
+/vendor/*
+/config/app.php
 
 /tmp/cache/models/*
 !/tmp/cache/models/empty
@@ -12215,23 +15639,33 @@ luac.out
 /tmp/tests/*
 !/tmp/tests/empty
 
+/logs/*
 !/logs/empty
 
 # CakePHP 2
 
+/app/tmp/*
+/app/Config/core.php
+/app/Config/database.php
+/vendors/*
 
 ### Flask template
 instance/*
 !instance/.gitignore
+.webassets-cache
+.env
 
 ### Raku template
 # Gitignore for Raku (https://raku.org)
 # As part of https://github.com/github/gitignore
 
 # precompiled files
+.precomp
+lib/.precomp
 
 
 ### ExpressionEngine template
+.DS_Store
 
 # Images
 images/avatars/
@@ -12266,6 +15700,7 @@ _thumbs/
 
 ### FuseTools template
 # Built and preview application files
+build
 
 # Scripts conversion file
 .uno
@@ -12275,153 +15710,312 @@ _thumbs/
 # http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
 
 dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
 project/plugins/project/
+.history
+.cache
 .lib/
 
 ### TeX template
 ## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
 
 ## Intermediate documents:
+*.dvi
+*.xdv
+*-converted-to.*
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
 # *.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
+.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
 
 ## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
 
 ## Build tool directories for auxiliary files
 # latexrun
+latex.out/
 
 ## Auxiliary and intermediate files from other packages:
 # algorithms
+*.alg
+*.loa
 
 # achemso
+acs-*.bib
 
 # amsthm
+*.thm
 
 # beamer
+*.nav
+*.pre
+*.snm
+*.vrb
 
 # changes
+*.soc
 
 # comment
+*.cut
 
 # cprotect
+*.cpt
 
 # elsarticle (documentclass of Elsevier journals)
+*.spl
 
 # endnotes
+*.ent
 
 # fixme
+*.lox
 
 # feynmf/feynmp
+*.mf
+*.mp
+*.t[1-9]
+*.t[1-9][0-9]
+*.tfm
 
 #(r)(e)ledmac/(r)(e)ledpar
+*.end
+*.?end
+*.[1-9]
+*.[1-9][0-9]
+*.[1-9][0-9][0-9]
+*.[1-9]R
+*.[1-9][0-9]R
+*.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
 
 # glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+*.slg
+*.slo
+*.sls
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 # *.ist
 
 # gnuplot
+*.gnuplot
+*.table
 
 # gnuplottex
+*-gnuplottex-*
 
 # gregoriotex
+*.gaux
+*.glog
+*.gtex
 
 # htlatex
+*.4ct
+*.4tc
+*.idv
+*.lg
+*.trc
+*.xref
 
 # hyperref
+*.brf
 
 # knitr
+*-concordance.tex
 # TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
 # *.tikz
+*-tikzDictionary
 
 # listings
+*.lol
 
 # luatexja-ruby
+*.ltjruby
 
 # makeidx
+*.idx
+*.ilg
+*.ind
 
 # minitoc
+*.maf
+*.mlf
+*.mlt
+*.mtc[0-9]*
+*.slf[0-9]*
+*.slt[0-9]*
+*.stc[0-9]*
 
 # minted
+_minted*
+*.pyg
 
 # morewrites
+*.mw
 
 # newpax
+*.newpax
 
 # nomencl
+*.nlg
+*.nlo
+*.nls
 
 # pax
+*.pax
 
 # pdfpcnotes
+*.pdfpc
 
 # sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
 
 # scrwfile
+*.wrt
 
 # svg
+svg-inkscape/
 
 # sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
 
 # pdfcomment
+*.upa
+*.upb
 
 # pythontex
+*.pytxcode
+pythontex-files-*/
 
 # tcolorbox
+*.listing
 
 # thmtools
+*.loe
 
 # TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
 
 # titletoc
+*.ptc
 
 # todonotes
+*.tdo
 
 # vhistory
+*.hst
+*.ver
 
 # easy-todo
+*.lod
 
 # xcolor
+*.xcp
 
 # xmpincl
+*.xmpi
 
 # xindy
+*.xdy
 
 # xypic precompiled matrices and outlines
+*.xyc
+*.xyd
 
 # endfloat
+*.ttt
+*.fff
 
 # Latexian
+TSWLatexianTemp*
 
 ## Editors:
 # WinEdt
+*.bak
+*.sav
 
 # Texpad
+.texpadtmp
 
 # LyX
+*.lyx~
 
 # Kile
+*.backup
 
 # gummi
+.*.swp
 
 # KBibTeX
+*~[0-9]*
 
 # TeXnicCenter
+*.tps
 
 # auto folder when using emacs and auctex
+./auto/*
+*.el
 
 # expex forward references with \gathertags
+*-tags.tex
 
 # standalone packages
+*.sta
 
 # Makeindex log files
+*.lpz
 
 # xwatermark package
+*.xwm
 
 # REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
@@ -12430,27 +16024,62 @@ project/plugins/project/
 
 ### Chocolatey template
 # Exclude packaged modules
+*.nupkg
 
 ### Cocos2dx template
 # Ignore thumbnails created by windows
+Thumbs.db
 
 # Ignore files build by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.aps
 *.vcproj.*.user
 *.vcxproj.user
 *.csproj.user
+*.vspscc
+*_i.c
+*.i
 *.icf
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug/
 [Dd]ebug.win32/
+*.sbr
+*.sdf
+obj/
+[Rr]elease/
 [Rr]elease.win32/
+_ReSharper*/
+[Tt]est[Rr]esult*
+ipch/
+*.opensdf
+*.opendb
 SubmissionInfo
 Generated Files
 AppPackages
 BundleArtifacts
+.vs/
 
 # Ignore files build by ndk and eclipse
 libs/
+bin/
+obj/
+gen/
 assets/
+local.properties
 
 # Ignore python compiled files
+*.pyc
 
 # Ignore files build by airplay and marmalade
 build_*_xcode/
@@ -12458,13 +16087,19 @@ build_*_vc10/
 
 # Ignore files build by xcode
 *.mode*v*
+*.pbxuser
 *.xcbkptlist
 *.xcworkspacedata
 *.xcuserstate
+*.xccheckout
 xcschememanagement.plist
+.DS_Store
 ._.*
+xcuserdata/
+DerivedData/
 
 # Ignore files built by AppCode
+.idea/
 
 # Ignore files built by bada
 .Simulator-Debug/
@@ -12477,6 +16112,8 @@ Device-Debug/
 Device-Release/
 
 # Ignore vim swaps
+*.swp
+*.swo
 
 # Ignore files created by create_project.py
 projects/
@@ -12490,11 +16127,18 @@ tools/tolua/userconf.ini
 tools/jenkins_scripts/mac/android/userconf.ini
 
 # CTags
+tags
 
 # ignore files, created with make-all-linux-project script
+/lib
 /build/linux-build
 
 # Cmake files
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+CMakeLists.txt.user
 
 # Ignore files generated by console
 build/build/
@@ -12508,6 +16152,7 @@ tests/*/proj.android-studio/app/proguard-project.txt
 
 # Android
 project.properties
+*.iml
 
 # Ignore prebuilt libraries folder
 /external/*
@@ -12532,26 +16177,39 @@ tests/cpp-tests/Resources/audio
 /*/*/prebuilt-mk/Android.mk
 /*/*/*/prebuilt-mk/Android.mk
 /*/*/*/*/prebuilt-mk/Android.mk
+*.xcscmblueprint
 
 ### NativeScript template
+/platforms
 /hooks
+/node_modules
+/lib
 /debugger
+/dist
 
 /app/**/*.map
 # shouldn't ignore this for vanilla nativescript
 # /app/**/*.js
 
+.DS_Store
+**/*.log
+tags
 
 ers.txt
 
 ### Data template
+*.csv
+*.dat
 *.efx
 *.gbr
+*.key
 *.pps
 *.ppt
 *.pptx
+*.sdf
 *.tax2010
 *.vcf
+*.xml
 
 ### JMeter template
 # JMeter common ignore files
@@ -12561,6 +16219,7 @@ ers.txt
 *.jtl
 
 # Ignore log files
+*.log
 
 # Ignore customized user.properties
 user.properties
@@ -12574,6 +16233,7 @@ stellar.yaml
 /.anjuta_sym_db.db
 
 ### Pimcore5 template
+/var/*
 
 # keep directories
 !/var/cache/.gitkeep
@@ -12587,6 +16247,7 @@ stellar.yaml
 !/var/config/
 
 # Auto-generated by bin/console assets:install
+/web/bundles/
 /web/var/
 
 !/var/SymfonyRequirements.php
@@ -12600,32 +16261,56 @@ pinegrow.json
 
 ### Pimcore4 template
 # pimcore source files
+/pimcore
 
 # asset files
+/website/var/assets/*
 
 # backups
+/website/var/backup/*
 
 # file cache
+/website/var/cache/*
 
 # generated PHP classes, keep definition files (.psf)
+/website/var/classes/Object*
+!/website/var/classes/objectbricks
 
 # various configuration files
+/website/var/config/system.xml
+/website/var/config/cache.xml
+/website/var/config/robots.txt
+/website/var/config/Geo*
+/website/var/config/object/*
+/website/var/config/portal/*
+/website/var/config/sqlreport/*
 
 # sent e-mail log files
+/website/var/email/*
 
 # log files
+/website/var/log/*.log
 
 # serialized recyclebin files
+/website/var/recyclebin/*
 
 # search plugin
+/website/var/search/*
 
 # various temp files
+/website/var/system/*
+/website/var/tmp/*
 
 # serialized version files
+/website/var/versions/asset/*
+/website/var/versions/document/*
+/website/var/versions/object/*
 
 # user profile images
+/website/var/user-image/*
 
 # keep .dummy files
+!.dummy
 
 ### SourcePawn template
 # SourcePawn
@@ -12634,8 +16319,10 @@ pinegrow.json
 *.smx # plugins
 
 ### dotenv template
+.env
 
 ### DocFx template
+.cache
 /**/_site/
 
 ### CFWheels template
@@ -12658,8 +16345,13 @@ stylesheets/bundles
 
 # ignore compilation output of ModelSim
 *.mti
+*.dat
 *.dbs
 *.psm
+*.bak
+*.cmp
+*.jpg
+*.html
 *.bsf
 
 # ignore simulation output of ModelSim
@@ -12674,32 +16366,46 @@ vsim.dbg
 
 ### Actionscript template
 # Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
 
 # Other files and folders
+.settings/
 
 # Executables
+*.swf
 *.air
+*.ipa
+*.apk
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 
 ### Gradle template
+.gradle
 **/build/
 !src/**/build/
 
 # Ignore Gradle GUI config
+gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
 
 # Avoid ignore Gradle wrappper properties
 !gradle-wrapper.properties
 
 # Cache of project
+.gradletasknamecache
 
 # Eclipse Gradle plugin generated files
 # Eclipse Core
+.project
 # JDT-specific (Eclipse Java Development Tools)
+.classpath
 
 ### Vim template
 # Swap
@@ -12716,7 +16422,9 @@ Sessionx.vim
 
 # Temporary
 .netrwhist
+*~
 # Auto-generated tag files
+tags
 # Persistent undo
 [._]*.un~
 
