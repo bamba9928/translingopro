@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Bassirou Fall, experienced interpreter and translator based in Dakar, Senegal.">
+    <meta name="keywords" content="Bassirou Fall,lingo, translingopro, interpreter in Dakar, translation in Senegal, Wolof translation, English to French interpreter, legal interpretation, medical interpretation, business negotiations, exhibition interpretation, Dakar Senegal services">
+    <meta name="author" content="Bassirou Fall">
+    <meta property="og:title" content="Bassirou Fall - Interpreter and Translator in Dakar, Senegal">
+    <meta property="og:description" content="Explore the professional portfolio of Bassirou Fall, experienced interpreter and translator based in Dakar, Senegal.">
+    <meta property="og:image" content="https://www.translingopro.com/static/images/transcription_english_french_4.jpg">
+    <meta property="og:url" content="www.translingopro.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bassirou Fall - Interpreter and Translator in Dakar, Senegal">
+    <meta name="twitter:description" content="Explore the professional portfolio of Bassirou Fall, experienced interpreter and translator based in Dakar, Senegal.">
+
+    <title>Bassirou Fall - Interpreter and Translator in Dakar, Senegal</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+#grad1 {
+  height: 200px;
+  background-color: blue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, blue, white);
+}
+</style>
+<!-- Icônes des réseaux sociaux flottant à gauche -->
+<style>
+    /* Style pour les icônes flottantes */
+    .social-icons {
+        position: fixed; /* Fixer les icônes à une position fixe */
+        left: 10px; /* Décalage à gauche */
+        top: 50%; /* Positionner verticalement au centre */
+        transform: translateY(-50%); /* Centrer verticalement exactement */
+        z-index: 9999; /* Mettre les icônes devant tout le contenu */
+    }
+
+    .social-icons a {
+        display: block; /* Chaque icône sera un bloc séparé */
+        margin: 15px 0; /* Espacement vertical entre les icônes */
+        font-size: 40px; /* Taille des icônes */
+        color: #000; /* Couleur par défaut des icônes */
+        text-decoration: none; /* Supprimer le soulignement */
+    }
+
+    /* Changer la couleur des icônes au survol */
+    .social-icons a:hover {
+        color: #007bff; /* Bleu au survol */
+    }
+</style>
+</head>
+<body>
+<div id="grad1"></div>
+<!-- Navbar -->
+<div class="navbar navbar-dark bg-dark fixed-top">
+  <a class="active" href="#about"><i class="fa fa-fw fa-user"></i> About Me</a>
+  <a href="#services"><i class="fa fa-fw fa-briefcase"></i> Services</a>
+  <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a href="#pricing"><i class="fa fa-fw fa-tags"></i> Pricing</a>
+  <!-- Bouton pour accéder au CV -->
+  <a href="{% url 'curriculum_vitae' %}" class="btn btn-outline-light ms-auto">
+    <i class="fa fa-fw fa-file"></i> My Curriculum Vitae
+  </a>
+</div>
+
+
+
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="contactModalLabel"><i class="fa fa-envelope"></i> Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Contact Info Section with WhatsApp and Email -->
+        <div class="text-center">
+          <p>For any inquiries, you can contact us via:</p>
+
+          <div>
+            <a href="mailto:bassiroufall2007@gmail.com" class="btn btn-danger">
+              <i class="fa fa-envelope"></i> Email
+            </a>
+          </div>
+            <div>
+            <a href="https://wa.me/221774666566" target="_blank" class="btn btn-success mb-2">
+              <i class="fa fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bassirou Fall Section -->
+<section id="bassirou-fall" class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="section-title mb-4"> <strong> Bassirou Fall: Interpreter & Translator in Senegal</strong></h2>
+        <p class="lead">Providing professional translation and interpretation services across multiple languages in Senegal and beyond.</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about py-5 bg-light" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="{% static 'images/about.jpg' %}" class="img-fluid rounded-circle mb-3" alt="Photo of Bassirou Fall">
+            </div>
+            <div class="col-md-6">
+                <div class="p-4 bg-white shadow rounded mb-3 hover-effect">
+                    <i class="fas fa-user-tie fa-lg text-primary me-2"></i>
+                    <p><strong>Am Bassirou, a professional interpreter specializing in Wolof, English, and French. With over nine years of experience, I deliver high-quality interpretation and translation services tailored to the specific needs of my clients.</strong> </p>
+                </div>
+                <div class="p-4 bg-white shadow rounded mb-3 hover-effect">
+                    <i class="fas fa-globe fa-lg text-success me-2"></i>
+                    <p><strong> My expertise spans consecutive and simultaneous interpretation, technical and legal lexicon translation, business correspondence, and participation in negotiations. I have also provided interpretation services at exhibitions and in the medical field.</strong> </p>
+                </div>
+                <div class="p-4 bg-white shadow rounded mb-3 hover-effect">
+                    <i class="fas fa-graduation-cap fa-lg text-info me-2"></i>
+                    <p><strong> I hold a Bachelor's degree in English Language from Dakar University and a postgraduate diploma from London. I am fluent in Wolof, English, and French, enabling me to offer versatile and accurate language services in all three languages.</strong> </p>
+                </div>
+                <div class="p-4 bg-white shadow rounded hover-effect">
+                    <i class="fas fa-handshake fa-lg text-warning me-2"></i>
+                    <p><strong> Having lived in an English-speaking country for nearly a decade and collaborated with esteemed organizations such as World Vision and Mercy Ships, I have gained invaluable experience assisting business partners during negotiations. This background allows me to consistently deliver exceptional interpretation and translation services.</strong> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="social-icons">
+    <a href="https://www.facebook.com/bass.fall.3150807/" class="bi bi-facebook" target="_blank" title="Facebook"></a>
+    <a href="https://twitter.com" class="bi bi-twitter" target="_blank" title="Twitter"></a>
+    <a href="https://www.linkedin.com/in/bassirou-fall-603719159/" class="bi bi-linkedin" target="_blank" title="LinkedIn"></a>
+</div>
+
+<!-- Services Section -->
+<section class="py-5" id="services">
+    <div class="container">
+        <h2 class="text-center bg-primary p-2" style="--bs-bg-opacity: .5; mb-4"><strong>Services</strong></h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow">
+                    <div class="card-body">
+                        <i class="fas fa-user-tie fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">Expertise</h5>
+                        <p>9+ years of experience in interpretation and translation services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow">
+                    <div class="card-body">
+                        <i class="fas fa-graduation-cap fa-3x mb-3 text-success"></i>
+                        <h5 class="card-title">Qualifications</h5>
+                        <p>Bachelor's degree in English Language and postgraduate diploma from London.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow">
+                    <div class="card-body">
+                        <i class="fas fa-clock fa-3x mb-3 text-info"></i>
+                        <h5 class="card-title">Availability</h5>
+                        <p>Flexible hours to meet your needs and ensure seamless communication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center bg-primary p-2" style="--bs-bg-opacity: .5; mb-4"><strong>Pricing</strong></h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <i class="fas fa-user-tie fa-3x text-primary mb-3"></i>
+                    <h5>Tourists</h5>
+                    <p>Starting at €50/hour</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <i class="fas fa-briefcase fa-3x text-success mb-3"></i>
+                    <h5>Professionals</h5>
+                    <p>Starting at €0.10/word</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <i class="fas fa-microphone-alt fa-3x text-danger mb-3"></i>
+                    <h5>Interpretation</h5>
+                    <p>Starting at €100/hour</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Photo Section -->
+<section id="photos" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center bg-primary p-2 mb-4" style="--bs-bg-opacity: .5;"><strong>Photo Gallery</strong></h2>
+        <div class="row text-center">
+            <!-- Première photo -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <img src="{% static 'images/bassirou_fall_3.jpg' %}" alt="Bassirou Fall Photo" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
+                </div>
+            </div>
+            <!-- Deuxième photo -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <img src="{% static 'images/BASSIROU_FALL_SENEGAL_DAKAR_AFRICA_8.jpg' %}" alt="Senegal Africa" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
+                </div>
+            </div>
+            <!-- Troisième photo -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <img src="{% static 'images/tourist_guide_6.jpg' %}" alt="Tourist Guide" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
+                </div>
+            </div>
+            <!-- Quatrième photo -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <img src="{% static 'images/transcription_english_french_4.jpg' %}" alt="English to French Transcription" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
+                </div>
+            </div>
+            <!-- Cinquième photo -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <img src="{% static 'images/translator_1.jpg' %}" alt="Translator" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
+                </div>
+            </div>
+            <!-- Sixième photo -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <img src="{% static 'images/wolof_french_english_5.jpg' %}" alt="Wolof to English" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Script pour l'effet de zoom -->
+<script>
+    function zoomImage(image) {
+        // Vérifier si l'image est déjà zoomée
+        if (image.classList.contains('zoomed')) {
+            image.classList.remove('zoomed'); // Réinitialiser le zoom
+        } else {
+            // Ajouter la classe 'zoomed' pour appliquer le zoom
+            image.classList.add('zoomed');
+        }
+    }
+</script>
+
+<!-- Footer -->
+<footer class="py-3 bg-dark text-light text-center">
+    <p>Contact Information:</p>
+    <address>
+        Email: <a href="mailto:bassiroufall2007@gmail.com" class="text-info">Bassirou Fall</a><br>
+        My CV: <a href="{% url 'curriculum_vitae' %}" class="text-info">Curriculum Vitae</a><br>
+        Whatsapp: <a href="https://wa.me/221774666566"class="text-info">Send Me Message</a><br>
+        Dakar, Senegal
+    </address>
+    <span><a href="https://horuservices.cloud" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
+  &copy; 2025 All rights reserved. Created by H-G-S
+</a></span>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

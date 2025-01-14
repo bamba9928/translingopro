@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>CV - Bassirou Fall</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            background-size: cover;
+        }
+
+        #cv-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+h1 {
+    text-align: center;
+    font-size: 2.5em; /* Plus grand pour attirer l'attention */
+    color: #007bff; /* Bleu vif */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre douce */
+    background: linear-gradient(90deg, #007bff, #0056b3); /* Dégradé élégant */
+    -webkit-background-clip: text; /* Affiche le dégradé à travers le texte */
+    -webkit-text-fill-color: transparent; /* Nécessaire pour le dégradé */
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif; /* Typographie moderne */
+    letter-spacing: 2px; /* Espacement pour l'élégance */
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(0, 123, 255, 0.5); /* Ligne décorative en bas */
+}
+
+
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        p, ul {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .buttons-container {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="buttons-container">
+        <button id="curriculum_vitae">Download Cv</button>
+        <button onclick="goBack()">Back Home</button>
+    </div>
+<div class="hero text-center">
+    <h1 class="hero-title">Bassirou Fall Curriculum Vitae</h1>
+</div>
+
+    <div id="cv-content">
+        <p><strong>Address:</strong> Bargny, Dakar</p>
+        <p><strong>Tel:</strong> +221 77 466 65 66</p>
+        <p><strong>Email:</strong> bassiroufall2007@gmail.com</p>
+
+        <h2>Profil:</h2>
+        <p>
+            I am an experienced career. I have worked in different environments as houses, hospitals, and residential care centers. After my studies in Senegal, I went to London School of Commerce in England, where I had been working for years and came back to work in Senegal. This experience made me open-minded, and was a good opportunity for me to meet and work with people from different cultures and backgrounds.
+        </p>
+
+        <h2>Professional Experiences:</h2>
+        <p><strong>2022-10:</strong> Translator for Mercy Ships in Dakar, Senegal</p>
+        <ul>
+            <li>Patient registrar in different health centers.</li>
+            <li>Translator and ward assistant in the GLOBAL MERCY SHIPS.</li>
+        </ul>
+        <p><strong>2019-12 to 2022-08:</strong> Manager and Administrator in Thies and Bambey, Senegal</p>
+        <ul>
+            <li>Managing different restaurants in the university.</li>
+            <li>Managing and leading all the works that link the university administration and the students.</li>
+        </ul>
+        <p><strong>2010-03 to 2015-05:</strong></p>
+        <p>
+            I have done different types of jobs in the United Kingdom between England and Scotland. During the time I was studying, I worked with agencies that used to send me to different jobs as kitchens, warehouses, stadiums, hotels. And as I worked with NGOs before in Senegal like World Vision who serve and help people who need it the most, I always wanted to work, help, and take care of young, disabled, and old people. I was blessed to find jobs in care works during this period.
+        </p>
+
+        <h2>Education:</h2>
+        <ul>
+            <li><strong>2007-2009</strong>  Postgraduate Diploma (Business and Management), London School of Commerce</li>
+            <li><strong> 2002-2007</strong> : Bachelor’s Degree in English (English Language and Civilisation), Université Cheikh Anta Diop de Dakar (UCAD)</li>
+            <li><strong> 2001-2002</strong> : A Level (Baccalaureat Série L1), Lycée d’enseignement général de Diourbel</li>
+        </ul>
+
+        <h2>Competences:</h2>
+        <ul>
+            <li>Technology management in the information age</li>
+            <li>Strategic financial management</li>
+            <li>Managing human capital</li>
+            <li>Strategic and innovative marketing</li>
+            <li>Research methodology</li>
+            <li>Business strategy in the global environment</li>
+            <li>Business policy</li>
+            <li>International marketing management</li>
+            <li>Patient registration technology</li>
+            <li>Ward assistant</li>
+            <li>Care home</li>
+            <li>Physical restraint in an inpatient mental health center</li>
+        </ul>
+        <p>I am willing to learn and take any additional courses or training to improve my knowledge and accomplish all my tasks in the best way at work.</p>
+
+        <h2>Languages:</h2>
+        <ul>
+            <li><strong>Wolof</strong>  - Mother tongue</li>
+            <li><strong>French</strong>  - Fluent</li>
+            <li><strong>English</strong>  - Fluent</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('download-cv').addEventListener('click', () => {
+            const doc = new jsPDF();
+            const element = document.getElementById('cv-content');
+
+            html2canvas(element).then((canvas) => {
+                const imgData = canvas.toDataURL('image/png');
+                const imgProps = doc.getImageProperties(imgData);
+                const pdfWidth = doc.internal.pageSize.getWidth();
+                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+                doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                doc.save('CV_Bassirou_Fall.pdf');
+            });
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /bassiroufall/
+Allow: /
+
+Sitemap: https://www.translingopro.com/sitemap.xml
