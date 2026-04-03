@@ -1,184 +1,589 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of Bassirou Fall, experienced interpreter and translator based in Dakar, Senegal.">
-    <meta name="keywords" content="Bassirou Fall,lingo, translingopro, interpreter in Dakar, translation in Senegal, Wolof translation, English to French interpreter, legal interpretation, medical interpretation, business negotiations, exhibition interpretation, Dakar Senegal services">
+
+    <!-- SEO & GEO Tags -->
+    <title>Bassirou Fall | Professional Interpreter &amp; Translator in Dakar, Senegal</title>
+    <meta name="description" content="Bassirou Fall provides premium consecutive, simultaneous, and liaison interpretation and translation services in English, French, and Wolof. Based in Dakar, Senegal.">
+    <meta name="keywords" content="professional interpreter Dakar, translator Senegal, English to French interpretation, Wolof translation, legal interpreter, business negotiations interpreter Senegal">
     <meta name="author" content="Bassirou Fall">
-    <meta property="og:title" content="Bassirou Fall - Interpreter and Translator in Dakar, Senegal">
-    <meta property="og:description" content="Explore the professional portfolio of Bassirou Fall, experienced interpreter and translator based in Dakar, Senegal.">
+    <link rel="canonical" href="https://www.translingopro.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bassirou Fall - Professional Interpreter &amp; Translator">
+    <meta property="og:description" content="Expert language services in English, French, and Wolof for businesses, medical, and legal needs in Senegal.">
     <meta property="og:image" content="https://www.translingopro.com/static/images/transcription_english_french_4.jpg">
-    <meta property="og:url" content="www.translingopro.com">
+    <meta property="og:url" content="https://www.translingopro.com/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bassirou Fall - Interpreter and Translator in Dakar, Senegal">
-    <meta name="twitter:description" content="Explore the professional portfolio of Bassirou Fall, experienced interpreter and translator based in Dakar, Senegal.">
+    <meta name="twitter:title" content="Bassirou Fall | Expert Interpreter in Senegal">
+    <meta name="twitter:description" content="High-quality interpretation and translation services tailored for international clients in Dakar.">
 
-    <title>Bassirou Fall - Interpreter and Translator in Dakar, Senegal</title>
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <!-- JSON-LD (Comprehensive CEO, GEO, LLMO) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": ["Person", "ProfessionalService"],
+        "name": "Bassirou Fall",
+        "description": "Premium interpretation and translation services in English, French, and Wolof.",
+        "image": "https://www.translingopro.com/static/images/about.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dakar",
+          "addressCountry": "SN"
+        },
+        "telephone": "+221774666566",
+        "email": "bassiroufall2007@gmail.com",
+        "url": "https://www.translingopro.com/",
+        "priceRange": "$$",
+        "knowsLanguage": ["English", "French", "Wolof"],
+        "sameAs": [
+          "https://www.linkedin.com/in/bassirou-fall-603719159/",
+          "https://www.facebook.com/bass.fall.3150807/"
+        ],
+        "jobTitle": "Professional Interpreter & Translator"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What languages do you translate and interpret?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I specialize in English, French, and Wolof providing both consecutive and simultaneous interpretation, alongside precise document translation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide remote or on-site interpretation in Senegal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I offer on-site interpretation services throughout Senegal, including Dakar and remote interpretation across the globe for business, legal, and medical sectors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do interpretation services cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "My standard interpretation rate starts at €100 per hour, tailored to the specific professional context and duration. Professional document translation begins at €0.10 per word."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <!-- Resources -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-    <style>
-#grad1 {
-  height: 200px;
-  background-color: blue; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to bottom right, blue, white);
-}
-</style>
-<!-- Icônes des réseaux sociaux flottant à gauche -->
-<style>
-    /* Style pour les icônes flottantes */
-    .social-icons {
-        position: fixed; /* Fixer les icônes à une position fixe */
-        left: 10px; /* Décalage à gauche */
-        top: 50%; /* Positionner verticalement au centre */
-        transform: translateY(-50%); /* Centrer verticalement exactement */
-        z-index: 9999; /* Mettre les icônes devant tout le contenu */
-    }
-
-    .social-icons a {
-        display: block; /* Chaque icône sera un bloc séparé */
-        margin: 15px 0; /* Espacement vertical entre les icônes */
-        font-size: 40px; /* Taille des icônes */
-        color: #000; /* Couleur par défaut des icônes */
-        text-decoration: none; /* Supprimer le soulignement */
-    }
-
-    /* Changer la couleur des icônes au survol */
-    .social-icons a:hover {
-        color: #007bff; /* Bleu au survol */
-    }
-</style>
 </head>
 <body>
-<div id="grad1"></div>
-<!-- Navbar -->
-<div class="navbar navbar-dark bg-dark fixed-top">
-  <a class="active" href="#about"><i class="fa fa-fw fa-user"></i> About Me</a>
-  <a href="#services"><i class="fa fa-fw fa-briefcase"></i> Services</a>
-  <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-  <a href="#pricing"><i class="fa fa-fw fa-tags"></i> Pricing</a>
-  <!-- Bouton pour accéder au CV -->
-  <a href="{% url 'curriculum_vitae' %}" class="btn btn-outline-light ms-auto">
-    <i class="fa fa-fw fa-file"></i> My Curriculum Vitae
-  </a>
+
+<!-- ============================================================
+     FLOATING SOCIAL BAR
+     ============================================================ -->
+<div class="social-icons-floating">
+    <a href="https://www.linkedin.com/in/bassirou-fall-603719159/" target="_blank" title="LinkedIn" class="linkedin">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.facebook.com/bass.fall.3150807/" target="_blank" title="Facebook" class="facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" title="Twitter" class="twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://wa.me/221774666566" target="_blank" title="WhatsApp" class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </div>
 
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+        TranslingoPro<span class="brand-dot"></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#photos">Gallery</a></li>
+        <li class="nav-item ms-lg-2">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="btn-outline-light-premium">
+                <i class="fa fa-envelope"></i> Contact
+            </a>
+        </li>
+        <li class="nav-item ms-lg-2">
+          <a href="{% url 'curriculum_vitae' %}" class="btn-outline-light-premium">
+            <i class="fa fa-file-pdf"></i> My CV
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<!-- ============================================================
+     SUCCESS MESSAGES
+     ============================================================ -->
+{% if messages %}
+<div class="position-fixed top-0 start-50 translate-middle-x mt-5 pt-3 w-100" style="max-width:600px; z-index:2000;">
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show shadow-lg border-0 mx-3" role="alert">
+        <strong><i class="fa fa-check-circle me-2"></i>Success:</strong> {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
 
-
-<!-- Contact Modal -->
-<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<!-- ============================================================
+     CONTACT MODAL
+     ============================================================ -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="contactModalLabel"><i class="fa fa-envelope"></i> Contact Us</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-header">
+        <h5 class="modal-title text-white fw-bold">
+            <i class="fa fa-paper-plane me-2 text-gold"></i>Get In Touch
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
-        <!-- Contact Info Section with WhatsApp and Email -->
+        <form action="{% url 'home' %}" method="POST" class="mb-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="john@company.com">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required placeholder="How can I help you?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 fw-bold">
+                <i class="fa fa-paper-plane me-2"></i>Send Message
+            </button>
+        </form>
+        <hr style="opacity:0.07;">
         <div class="text-center">
-          <p>For any inquiries, you can contact us via:</p>
-
-          <div>
-            <a href="mailto:bassiroufall2007@gmail.com" class="btn btn-danger">
-              <i class="fa fa-envelope"></i> Email
-            </a>
-          </div>
-            <div>
-            <a href="https://wa.me/221774666566" target="_blank" class="btn btn-success mb-2">
-              <i class="fa fa-whatsapp"></i> WhatsApp
-            </a>
-          </div>
+            <p class="text-muted small fw-semibold text-uppercase mb-3" style="letter-spacing:1px;">Or connect instantly</p>
+            <div class="d-flex justify-content-center gap-2">
+              <a href="mailto:bassiroufall2007@gmail.com" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+                <i class="fa fa-envelope me-1"></i> Email
+              </a>
+              <a href="https://wa.me/221774666566" target="_blank" class="btn btn-success btn-sm rounded-pill px-3">
+                <i class="fab fa-whatsapp me-1"></i> WhatsApp
+              </a>
+            </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Bassirou Fall Section -->
-<section id="bassirou-fall" class="py-5 bg-light">
-    <div class="container text-center">
-        <h2 class="section-title mb-4"> <strong> Bassirou Fall: Interpreter & Translator in Senegal</strong></h2>
-        <p class="lead">Providing professional translation and interpretation services across multiple languages in Senegal and beyond.</p>
-    </div>
-</section>
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<main id="main-content">
 
-<!-- About Section -->
-<section class="about py-5 bg-light" id="about">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center">
-                <img src="{% static 'images/about.jpg' %}" class="img-fluid rounded-circle mb-3" alt="Photo of Bassirou Fall">
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<header class="hero-geometric text-center" id="home">
+    <div class="container hero-content">
+        <div class="hero-eyebrow">
+            <span></span> Professional Language Services <span></span>
+        </div>
+        <h1 class="hero-title">
+            Elevate Your<br>
+            <span class="title-accent">Global Communication</span>
+        </h1>
+        <p class="hero-subtitle">
+            Premium Interpretation &amp; Translation — English, French &amp; Wolof.<br>
+            Your trusted linguistic partner for international business in Senegal.
+        </p>
+        <div class="hero-cta-group">
+            <a href="#about" class="btn-hero-primary">
+                <i class="fa fa-user-tie"></i> Discover My Expertise
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="btn-hero-ghost">
+                <i class="fa fa-envelope"></i> Request a Quote
+            </a>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-number">9<span class="stat-suffix">+</span></span>
+                <span class="hero-stat-label">Years Experience</span>
             </div>
-            <div class="col-md-6">
-                <div class="p-4 bg-white shadow rounded mb-3 hover-effect">
-                    <i class="fas fa-user-tie fa-lg text-primary me-2"></i>
-                    <p><strong>Am Bassirou, a professional interpreter specializing in Wolof, English, and French. With over nine years of experience, I deliver high-quality interpretation and translation services tailored to the specific needs of my clients.</strong> </p>
-                </div>
-                <div class="p-4 bg-white shadow rounded mb-3 hover-effect">
-                    <i class="fas fa-globe fa-lg text-success me-2"></i>
-                    <p><strong> My expertise spans consecutive and simultaneous interpretation, technical and legal lexicon translation, business correspondence, and participation in negotiations. I have also provided interpretation services at exhibitions and in the medical field.</strong> </p>
-                </div>
-                <div class="p-4 bg-white shadow rounded mb-3 hover-effect">
-                    <i class="fas fa-graduation-cap fa-lg text-info me-2"></i>
-                    <p><strong> I hold a Bachelor's degree in English Language from Dakar University and a postgraduate diploma from London. I am fluent in Wolof, English, and French, enabling me to offer versatile and accurate language services in all three languages.</strong> </p>
-                </div>
-                <div class="p-4 bg-white shadow rounded hover-effect">
-                    <i class="fas fa-handshake fa-lg text-warning me-2"></i>
-                    <p><strong> Having lived in an English-speaking country for nearly a decade and collaborated with esteemed organizations such as World Vision and Mercy Ships, I have gained invaluable experience assisting business partners during negotiations. This background allows me to consistently deliver exceptional interpretation and translation services.</strong> </p>
-                </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">3<span class="stat-suffix"></span></span>
+                <span class="hero-stat-label">Languages</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">100<span class="stat-suffix">%</span></span>
+                <span class="hero-stat-label">Confidentiality</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">2<span class="stat-suffix">+</span></span>
+                <span class="hero-stat-label">International NGOs</span>
             </div>
         </div>
     </div>
-</section>
+</header>
 
-<div class="social-icons">
-    <a href="https://www.facebook.com/bass.fall.3150807/" class="bi bi-facebook" target="_blank" title="Facebook"></a>
-    <a href="https://twitter.com" class="bi bi-twitter" target="_blank" title="Twitter"></a>
-    <a href="https://www.linkedin.com/in/bassirou-fall-603719159/" class="bi bi-linkedin" target="_blank" title="LinkedIn"></a>
+<!-- ============================================================
+     LANGUAGE STRIP
+     ============================================================ -->
+<div class="lang-strip">
+    <div class="container">
+        <div class="lang-strip-inner">
+            <div class="lang-badge"><span class="lang-dot"></span> English — Full Professional Proficiency</div>
+            <div class="lang-separator"></div>
+            <div class="lang-badge"><span class="lang-dot"></span> Français — Bilingue</div>
+            <div class="lang-separator"></div>
+            <div class="lang-badge"><span class="lang-dot"></span> Wolof — Langue Maternelle</div>
+        </div>
+    </div>
 </div>
 
-<!-- Services Section -->
-<section class="py-5" id="services">
-    <div class="container">
-        <h2 class="text-center bg-primary p-2" style="--bs-bg-opacity: .5; mb-4"><strong>Services</strong></h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 text-center shadow">
-                    <div class="card-body">
-                        <i class="fas fa-user-tie fa-3x mb-3 text-primary"></i>
-                        <h5 class="card-title">Expertise</h5>
-                        <p>9+ years of experience in interpretation and translation services.</p>
+<!-- ============================================================
+     ABOUT SECTION
+     ============================================================ -->
+<section class="py-5" id="about" style="background: var(--pure-white);">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+
+            <!-- Profile Photo -->
+            <div class="col-lg-5 text-center reveal">
+                <div class="profile-img-wrapper d-inline-block" style="padding: 12px; position: relative;">
+                    <div class="profile-img-ring"></div>
+                    <div class="profile-img-ring-inner"></div>
+                    <img src="{% static 'images/about.jpg' %}"
+                         class="profile-img"
+                         alt="Bassirou Fall - Professional Interpreter and Translator in Dakar, Senegal">
+                    <div class="profile-badge">
+                        <i class="fa fa-star me-1" style="color: var(--marine-deep);"></i> 9+ Years
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 text-center shadow">
-                    <div class="card-body">
-                        <i class="fas fa-graduation-cap fa-3x mb-3 text-success"></i>
-                        <h5 class="card-title">Qualifications</h5>
-                        <p>Bachelor's degree in English Language and postgraduate diploma from London.</p>
+
+            <!-- About Content -->
+            <div class="col-lg-7 reveal" style="transition-delay: 0.15s;">
+                <span class="section-label">Who I Am</span>
+                <h2 class="section-title text-start ms-0 mb-1">
+                    About <span>Bassirou Fall</span>
+                </h2>
+                <div class="section-divider" style="margin-left: 0;"></div>
+
+                <div class="about-feature-card">
+                    <div class="about-feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <div class="about-feature-text">
+                        <h4>Professional Interpreter</h4>
+                        <p>With over nine years of experience, I deliver high-quality interpretation and translation services tailored to international clients, specializing in Wolof, English, and French.</p>
+                    </div>
+                </div>
+
+                <div class="about-feature-card">
+                    <div class="about-feature-icon"><i class="fas fa-globe-africa"></i></div>
+                    <div class="about-feature-text">
+                        <h4>Comprehensive Expertise</h4>
+                        <p>Consecutive & simultaneous interpretation, legal and technical lexicon translation, business correspondence, and cross-cultural negotiation facilitation.</p>
+                    </div>
+                </div>
+
+                <div class="about-feature-card">
+                    <div class="about-feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="about-feature-text">
+                        <h4>Academic Background</h4>
+                        <p>Bachelor's degree in English Language from Dakar University and a postgraduate diploma from the London School of Commerce — enabling culturally nuanced precision.</p>
+                    </div>
+                </div>
+
+                <div class="about-feature-card">
+                    <div class="about-feature-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="about-feature-text">
+                        <h4>Trusted by International NGOs</h4>
+                        <p>Collaborated with World Vision and Mercy Ships, bringing empathy, precision, and absolute confidentiality to every professional assignment.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 text-center shadow">
-                    <div class="card-body">
-                        <i class="fas fa-clock fa-3x mb-3 text-info"></i>
-                        <h5 class="card-title">Availability</h5>
-                        <p>Flexible hours to meet your needs and ensure seamless communication.</p>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SERVICES SECTION
+     ============================================================ -->
+<section class="py-5" id="services" style="background: var(--off-white);">
+    <div class="container py-5">
+        <div class="text-center reveal">
+            <span class="section-label">What I Offer</span>
+            <h2 class="section-title">Professional <span>Services</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Tailored linguistic solutions for every professional context — from boardrooms to medical wards.</p>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <div class="col-md-4 reveal">
+                <article class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-headphones-alt"></i></div>
+                    <h3>Interpretation</h3>
+                    <p>Simultaneous and consecutive interpretation for conferences, medical environments, and high-stakes business meetings. Expert delivery in EN/FR/Wolof.</p>
+                </article>
+            </div>
+            <div class="col-md-4 reveal" style="transition-delay: 0.1s;">
+                <article class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-file-signature"></i></div>
+                    <h3>Document Translation</h3>
+                    <p>Precise, culturally adapted translation of legal, technical, and corporate documents. Strict terminological accuracy across all three languages.</p>
+                </article>
+            </div>
+            <div class="col-md-4 reveal" style="transition-delay: 0.2s;">
+                <article class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-comments-dollar"></i></div>
+                    <h3>Business Liaison</h3>
+                    <p>Acting as your dedicated linguistic liaison during exhibitions, tours, and corporate negotiations throughout Senegal and the region.</p>
+                </article>
+            </div>
+            <div class="col-md-4 reveal" style="transition-delay: 0.05s;">
+                <article class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-hospital"></i></div>
+                    <h3>Medical Interpretation</h3>
+                    <p>Specialized medical terminology knowledge gained through real-world experience with Mercy Ships — ensuring patient-centred clarity.</p>
+                </article>
+            </div>
+            <div class="col-md-4 reveal" style="transition-delay: 0.15s;">
+                <article class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Tourist Guide &amp; Escort</h3>
+                    <p>Personalized guided tours and travel assistance throughout Senegal — ensuring comfort, cultural understanding, and memorable experiences.</p>
+                </article>
+            </div>
+            <div class="col-md-4 reveal" style="transition-delay: 0.25s;">
+                <article class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-gavel"></i></div>
+                    <h3>Legal &amp; NGO Support</h3>
+                    <p>Experienced in supporting NGOs like World Vision with administrative translation, field communication, and stakeholder liaison services.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PRICING SECTION
+     ============================================================ -->
+<section id="pricing" class="py-5" style="background: var(--pure-white);">
+    <div class="container py-5">
+        <div class="text-center reveal">
+            <span class="section-label">Investment</span>
+            <h2 class="section-title">Transparent <span>Pricing</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Clear, competitive rates with no hidden fees. Every engagement is treated with the same professional standard.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center mt-2">
+
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="pricing-card dark h-100 text-center">
+                    <div class="pricing-popular-badge">⭐ Most Popular</div>
+                    <div class="pricing-icon"><i class="fas fa-microphone-alt"></i></div>
+                    <h3>Interpretation</h3>
+                    <div class="pricing-amount">€100</div>
+                    <span class="pricing-period">per hour</span>
+                    <p>For conferences, medical, and legal interpretation. Precise, impartial, and strictly confidential delivery.</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
+                        Book Now <i class="fa fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 reveal" style="transition-delay: 0.1s;">
+                <div class="pricing-card light h-100 text-center">
+                    <div style="height: 28px;"></div><!-- spacer to align with badge -->
+                    <div class="pricing-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Professional Translation</h3>
+                    <div class="pricing-amount">€0.10</div>
+                    <span class="pricing-period">per word</span>
+                    <p>High-accuracy translation for legal contracts, corporate manuals, and technical documentation.</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
+                        Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 reveal" style="transition-delay: 0.2s;">
+                <div class="pricing-card light h-100 text-center">
+                    <div style="height: 28px;"></div>
+                    <div class="pricing-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Tourists &amp; Casual</h3>
+                    <div class="pricing-amount">€50</div>
+                    <span class="pricing-period">per hour</span>
+                    <p>Personalized guided tours and casual translation assistance throughout Senegal and beyond.</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
+                        Contact Me <i class="fa fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PHOTO GALLERY
+     ============================================================ -->
+<section id="photos" class="py-5" style="background: var(--surface);">
+    <div class="container py-5">
+        <div class="text-center reveal">
+            <span class="section-label">In The Field</span>
+            <h2 class="section-title">Gallery &amp; <span>Experience</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <div class="col-md-4 col-sm-6 reveal">
+                <div class="gallery-overlay-wrap">
+                    <img src="{% static 'images/bassirou_fall_3.jpg' %}"
+                         alt="Bassirou Fall - Interpreter Portrait"
+                         class="gallery-img"
+                         onclick="openZoom(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 reveal" style="transition-delay: 0.08s;">
+                <div class="gallery-overlay-wrap">
+                    <img src="{% static 'images/BASSIROU_FALL_SENEGAL_DAKAR_AFRICA_8.jpg' %}"
+                         alt="Senegal Africa Professional Work"
+                         class="gallery-img"
+                         onclick="openZoom(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 reveal" style="transition-delay: 0.16s;">
+                <div class="gallery-overlay-wrap">
+                    <img src="{% static 'images/tourist_guide_6.jpg' %}"
+                         alt="Tourist Guide Expertise Senegal"
+                         class="gallery-img"
+                         onclick="openZoom(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 reveal" style="transition-delay: 0.06s;">
+                <div class="gallery-overlay-wrap">
+                    <img src="{% static 'images/transcription_english_french_4.jpg' %}"
+                         alt="English to French Transcription Work"
+                         class="gallery-img"
+                         onclick="openZoom(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 reveal" style="transition-delay: 0.14s;">
+                <div class="gallery-overlay-wrap">
+                    <img src="{% static 'images/translator_1.jpg' %}"
+                         alt="Professional Translator Bassirou Fall"
+                         class="gallery-img"
+                         onclick="openZoom(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 reveal" style="transition-delay: 0.22s;">
+                <div class="gallery-overlay-wrap">
+                    <img src="{% static 'images/wolof_french_english_5.jpg' %}"
+                         alt="Wolof French English Language Services"
+                         class="gallery-img"
+                         onclick="openZoom(this.src)">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Zoom Overlay -->
+<div class="zoomed-overlay" id="zoomOverlay" onclick="closeZoom()">
+    <img src="" alt="Zoomed gallery image" class="zoomed-img" id="zoomedImg">
+</div>
+
+<!-- ============================================================
+     FAQ SECTION (GEO / AI Optimization)
+     ============================================================ -->
+<section id="faq" class="faq-section">
+    <div class="container faq-container">
+        <div class="text-center reveal">
+            <span class="section-label">Questions & Answers</span>
+            <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Quick answers to clear up the most common inquiries regarding my translation and interpretation services.</p>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+            <div class="col-lg-8 reveal" style="transition-delay: 0.1s;">
+                <div class="accordion" id="faqAccordion">
+
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-card">
+                        <div class="accordion-item border-0 bg-transparent">
+                            <h3 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    What languages do you translate and interpret?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    I specialize in <strong>English, French, and Wolof</strong>. As a linguistic expert native in Wolof, bilingual in French, and with full professional proficiency in English, I provide comprehensive communication bridges for NGOs, corporate businesses, and the medical sector.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-card">
+                        <div class="accordion-item border-0 bg-transparent">
+                            <h3 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    Do you provide remote or on-site interpretation in Senegal?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, I offer entirely flexible services. While I am based in Dakar and can actively cover events, tours, and high-stakes meetings throughout <strong>Senegal</strong> on-site, I also handle remote interpretations for international clients worldwide using standard platforms (Zoom, Teams, etc.).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-card">
+                        <div class="accordion-item border-0 bg-transparent">
+                            <h3 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    How much do interpretation or translation services cost?
+                                </button>
+                            </h3>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    My standard prices are completely transparent: interpretation is tracked at <strong>€100 per hour</strong> and professional document translation sits at <strong>€0.10 per word</strong>. I can also deliver customized quotes for extended deployments and specific travel packages or long-term partnerships.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,107 +591,126 @@
     </div>
 </section>
 
-<!-- Pricing Section -->
-<section id="pricing" class="py-5 bg-light">
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
     <div class="container">
-        <h2 class="text-center bg-primary p-2" style="--bs-bg-opacity: .5; mb-4"><strong>Pricing</strong></h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <i class="fas fa-user-tie fa-3x text-primary mb-3"></i>
-                    <h5>Tourists</h5>
-                    <p>Starting at €50/hour</p>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-6">
+                <div class="footer-brand">
+                    TranslingoPro<span class="brand-dot" style="display:inline-block; width:7px; height:7px; background:var(--accent-gold); border-radius:50%; margin-bottom:-1px; margin-left:2px;"></span>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <i class="fas fa-briefcase fa-3x text-success mb-3"></i>
-                    <h5>Professionals</h5>
-                    <p>Starting at €0.10/word</p>
+                <p class="footer-tagline">Premium Interpretation &amp; Translation · Dakar, Senegal</p>
+
+                <div class="d-flex flex-column align-items-center gap-1 mb-3">
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+                        <a href="mailto:bassiroufall2007@gmail.com">bassiroufall2007@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <a href="https://wa.me/221774666566">+221 77 466 65 66</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa fa-map-marker-alt"></i></div>
+                        <span>Bargny, Dakar, Senegal</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <i class="fas fa-microphone-alt fa-3x text-danger mb-3"></i>
-                    <h5>Interpretation</h5>
-                    <p>Starting at €100/hour</p>
+
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/bassirou-fall-603719159/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/bass.fall.3150807/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/221774666566" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <div class="d-flex justify-content-center gap-2 mb-4">
+                    <a href="{% url 'curriculum_vitae' %}" class="btn-outline-light-premium btn-sm" style="font-size:0.82rem; padding: 0.4rem 1.2rem;">
+                        <i class="fa fa-file-pdf me-1"></i> View My CV
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="btn-outline-light-premium btn-sm" style="font-size:0.82rem; padding: 0.4rem 1.2rem;">
+                        <i class="fa fa-envelope me-1"></i> Contact
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- Photo Section -->
-<section id="photos" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center bg-primary p-2 mb-4" style="--bs-bg-opacity: .5;"><strong>Photo Gallery</strong></h2>
-        <div class="row text-center">
-            <!-- Première photo -->
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <img src="{% static 'images/bassirou_fall_3.jpg' %}" alt="Bassirou Fall Photo" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
-                </div>
-            </div>
-            <!-- Deuxième photo -->
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <img src="{% static 'images/BASSIROU_FALL_SENEGAL_DAKAR_AFRICA_8.jpg' %}" alt="Senegal Africa" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
-                </div>
-            </div>
-            <!-- Troisième photo -->
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <img src="{% static 'images/tourist_guide_6.jpg' %}" alt="Tourist Guide" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
-                </div>
-            </div>
-            <!-- Quatrième photo -->
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <img src="{% static 'images/transcription_english_french_4.jpg' %}" alt="English to French Transcription" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
-                </div>
-            </div>
-            <!-- Cinquième photo -->
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <img src="{% static 'images/translator_1.jpg' %}" alt="Translator" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
-                </div>
-            </div>
-            <!-- Sixième photo -->
-            <div class="col-md-4">
-                <div class="p-4 bg-white shadow rounded">
-                    <img src="{% static 'images/wolof_french_english_5.jpg' %}" alt="Wolof to English" class="img-fluid rounded mb-3" onclick="zoomImage(this)">
-                </div>
-            </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom text-center">
+            <p class="mb-0">&copy; 2025 Bassirou Fall · TranslingoPro · All rights reserved.</p>
         </div>
     </div>
-</section>
+</footer>
 
-<!-- Script pour l'effet de zoom -->
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-    function zoomImage(image) {
-        // Vérifier si l'image est déjà zoomée
-        if (image.classList.contains('zoomed')) {
-            image.classList.remove('zoomed'); // Réinitialiser le zoom
-        } else {
-            // Ajouter la classe 'zoomed' pour appliquer le zoom
-            image.classList.add('zoomed');
-        }
+    // Navbar scroll shrink
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navLinks = document.querySelectorAll('.navbar .nav-link');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('active',
+                        link.getAttribute('href') === '#' + entry.target.id);
+                });
+            }
+        });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    sections.forEach(s => observer.observe(s));
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // Gallery zoom
+    function openZoom(src) {
+        document.getElementById('zoomOverlay').style.display = 'flex';
+        document.getElementById('zoomedImg').src = src;
+        document.body.style.overflow = 'hidden';
     }
+    function closeZoom() {
+        document.getElementById('zoomOverlay').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeZoom(); });
+
+    // Animate hero stat counters
+    document.querySelectorAll('.hero-stat-number').forEach(el => {
+        const suffix = el.querySelector('.stat-suffix');
+        const target = parseInt(el.textContent);
+        const suffixText = suffix ? suffix.textContent : '';
+        let start = 0;
+        const step = () => {
+            start += Math.ceil(target / 30);
+            if (start > target) start = target;
+            el.textContent = start + suffixText;
+            if (start < target) requestAnimationFrame(step);
+        };
+        setTimeout(() => requestAnimationFrame(step), 800);
+    });
 </script>
 
-<!-- Footer -->
-<footer class="py-3 bg-dark text-light text-center">
-    <p>Contact Information:</p>
-    <address>
-        Email: <a href="mailto:bassiroufall2007@gmail.com" class="text-info">Bassirou Fall</a><br>
-        My CV: <a href="{% url 'curriculum_vitae' %}" class="text-info">Curriculum Vitae</a><br>
-        Whatsapp: <a href="https://wa.me/221774666566"class="text-info">Send Me Message</a><br>
-        Dakar, Senegal
-    </address>
-    <span><a href="https://horuservices.cloud" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
-  &copy; 2025 All rights reserved. Created by H-G-S
-</a></span>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

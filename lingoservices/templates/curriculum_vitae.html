@@ -1,176 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>CV - Bassirou Fall</title>
+    <title>Curriculum Vitae | Bassirou Fall — Interpreter &amp; Translator, Dakar</title>
+    <meta name="description" content="Official CV of Bassirou Fall, professional interpreter and translator based in Dakar, Senegal. Expert in English, French, and Wolof.">
+    <link rel="canonical" href="https://www.translingopro.com/cv/">
+
+    <!-- JSON-LD structured data (GEO / LLMO / AI SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bassirou Fall",
+      "jobTitle": "Professional Interpreter & Translator",
+      "description": "Expert interpreter and translator with 9+ years of experience in English, French, and Wolof based in Dakar, Senegal.",
+      "url": "https://www.translingopro.com/",
+      "email": "bassiroufall2007@gmail.com",
+      "telephone": "+221774666566",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dakar",
+        "addressCountry": "SN"
+      },
+      "knowsLanguage": ["English", "French", "Wolof"],
+      "sameAs": [
+        "https://www.linkedin.com/in/bassirou-fall-603719159/",
+        "https://www.facebook.com/bass.fall.3150807/"
+      ],
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "London School of Commerce"},
+        {"@type": "CollegeOrUniversity", "name": "Université Cheikh Anta Diop de Dakar"}
+      ],
+      "hasCredential": [
+        {"@type": "EducationalOccupationalCredential", "name": "Postgraduate Diploma in Business and Management"},
+        {"@type": "EducationalOccupationalCredential", "name": "Bachelor's Degree in English Language & Civilization"}
+      ]
+    }
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            background-size: cover;
+            background-color: var(--surface);
+            background-image:
+              linear-gradient(rgba(10,25,48,0.025) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(10,25,48,0.025) 1px, transparent 1px);
+            background-size: 35px 35px;
+            min-height: 100vh;
+            padding-top: 2rem;
+            padding-bottom: 6rem;
         }
 
+        /* Page header (outside the white card) */
+        .cv-page-header {
+            max-width: 900px;
+            margin: 0 auto 1.5rem;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .cv-page-brand {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--marine-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .cv-page-brand .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            margin-bottom: -1px;
+        }
+
+        /* CV White Card */
         #cv-content {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background: var(--pure-white);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 52px 64px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(0,0,0,0.04);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
         }
 
-h1 {
-    text-align: center;
-    font-size: 2.5em; /* Plus grand pour attirer l'attention */
-    color: #007bff; /* Bleu vif */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre douce */
-    background: linear-gradient(90deg, #007bff, #0056b3); /* Dégradé élégant */
-    -webkit-background-clip: text; /* Affiche le dégradé à travers le texte */
-    -webkit-text-fill-color: transparent; /* Nécessaire pour le dégradé */
-    margin-top: 20px;
-    font-family: 'Poppins', sans-serif; /* Typographie moderne */
-    letter-spacing: 2px; /* Espacement pour l'élégance */
-    padding-bottom: 10px;
-    border-bottom: 3px solid rgba(0, 123, 255, 0.5); /* Ligne décorative en bas */
-}
-
-
-        h2 {
-            color: #0056b3;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+        /* CV Header Block */
+        .cv-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-subtle);
         }
 
-        p, ul {
-            color: #333;
-            margin: 10px 0;
+        .cv-name-block { flex: 1; }
+
+        .cv-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 2.4rem;
+            color: var(--marine-dark);
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            margin: 0 0 0.3rem;
         }
 
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        .cv-title-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: linear-gradient(135deg, var(--marine-dark), var(--marine-light));
+            color: var(--pure-white);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.35rem 1rem;
+            border-radius: var(--radius-pill);
+            margin-top: 0.5rem;
         }
 
-        .buttons-container {
-            position: fixed;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
+        .cv-contact-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .cv-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--off-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-pill);
+            padding: 0.3rem 0.85rem;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .cv-chip i { color: var(--accent-gold); font-size: 0.75rem; }
+
+        /* Language pills in header */
+        .cv-lang-pills {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 0.5rem;
+            flex-shrink: 0;
         }
 
-        button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
+        .cv-lang-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .cv-lang-pill .level-bar {
+            width: 60px;
+            height: 4px;
+            background: var(--border-subtle);
+            border-radius: var(--radius-pill);
+            overflow: hidden;
+        }
+
+        .cv-lang-pill .level-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--marine-dark), var(--accent-gold));
+            border-radius: inherit;
+        }
+
+        /* Section headings */
+        #cv-content h2.cv-section-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            margin-top: 2.5rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        #cv-content h2.cv-section-title::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: var(--accent-gold);
+            border-radius: var(--radius-pill);
+            flex-shrink: 0;
+        }
+
+        #cv-content h2.cv-section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-subtle);
+        }
+
+        /* Profile text */
+        .cv-profile-text {
+            font-size: 0.93rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+            background: var(--off-white);
+            border-left: 3px solid var(--accent-gold);
+            padding: 1rem 1.4rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+
+        /* Timeline */
+        .timeline-entry {
+            display: flex;
+            gap: 1.2rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .timeline-dot-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0.3rem;
+            flex-shrink: 0;
+        }
+
+        .timeline-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--marine-dark);
+            border: 2px solid var(--accent-gold);
+            flex-shrink: 0;
+        }
+
+        .timeline-line {
+            flex: 1;
+            width: 1px;
+            background: var(--border-subtle);
+            margin-top: 4px;
+        }
+
+        .timeline-body { flex: 1; }
+
+        .timeline-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-role {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        .timeline-date {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--pure-white);
+            background: var(--marine-dark);
+            padding: 0.2rem 0.75rem;
+            border-radius: var(--radius-pill);
+            white-space: nowrap;
+        }
+
+        .timeline-org {
+            font-size: 0.87rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+        }
+
+        /* Education entries */
+        .edu-entry {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: var(--off-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+        }
+
+        .edu-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-sm);
+            background: linear-gradient(135deg, var(--marine-dark), var(--marine-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .edu-body { flex: 1; }
+
+        .edu-degree {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--text-primary);
+            margin-bottom: 0.15rem;
+        }
+
+        .edu-school {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Skills grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+        }
+
+        .skill-item::before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+            flex-shrink: 0;
+        }
+
+        /* Languages section */
+        .lang-entry {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.65rem 1rem;
+            background: var(--off-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.6rem;
+        }
+
+        .lang-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--text-primary);
+        }
+
+        .lang-level {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .lang-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .lang-dot-item {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border-subtle);
+        }
+
+        .lang-dot-item.filled { background: var(--marine-dark); }
+        .lang-dot-item.filled.gold { background: var(--accent-gold); }
+
+        /* Floating Buttons */
+        .buttons-container {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            display: flex;
+            gap: 12px;
+            z-index: 1000;
+        }
+
+        .cv-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.6rem;
+            border-radius: var(--radius-pill);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.88rem;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-lg);
         }
 
-        button:hover {
-            background-color: #0056b3;
+        .cv-btn-primary {
+            background: linear-gradient(135deg, var(--accent-gold), #E8C560);
+            color: var(--marine-deep);
+        }
+
+        .cv-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .cv-btn-dark {
+            background: linear-gradient(135deg, var(--marine-dark), var(--marine-mid));
+            color: var(--pure-white);
+        }
+
+        .cv-btn-dark:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        @media (max-width: 768px) {
+            body { padding-top: 1rem; }
+            #cv-content { padding: 28px 22px; margin: 0 12px; border-radius: var(--radius-lg); }
+            .cv-header { flex-direction: column; align-items: flex-start; }
+            .cv-lang-pills { flex-direction: row; flex-wrap: wrap; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .buttons-container { position: static; justify-content: center; margin: 2rem 0 1rem; flex-wrap: wrap; }
         }
     </style>
-
 </head>
 <body>
-    <div class="buttons-container">
-        <button id="curriculum_vitae">Download Cv</button>
-        <button onclick="goBack()">Back Home</button>
+
+    <!-- Page Header (outside card) -->
+    <div class="cv-page-header">
+        <div class="cv-page-brand">TranslingoPro<span class="dot"></span></div>
+        <div class="d-flex gap-2">
+            <button id="download-cv" class="cv-btn cv-btn-primary" style="font-size:0.82rem; padding: 0.55rem 1.3rem;">
+                <i class="fa fa-download"></i> Download PDF
+            </button>
+            <button onclick="goBack()" class="cv-btn cv-btn-dark" style="font-size:0.82rem; padding: 0.55rem 1.3rem;">
+                <i class="fa fa-arrow-left"></i> Back
+            </button>
+        </div>
     </div>
-<div class="hero text-center">
-    <h1 class="hero-title">Bassirou Fall Curriculum Vitae</h1>
-</div>
 
     <div id="cv-content">
-        <p><strong>Address:</strong> Bargny, Dakar</p>
-        <p><strong>Tel:</strong> +221 77 466 65 66</p>
-        <p><strong>Email:</strong> bassiroufall2007@gmail.com</p>
 
-        <h2>Profil:</h2>
-        <p>
-            I am an experienced career. I have worked in different environments as houses, hospitals, and residential care centers. After my studies in Senegal, I went to London School of Commerce in England, where I had been working for years and came back to work in Senegal. This experience made me open-minded, and was a good opportunity for me to meet and work with people from different cultures and backgrounds.
+        <!-- ── CV HEADER ── -->
+        <div class="cv-header">
+            <div class="cv-name-block">
+                <h1 class="cv-name">Bassirou Fall</h1>
+                <div class="cv-title-tag">
+                    <i class="fas fa-language" style="font-size:0.65rem;"></i>
+                    Professional Interpreter &amp; Translator
+                </div>
+                <div class="cv-contact-chips">
+                    <span class="cv-chip"><i class="fa fa-map-marker-alt"></i> Bargny, Dakar, Senegal</span>
+                    <span class="cv-chip"><i class="fa fa-phone"></i> +221 77 466 65 66</span>
+                    <span class="cv-chip"><i class="fa fa-envelope"></i> bassiroufall2007@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="cv-lang-pills">
+                <div class="cv-lang-pill">
+                    <span>Wolof</span>
+                    <div class="level-bar"><div class="level-fill" style="width:100%"></div></div>
+                    <span style="font-size:0.7rem; color:var(--text-muted);">Native</span>
+                </div>
+                <div class="cv-lang-pill">
+                    <span>French</span>
+                    <div class="level-bar"><div class="level-fill" style="width:95%"></div></div>
+                    <span style="font-size:0.7rem; color:var(--text-muted);">Bilingual</span>
+                </div>
+                <div class="cv-lang-pill">
+                    <span>English</span>
+                    <div class="level-bar"><div class="level-fill" style="width:90%"></div></div>
+                    <span style="font-size:0.7rem; color:var(--text-muted);">Fluent</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── EXECUTIVE PROFILE ── -->
+        <h2 class="cv-section-title">Executive Profile</h2>
+        <p class="cv-profile-text">
+            Highly experienced and culturally adaptable professional with a robust background in interpretation, administration, and healthcare support. Educated in Senegal and at the London School of Commerce in the UK. My international experience has fostered an open-minded approach, equipping me with exceptional interpersonal skills and the ability to collaborate effectively with individuals from diverse cultures and professional backgrounds.
         </p>
 
-        <h2>Professional Experiences:</h2>
-        <p><strong>2022-10:</strong> Translator for Mercy Ships in Dakar, Senegal</p>
-        <ul>
-            <li>Patient registrar in different health centers.</li>
-            <li>Translator and ward assistant in the GLOBAL MERCY SHIPS.</li>
-        </ul>
-        <p><strong>2019-12 to 2022-08:</strong> Manager and Administrator in Thies and Bambey, Senegal</p>
-        <ul>
-            <li>Managing different restaurants in the university.</li>
-            <li>Managing and leading all the works that link the university administration and the students.</li>
-        </ul>
-        <p><strong>2010-03 to 2015-05:</strong></p>
-        <p>
-            I have done different types of jobs in the United Kingdom between England and Scotland. During the time I was studying, I worked with agencies that used to send me to different jobs as kitchens, warehouses, stadiums, hotels. And as I worked with NGOs before in Senegal like World Vision who serve and help people who need it the most, I always wanted to work, help, and take care of young, disabled, and old people. I was blessed to find jobs in care works during this period.
-        </p>
+        <!-- ── PROFESSIONAL EXPERIENCE ── -->
+        <h2 class="cv-section-title">Professional Experience</h2>
 
-        <h2>Education:</h2>
-        <ul>
-            <li><strong>2007-2009</strong>  Postgraduate Diploma (Business and Management), London School of Commerce</li>
-            <li><strong> 2002-2007</strong> : Bachelor’s Degree in English (English Language and Civilisation), Université Cheikh Anta Diop de Dakar (UCAD)</li>
-            <li><strong> 2001-2002</strong> : A Level (Baccalaureat Série L1), Lycée d’enseignement général de Diourbel</li>
-        </ul>
+        <div class="timeline-entry">
+            <div class="timeline-dot-col">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-body">
+                <div class="timeline-meta">
+                    <span class="timeline-role">Translator &amp; Registrar</span>
+                    <span class="timeline-date">Oct 2022 — Present</span>
+                </div>
+                <div class="timeline-org"><i class="fas fa-hospital me-1" style="font-size:0.75rem;"></i> Mercy Ships · Dakar, Senegal</div>
+                <ul style="font-size:0.87rem; color:var(--text-muted); padding-left: 1.2rem; margin:0; line-height:1.75;">
+                    <li>Acted as a patient registrar across multiple local health centres and community outreach sites.</li>
+                    <li>Provided critical translation services and ward assistance aboard the Global Mercy Ships vessel.</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>Competences:</h2>
-        <ul>
-            <li>Technology management in the information age</li>
-            <li>Strategic financial management</li>
-            <li>Managing human capital</li>
-            <li>Strategic and innovative marketing</li>
-            <li>Research methodology</li>
-            <li>Business strategy in the global environment</li>
-            <li>Business policy</li>
-            <li>International marketing management</li>
-            <li>Patient registration technology</li>
-            <li>Ward assistant</li>
-            <li>Care home</li>
-            <li>Physical restraint in an inpatient mental health center</li>
-        </ul>
-        <p>I am willing to learn and take any additional courses or training to improve my knowledge and accomplish all my tasks in the best way at work.</p>
+        <div class="timeline-entry">
+            <div class="timeline-dot-col">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-body">
+                <div class="timeline-meta">
+                    <span class="timeline-role">Manager &amp; Administrator</span>
+                    <span class="timeline-date">Dec 2019 — Aug 2022</span>
+                </div>
+                <div class="timeline-org"><i class="fas fa-university me-1" style="font-size:0.75rem;"></i> University Operations · Thies &amp; Bambey, Senegal</div>
+                <ul style="font-size:0.87rem; color:var(--text-muted); padding-left: 1.2rem; margin:0; line-height:1.75;">
+                    <li>Managed daily operations for multiple university dining and service facilities.</li>
+                    <li>Acted as the primary liaison between university administration and the student body to resolve operational issues.</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>Languages:</h2>
-        <ul>
-            <li><strong>Wolof</strong>  - Mother tongue</li>
-            <li><strong>French</strong>  - Fluent</li>
-            <li><strong>English</strong>  - Fluent</li>
-        </ul>
+        <div class="timeline-entry" style="margin-bottom:0;">
+            <div class="timeline-dot-col">
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-body">
+                <div class="timeline-meta">
+                    <span class="timeline-role">Diverse Industry &amp; Healthcare Roles</span>
+                    <span class="timeline-date">Mar 2010 — May 2015</span>
+                </div>
+                <div class="timeline-org"><i class="fas fa-flag me-1" style="font-size:0.75rem;"></i> Various Agencies · United Kingdom (England &amp; Scotland)</div>
+                <p style="font-size:0.87rem; color:var(--text-muted); margin:0; line-height:1.75;">
+                    Successfully adapted to demanding roles in logistics, hospitality, and healthcare. Building on earlier NGO experience in Senegal (World Vision), dedicated significant time to specialised care work in the UK, assisting young, disabled, and elderly individuals.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── EDUCATION ── -->
+        <h2 class="cv-section-title">Education</h2>
+
+        <div class="edu-entry">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-body">
+                <div class="edu-degree">Postgraduate Diploma in Business and Management</div>
+                <div class="edu-school">London School of Commerce, United Kingdom &mdash; 2007–2009</div>
+            </div>
+        </div>
+
+        <div class="edu-entry">
+            <div class="edu-icon"><i class="fas fa-university"></i></div>
+            <div class="edu-body">
+                <div class="edu-degree">Bachelor's Degree in English Language &amp; Civilization</div>
+                <div class="edu-school">Université Cheikh Anta Diop de Dakar (UCAD) &mdash; 2002–2007</div>
+            </div>
+        </div>
+
+        <div class="edu-entry">
+            <div class="edu-icon"><i class="fas fa-school"></i></div>
+            <div class="edu-body">
+                <div class="edu-degree">A-Level · Baccalauréat Série L1</div>
+                <div class="edu-school">Lycée d'Enseignement Général de Diourbel &mdash; 2001–2002</div>
+            </div>
+        </div>
+
+        <!-- ── CORE COMPETENCIES ── -->
+        <h2 class="cv-section-title">Core Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-item">International Marketing Management</div>
+            <div class="skill-item">Research Methodology &amp; Business Policy</div>
+            <div class="skill-item">Strategic Financial Management</div>
+            <div class="skill-item">Healthcare &amp; Patient Registration</div>
+            <div class="skill-item">Managing Human Capital</div>
+            <div class="skill-item">Ward Assistance &amp; Care Home Management</div>
+            <div class="skill-item">Technology Management (Information Age)</div>
+            <div class="skill-item">Physical Restraint (Inpatient Mental Health)</div>
+            <div class="skill-item">Business Strategy in a Global Environment</div>
+            <div class="skill-item">Continuous Learning &amp; Skill Development</div>
+        </div>
+
+        <!-- ── LINGUISTIC ABILITIES ── -->
+        <h2 class="cv-section-title">Linguistic Abilities</h2>
+
+        <div class="lang-entry">
+            <div>
+                <div class="lang-name">Wolof</div>
+                <div class="lang-level">Mother Tongue — Native Proficiency</div>
+            </div>
+            <div class="lang-dots">
+                <div class="lang-dot-item filled gold"></div>
+                <div class="lang-dot-item filled gold"></div>
+                <div class="lang-dot-item filled gold"></div>
+                <div class="lang-dot-item filled gold"></div>
+                <div class="lang-dot-item filled gold"></div>
+            </div>
+        </div>
+
+        <div class="lang-entry">
+            <div>
+                <div class="lang-name">French</div>
+                <div class="lang-level">Fluent — Bilingual Proficiency</div>
+            </div>
+            <div class="lang-dots">
+                <div class="lang-dot-item filled"></div>
+                <div class="lang-dot-item filled"></div>
+                <div class="lang-dot-item filled"></div>
+                <div class="lang-dot-item filled"></div>
+                <div class="lang-dot-item filled" style="opacity:0.4;"></div>
+            </div>
+        </div>
+
+        <div class="lang-entry">
+            <div>
+                <div class="lang-name">English</div>
+                <div class="lang-level">Fluent — Full Professional Proficiency</div>
+            </div>
+            <div class="lang-dots">
+                <div class="lang-dot-item filled"></div>
+                <div class="lang-dot-item filled"></div>
+                <div class="lang-dot-item filled"></div>
+                <div class="lang-dot-item filled"></div>
+                <div class="lang-dot-item" style="opacity:0.3;"></div>
+            </div>
+        </div>
+
+    </div><!-- /#cv-content -->
+
+    <!-- Floating Action Buttons -->
+    <div class="buttons-container">
+        <button id="download-cv-fab" class="cv-btn cv-btn-primary">
+            <i class="fa fa-download"></i> Download PDF
+        </button>
+        <button onclick="goBack()" class="cv-btn cv-btn-dark">
+            <i class="fa fa-arrow-left"></i> Back Home
+        </button>
     </div>
 
     <script>
-        document.getElementById('download-cv').addEventListener('click', () => {
-            const doc = new jsPDF();
+        function triggerDownload() {
+            const doc = new jsPDF('p', 'mm', 'a4');
             const element = document.getElementById('cv-content');
+            const allBtns = document.querySelectorAll('.cv-btn');
+            const originalTexts = [];
 
-            html2canvas(element).then((canvas) => {
-                const imgData = canvas.toDataURL('image/png');
-                const imgProps = doc.getImageProperties(imgData);
-                const pdfWidth = doc.internal.pageSize.getWidth();
-                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-                doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-                doc.save('CV_Bassirou_Fall.pdf');
+            allBtns.forEach((btn, i) => {
+                originalTexts[i] = btn.innerHTML;
+                btn.disabled = true;
             });
-        });
+
+            const downloadBtn = document.getElementById('download-cv');
+            const downloadBtnFab = document.getElementById('download-cv-fab');
+            downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+            downloadBtnFab.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+
+            html2canvas(element, { scale: 2, useCORS: true, backgroundColor: '#ffffff' }).then((canvas) => {
+                const imgData = canvas.toDataURL('image/jpeg', 1.0);
+                const pdfWidth = doc.internal.pageSize.getWidth();
+                const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+                doc.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+                doc.save('Bassirou_Fall_CV.pdf');
+
+                allBtns.forEach((btn, i) => {
+                    btn.innerHTML = originalTexts[i];
+                    btn.disabled = false;
+                });
+            });
+        }
+
+        document.getElementById('download-cv').addEventListener('click', triggerDownload);
+        document.getElementById('download-cv-fab').addEventListener('click', triggerDownload);
 
         function goBack() {
-            window.history.back();
+            window.location.href = "{% url 'home' %}";
         }
     </script>
 </body>
