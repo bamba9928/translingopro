@@ -1287,6 +1287,197 @@ footer a:hover { color: var(--accent-gold); }
 }
 
 /* ============================================================
+   WHATSAPP FLOATING CTA
+   ============================================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 950;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25D366;
+  color: var(--pure-white);
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-pill);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.35);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  animation: pulse-whatsapp 2.5s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.45);
+  color: var(--pure-white);
+}
+
+.whatsapp-float i {
+  font-size: 1.4rem;
+}
+
+@keyframes pulse-whatsapp {
+  0%, 100% { box-shadow: 0 8px 28px rgba(37, 211, 102, 0.35); }
+  50%      { box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55), 0 0 0 12px rgba(37, 211, 102, 0.08); }
+}
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 950;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--marine-dark), var(--marine-mid));
+  color: var(--pure-white);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: linear-gradient(135deg, var(--accent-gold), #E8C560);
+  color: var(--marine-deep);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ============================================================
+   TESTIMONIALS SECTION
+   ============================================================ */
+.testimonial-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.8rem;
+  height: 100%;
+  transition: all var(--transition-base);
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.testimonial-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(201,168,76,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+.testimonial-quote {
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.testimonial-text {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.93rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.testimonial-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-gold), #E8C560);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--marine-deep);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--pure-white);
+}
+
+.testimonial-role {
+  font-size: 0.78rem;
+  color: var(--accent-gold);
+  font-weight: 500;
+}
+
+/* Trust Badges */
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255,255,255,0.5);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.trust-badge i {
+  color: var(--accent-gold);
+  font-size: 1rem;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 991px) {
@@ -1305,7 +1496,14 @@ footer a:hover { color: var(--accent-gold); }
   .glass-card { padding: 1.5rem; }
   #cv-content { padding: 30px 20px; margin: 20px 10px; }
   .buttons-container { position: static; justify-content: center; margin-bottom: 40px; }
-  .btn-outline-light-premium, .cv-btn { padding: 0.8rem 1.6rem; min-height: 48px; } /* Improved touch targets */
+  .btn-outline-light-premium, .cv-btn { padding: 0.8rem 1.6rem; min-height: 48px; }
   .zoomed-img { max-width: 95vw; max-height: 90vh; }
   section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+
+  .whatsapp-float { padding: 0.75rem; border-radius: 50%; }
+  .whatsapp-float-label { display: none; }
+  .whatsapp-float i { font-size: 1.5rem; }
+  .back-to-top { left: auto; right: 28px; bottom: 86px; width: 40px; height: 40px; font-size: 0.8rem; }
+  .trust-badges { gap: 1rem; }
+  .trust-badge { font-size: 0.72rem; }
 }

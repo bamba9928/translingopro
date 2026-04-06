@@ -108,6 +108,21 @@
 </div>
 
 <!-- ============================================================
+     WHATSAPP FLOATING CTA (Mobile-friendly)
+     ============================================================ -->
+<a href="https://wa.me/221774666566" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-float-label">Chat with me</span>
+</a>
+
+<!-- ============================================================
+     BACK TO TOP BUTTON
+     ============================================================ -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- ============================================================
      NAVBAR
      ============================================================ -->
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
@@ -123,6 +138,7 @@
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link" href="#photos">Gallery</a></li>
         <li class="nav-item ms-lg-2">
             <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="btn-outline-light-premium">
@@ -261,7 +277,7 @@
         <div class="lang-strip-inner">
             <div class="lang-badge"><span class="lang-dot"></span> English — Full Professional Proficiency</div>
             <div class="lang-separator"></div>
-            <div class="lang-badge"><span class="lang-dot"></span> Français — Bilingue</div>
+            <div class="lang-badge"><span class="lang-dot"></span> Fran&ccedil;ais — Bilingue</div>
             <div class="lang-separator"></div>
             <div class="lang-badge"><span class="lang-dot"></span> Wolof — Langue Maternelle</div>
         </div>
@@ -282,7 +298,8 @@
                     <div class="profile-img-ring-inner"></div>
                     <img src="{% static 'images/about.jpg' %}"
                          class="profile-img"
-                         alt="Bassirou Fall - Professional Interpreter and Translator in Dakar, Senegal">
+                         alt="Bassirou Fall - Professional Interpreter and Translator in Dakar, Senegal"
+                         loading="lazy">
                     <div class="profile-badge">
                         <i class="fa fa-star me-1" style="color: var(--marine-deep);"></i> 9+ Years
                     </div>
@@ -409,10 +426,10 @@
 
             <div class="col-lg-4 col-md-6 reveal">
                 <div class="pricing-card dark h-100 text-center">
-                    <div class="pricing-popular-badge">⭐ Most Popular</div>
+                    <div class="pricing-popular-badge">Most Popular</div>
                     <div class="pricing-icon"><i class="fas fa-microphone-alt"></i></div>
                     <h3>Interpretation</h3>
-                    <div class="pricing-amount">€100</div>
+                    <div class="pricing-amount">&euro;100</div>
                     <span class="pricing-period">per hour</span>
                     <p>For conferences, medical, and legal interpretation. Precise, impartial, and strictly confidential delivery.</p>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
@@ -423,10 +440,10 @@
 
             <div class="col-lg-4 col-md-6 reveal" style="transition-delay: 0.1s;">
                 <div class="pricing-card light h-100 text-center">
-                    <div style="height: 28px;"></div><!-- spacer to align with badge -->
+                    <div style="height: 28px;"></div>
                     <div class="pricing-icon"><i class="fas fa-briefcase"></i></div>
                     <h3>Professional Translation</h3>
-                    <div class="pricing-amount">€0.10</div>
+                    <div class="pricing-amount">&euro;0.10</div>
                     <span class="pricing-period">per word</span>
                     <p>High-accuracy translation for legal contracts, corporate manuals, and technical documentation.</p>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
@@ -440,7 +457,7 @@
                     <div style="height: 28px;"></div>
                     <div class="pricing-icon"><i class="fas fa-map-marked-alt"></i></div>
                     <h3>Tourists &amp; Casual</h3>
-                    <div class="pricing-amount">€50</div>
+                    <div class="pricing-amount">&euro;50</div>
                     <span class="pricing-period">per hour</span>
                     <p>Personalized guided tours and casual translation assistance throughout Senegal and beyond.</p>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
@@ -449,6 +466,82 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS SECTION
+     ============================================================ -->
+<section id="testimonials" class="py-5" style="background: var(--marine-deep);">
+    <div class="container py-5">
+        <div class="text-center reveal">
+            <span class="section-label" style="color: var(--accent-gold);">Client Feedback</span>
+            <h2 class="section-title" style="color: var(--pure-white);">What Clients <span style="-webkit-text-fill-color: var(--accent-gold);">Say</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.55);">Trusted by international organizations, businesses, and individuals across Senegal and beyond.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center mt-2">
+            <div class="col-lg-4 col-md-6 reveal">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">Bassirou's interpretation during our medical missions was outstanding. His ability to bridge cultural gaps while maintaining medical accuracy made a real difference for our patients.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+                        <div>
+                            <div class="testimonial-name">Medical Team Lead</div>
+                            <div class="testimonial-role">Mercy Ships</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 reveal" style="transition-delay: 0.1s;">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">Exceptional professionalism and deep understanding of both languages. Bassirou handled our legal documents with precision and delivered ahead of schedule. Highly recommended.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+                        <div>
+                            <div class="testimonial-name">Project Coordinator</div>
+                            <div class="testimonial-role">World Vision International</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 reveal" style="transition-delay: 0.2s;">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">Our guided tour through Senegal was unforgettable thanks to Bassirou. His local knowledge, language skills, and warm personality made every moment special. A true ambassador of his country.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+                        <div>
+                            <div class="testimonial-name">Travel Group</div>
+                            <div class="testimonial-role">International Tourists</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges reveal" style="transition-delay: 0.15s;">
+            <div class="trust-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>100% Confidential</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-certificate"></i>
+                <span>Certified Professional</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-globe-africa"></i>
+                <span>International Experience</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-clock"></i>
+                <span>Available 7/7</span>
+            </div>
         </div>
     </div>
 </section>
@@ -470,6 +563,7 @@
                     <img src="{% static 'images/bassirou_fall_3.jpg' %}"
                          alt="Bassirou Fall - Interpreter Portrait"
                          class="gallery-img"
+                         loading="lazy"
                          onclick="openZoom(this.src)">
                 </div>
             </div>
@@ -478,6 +572,7 @@
                     <img src="{% static 'images/BASSIROU_FALL_SENEGAL_DAKAR_AFRICA_8.jpg' %}"
                          alt="Senegal Africa Professional Work"
                          class="gallery-img"
+                         loading="lazy"
                          onclick="openZoom(this.src)">
                 </div>
             </div>
@@ -486,6 +581,7 @@
                     <img src="{% static 'images/tourist_guide_6.jpg' %}"
                          alt="Tourist Guide Expertise Senegal"
                          class="gallery-img"
+                         loading="lazy"
                          onclick="openZoom(this.src)">
                 </div>
             </div>
@@ -494,6 +590,7 @@
                     <img src="{% static 'images/transcription_english_french_4.jpg' %}"
                          alt="English to French Transcription Work"
                          class="gallery-img"
+                         loading="lazy"
                          onclick="openZoom(this.src)">
                 </div>
             </div>
@@ -502,6 +599,7 @@
                     <img src="{% static 'images/translator_1.jpg' %}"
                          alt="Professional Translator Bassirou Fall"
                          class="gallery-img"
+                         loading="lazy"
                          onclick="openZoom(this.src)">
                 </div>
             </div>
@@ -510,6 +608,7 @@
                     <img src="{% static 'images/wolof_french_english_5.jpg' %}"
                          alt="Wolof French English Language Services"
                          class="gallery-img"
+                         loading="lazy"
                          onclick="openZoom(this.src)">
                 </div>
             </div>
@@ -580,7 +679,7 @@
                             </h3>
                             <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    My standard prices are completely transparent: interpretation is tracked at <strong>€100 per hour</strong> and professional document translation sits at <strong>€0.10 per word</strong>. I can also deliver customized quotes for extended deployments and specific travel packages or long-term partnerships.
+                                    My standard prices are completely transparent: interpretation is tracked at <strong>&euro;100 per hour</strong> and professional document translation sits at <strong>&euro;0.10 per word</strong>. I can also deliver customized quotes for extended deployments and specific travel packages or long-term partnerships.
                                 </div>
                             </div>
                         </div>
@@ -603,7 +702,7 @@
                 <div class="footer-brand">
                     TranslingoPro<span class="brand-dot" style="display:inline-block; width:7px; height:7px; background:var(--accent-gold); border-radius:50%; margin-bottom:-1px; margin-left:2px;"></span>
                 </div>
-                <p class="footer-tagline">Premium Interpretation &amp; Translation · Dakar, Senegal</p>
+                <p class="footer-tagline">Premium Interpretation &amp; Translation &middot; Dakar, Senegal</p>
 
                 <div class="d-flex flex-column align-items-center gap-1 mb-3">
                     <div class="footer-contact-item">
@@ -640,7 +739,7 @@
 
         <hr class="footer-divider">
         <div class="footer-bottom text-center">
-            <p class="mb-0">&copy; 2025 Bassirou Fall · TranslingoPro · All rights reserved.</p>
+            <p class="mb-0">&copy; <span id="currentYear"></span> Bassirou Fall &middot; TranslingoPro &middot; All rights reserved.</p>
         </div>
     </div>
 </footer>
@@ -651,6 +750,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+    // Dynamic copyright year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
     // Navbar scroll shrink
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
@@ -709,6 +811,23 @@
             if (start < target) requestAnimationFrame(step);
         };
         setTimeout(() => requestAnimationFrame(step), 800);
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Auto-dismiss success alerts
+    document.querySelectorAll('.alert-success').forEach(alert => {
+        setTimeout(() => {
+            const bsAlert = bootstrap.Alert.getOrCreateInstance(alert);
+            bsAlert.close();
+        }, 5000);
     });
 </script>
 
