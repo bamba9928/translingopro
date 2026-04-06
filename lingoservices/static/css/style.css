@@ -2103,10 +2103,56 @@ footer a:hover { color: var(--accent-gold); }
   .hero-geometric { padding: 130px 0 80px; }
   .hero-stats { gap: 2rem; justify-content: center; }
   .hero-stat::after { display: none; }
-  
+
   .about-accred-banner { padding: 1.25rem; }
   .about-accred-item { flex: 1 1 45%; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 1rem 0.5rem; }
   .about-accred-item:nth-last-child(-n+2) { border-bottom: none; }
+
+  /* Mobile navbar dropdown */
+  .navbar-collapse {
+    background: rgba(5, 13, 31, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    padding: 1rem 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+  }
+
+  .navbar-nav {
+    gap: 0.25rem;
+  }
+
+  .navbar .nav-link {
+    padding: 0.75rem 1rem !important;
+    margin: 0 !important;
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem !important;
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    background: rgba(255,255,255,0.05);
+  }
+
+  .navbar .nav-link::after {
+    display: none;
+  }
+
+  .navbar-nav .btn-outline-light-premium {
+    margin: 0.25rem 0 !important;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Testimonials mobile */
+  .testimonial-card { padding: 1.5rem 1.2rem; }
+  .testimonial-text { font-size: 0.9rem; }
+
+  /* Why Choose mobile */
+  .why-card { padding: 2rem 1.5rem; }
 }
 
 @media (max-width: 767px) {
@@ -2114,40 +2160,82 @@ footer a:hover { color: var(--accent-gold); }
   .hero-subtitle { font-size: 1rem; }
   .hero-cta-group { flex-direction: column; align-items: stretch; gap: 1rem; padding: 0 1rem; }
   .hero-cta-group a { justify-content: center; padding: 1rem; }
-  
+
   /* Stats in 2x2 Grid for Mobile */
-  .hero-stats { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 1.5rem; 
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     margin-top: 3.5rem;
   }
-  .hero-stat { text-align: center; }
+  .hero-stat {
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 0.8rem;
+  }
   .hero-stat-number { font-size: 1.8rem; }
   .hero-stat-label { font-size: 0.7rem; }
 
   .section-title { font-size: 1.7rem; }
-  .section-subtitle { margin-bottom: 2.5rem; }
+  .section-subtitle { margin-bottom: 2.5rem; font-size: 0.95rem; }
   .glass-card { padding: 1.5rem; }
-  
+
   #cv-content { padding: 30px 20px; margin: 20px 10px; }
   .buttons-container { position: static; justify-content: center; margin-bottom: 40px; }
-  .btn-outline-light-premium, .cv-btn { padding: 0.8rem 1.6rem; min-height: 48px; } 
-  
+  .btn-outline-light-premium, .cv-btn { padding: 0.8rem 1.6rem; min-height: 48px; }
+
+  .about-accred-banner {
+    flex-direction: column;
+    gap: 0;
+  }
   .about-accred-item { flex: 1 1 100%; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .about-accred-item:last-child { border-bottom: none; }
-  
+  .about-accred-sep { display: none; }
+
   .about-section-premium { padding: 4rem 0; }
   .profile-img { max-width: 280px; }
-  
+
   .zoomed-img { max-width: 95vw; max-height: 90vh; }
   section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+
+  /* Gallery grid mobile */
+  .gallery-img { height: 200px; }
+
+  /* FAQ mobile */
+  .faq-card .accordion-button { font-size: 0.95rem; padding: 1rem 1.2rem; }
+  .faq-card .accordion-body { padding: 0 1.2rem 1.2rem; font-size: 0.9rem; }
+
+  /* Testimonials mobile */
+  .testimonials-section { padding: 3.5rem 0; }
+  .testimonial-card { margin-bottom: 0.5rem; }
+
+  /* Why Choose mobile */
+  .why-choose-section { padding: 3.5rem 0; }
+  .why-icon { width: 56px; height: 56px; font-size: 1.3rem; }
+  .why-card h3 { font-size: 1.05rem; }
+  .why-card p { font-size: 0.88rem; }
 }
 
 @media (max-width: 480px) {
+  .hero-geometric { padding: 110px 0 60px; }
   .hero-title { font-size: 1.9rem; }
+  .hero-subtitle { font-size: 0.92rem; line-height: 1.7; }
+  .hero-stat-number { font-size: 1.5rem; }
+  .hero-stat-label { font-size: 0.65rem; letter-spacing: 1px; }
+
   .about-kpi-num { font-size: 1.4rem; }
   .about-accred-title { font-size: 0.8rem; }
   .service-card { padding: 1.8rem 1.5rem; }
   .pricing-amount { font-size: 1.8rem; }
+
+  .section-title { font-size: 1.5rem; }
+  .section-subtitle { font-size: 0.88rem; }
+  .section-label { font-size: 0.65rem; letter-spacing: 2px; }
+
+  /* Testimonials compact */
+  .testimonial-text { font-size: 0.85rem; line-height: 1.65; }
+  .testimonial-author strong { font-size: 0.88rem; }
+  .testimonial-author span { font-size: 0.75rem; }
 }
