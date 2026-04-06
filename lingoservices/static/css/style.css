@@ -433,6 +433,45 @@ img { max-width: 100%; }
   opacity: 0.6;
 }
 
+/* Certificate-style ornaments */
+.hero-eyebrow.certificate-style {
+  gap: 0.8rem;
+  flex-wrap: nowrap;
+}
+
+.hero-eyebrow.certificate-style::before,
+.hero-eyebrow.certificate-style::after {
+  display: none;
+}
+
+.cert-ornament {
+  display: flex;
+  align-items: center;
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.cert-ornament svg {
+  display: block;
+}
+
+.cert-ornament-right {
+  transform: scaleX(1);
+}
+
+.cert-text {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .cert-ornament svg { width: 60px; height: 24px; }
+  .hero-eyebrow.certificate-style { gap: 0.4rem; }
+}
+
+@media (max-width: 480px) {
+  .cert-ornament { display: none; }
+}
+
 .hero-title {
   color: var(--pure-white);
   font-size: clamp(2.4rem, 5vw, 4.2rem);
@@ -1468,10 +1507,21 @@ section { overflow: hidden; }
 
 .pricing-amount {
   font-family: 'Outfit', sans-serif;
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 900;
   line-height: 1;
   margin-bottom: 0.3rem;
+  background: linear-gradient(135deg, var(--accent-gold), #E8C560);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pricing-card.dark .pricing-amount {
+  background: linear-gradient(135deg, var(--accent-gold), #F0D080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .pricing-card.dark .pricing-amount { color: var(--pure-white); }
@@ -1744,6 +1794,54 @@ footer a:hover { color: var(--accent-gold); }
   color: rgba(255,255,255,0.35);
 }
 
+/* Footer Credit — HORUS GLOBAL SERVICE */
+.footer-credit {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.5px;
+}
+
+.footer-credit-heart {
+  color: #E74C3C;
+  display: inline-block;
+  animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+.footer-credit-link {
+  color: #00D4FF !important;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  text-decoration: none !important;
+  animation: glow-blink 2s ease-in-out infinite;
+  position: relative;
+}
+
+.footer-credit-link:hover {
+  color: #fff !important;
+  text-shadow: 0 0 12px rgba(0,212,255,0.8), 0 0 24px rgba(0,212,255,0.4);
+}
+
+@keyframes glow-blink {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(0,212,255,0.4), 0 0 12px rgba(0,212,255,0.2);
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: 0 0 2px rgba(0,212,255,0.1);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.15); }
+}
+
 .footer-social {
   display: flex;
   justify-content: center;
@@ -1926,5 +2024,5 @@ footer a:hover { color: var(--accent-gold); }
   .about-kpi-num { font-size: 1.4rem; }
   .about-accred-title { font-size: 0.8rem; }
   .service-card { padding: 1.8rem 1.5rem; }
-  .pricing-amount { font-size: 2.5rem; }
+  .pricing-amount { font-size: 1.8rem; }
 }

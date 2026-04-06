@@ -72,7 +72,7 @@
             "name": "How much do interpretation services cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "My standard interpretation rate starts at €100 per hour, tailored to the specific professional context and duration. Professional document translation begins at €0.10 per word."
+              "text": "My rates are fully negotiable and tailored to each project's scope, duration, and complexity. Contact me via WhatsApp to discuss your needs and receive a personalised quote."
             }
           }
         ]
@@ -103,7 +103,7 @@
     <a href="https://twitter.com" target="_blank" title="Twitter" class="twitter">
         <i class="fab fa-twitter"></i>
     </a>
-    <a href="https://wa.me/221774666566" target="_blank" title="WhatsApp" class="whatsapp">
+    <a href="https://wa.me/221774666566?text=Hello%20Bassirou%2C%20I%20found%20your%20website%20TranslingoPro%20and%20I%20am%20interested%20in%20your%20language%20services.%20Could%20we%20discuss%3F" target="_blank" title="WhatsApp" class="whatsapp">
         <i class="fab fa-whatsapp"></i>
     </a>
 </div>
@@ -173,37 +173,22 @@
         </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <form action="{% url 'home' %}" method="POST" class="mb-4">
-            {% csrf_token %}
-            <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" name="name" required placeholder="John Doe">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" required placeholder="john@company.com">
-            </div>
-            <div class="mb-4">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required placeholder="How can I help you?"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100 fw-bold">
-                <i class="fa fa-paper-plane me-2"></i>Send Message
-            </button>
-        </form>
-        <hr style="opacity:0.07;">
-        <div class="text-center">
-            <p class="text-muted small fw-semibold text-uppercase mb-3" style="letter-spacing:1px;">Or connect instantly</p>
-            <div class="d-flex justify-content-center gap-2">
-              <a href="mailto:bassiroufall2007@gmail.com" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
-                <i class="fa fa-envelope me-1"></i> Email
-              </a>
-              <a href="https://wa.me/221774666566" target="_blank" class="btn btn-success btn-sm rounded-pill px-3">
-                <i class="fab fa-whatsapp me-1"></i> WhatsApp
-              </a>
-            </div>
+      <div class="modal-body text-center py-5">
+        <div style="width:72px; height:72px; border-radius:50%; background: #25D366; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem; color:#fff;">
+            <i class="fab fa-whatsapp"></i>
         </div>
+        <h5 style="font-family:'Outfit',sans-serif; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">Let's Connect!</h5>
+        <p style="color:var(--text-muted); font-size:0.93rem; line-height:1.7; max-width:360px; margin:0 auto 2rem;">
+            The fastest way to reach me is via WhatsApp. Send me a message and I'll get back to you as soon as possible.
+        </p>
+        <a href="https://wa.me/221774666566?text=Hello%20Bassirou%2C%20I%20found%20your%20website%20TranslingoPro%20and%20I%20am%20interested%20in%20your%20language%20services.%20Could%20we%20discuss%3F" target="_blank" class="btn btn-success btn-lg rounded-pill px-5 fw-bold" style="font-family:'Outfit',sans-serif; font-size:1rem;">
+            <i class="fab fa-whatsapp me-2"></i> Chat on WhatsApp
+        </a>
+        <hr style="opacity:0.07; margin:2rem 0 1.5rem;">
+        <p class="text-muted small fw-semibold text-uppercase mb-3" style="letter-spacing:1px;">Or send an email</p>
+        <a href="mailto:bassiroufall2007@gmail.com" class="btn btn-outline-secondary btn-sm rounded-pill px-4">
+            <i class="fa fa-envelope me-1"></i> bassiroufall2007@gmail.com
+        </a>
       </div>
     </div>
   </div>
@@ -219,8 +204,26 @@
      ============================================================ -->
 <header class="hero-geometric text-center" id="home">
     <div class="container hero-content">
-        <div class="hero-eyebrow">
-            <span></span> Professional Language Services <span></span>
+        <div class="hero-eyebrow certificate-style">
+            <span class="cert-ornament cert-ornament-left">
+                <svg viewBox="0 0 120 40" width="120" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M118 20C110 20 108 10 100 10C92 10 90 20 82 20C74 20 72 10 64 10C56 10 54 20 46 20C38 20 36 10 28 10C20 10 18 20 10 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                    <path d="M118 20C110 20 108 30 100 30C92 30 90 20 82 20C74 20 72 30 64 30C56 30 54 20 46 20C38 20 36 30 28 30C20 30 18 20 10 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                    <circle cx="6" cy="20" r="3" fill="currentColor" opacity="0.6"/>
+                    <circle cx="46" cy="20" r="2" fill="currentColor" opacity="0.3"/>
+                    <circle cx="82" cy="20" r="2" fill="currentColor" opacity="0.3"/>
+                </svg>
+            </span>
+            <span class="cert-text">Professional Language Services</span>
+            <span class="cert-ornament cert-ornament-right">
+                <svg viewBox="0 0 120 40" width="120" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 20C10 20 12 10 20 10C28 10 30 20 38 20C46 20 48 10 56 10C64 10 66 20 74 20C82 20 84 10 92 10C100 10 102 20 110 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                    <path d="M2 20C10 20 12 30 20 30C28 30 30 20 38 20C46 20 48 30 56 30C64 30 66 20 74 20C82 20 84 30 92 30C100 30 102 20 110 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                    <circle cx="114" cy="20" r="3" fill="currentColor" opacity="0.6"/>
+                    <circle cx="74" cy="20" r="2" fill="currentColor" opacity="0.3"/>
+                    <circle cx="38" cy="20" r="2" fill="currentColor" opacity="0.3"/>
+                </svg>
+            </span>
         </div>
         <h1 class="hero-title">
             Elevate Your<br>
@@ -633,28 +636,28 @@
 
             <div class="col-lg-4 col-md-6 reveal">
                 <div class="pricing-card dark h-100 text-center">
-                    <div class="pricing-popular-badge">⭐ Most Popular</div>
+                    <div class="pricing-popular-badge">Most Popular</div>
                     <div class="pricing-icon"><i class="fas fa-microphone-alt"></i></div>
                     <h3>Interpretation</h3>
-                    <div class="pricing-amount">€100</div>
-                    <span class="pricing-period">per hour</span>
+                    <div class="pricing-amount">Negotiable</div>
+                    <span class="pricing-period">tailored to your needs</span>
                     <p>For conferences, medical, and legal interpretation. Precise, impartial, and strictly confidential delivery.</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
-                        Book Now <i class="fa fa-arrow-right ms-1"></i>
+                    <a href="https://wa.me/221774666566?text=Hello%20Bassirou%2C%20I%20am%20interested%20in%20your%20interpretation%20services.%20Could%20we%20discuss%20pricing%20and%20availability%3F" target="_blank" class="pricing-cta">
+                        Discuss on WhatsApp <i class="fab fa-whatsapp ms-1"></i>
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6 reveal" style="transition-delay: 0.1s;">
                 <div class="pricing-card light h-100 text-center">
-                    <div style="height: 28px;"></div><!-- spacer to align with badge -->
+                    <div style="height: 28px;"></div>
                     <div class="pricing-icon"><i class="fas fa-briefcase"></i></div>
                     <h3>Professional Translation</h3>
-                    <div class="pricing-amount">€0.10</div>
-                    <span class="pricing-period">per word</span>
+                    <div class="pricing-amount">Negotiable</div>
+                    <span class="pricing-period">based on project scope</span>
                     <p>High-accuracy translation for legal contracts, corporate manuals, and technical documentation.</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
-                        Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                    <a href="https://wa.me/221774666566?text=Hello%20Bassirou%2C%20I%20need%20a%20professional%20document%20translation.%20Could%20we%20discuss%20the%20details%20and%20pricing%3F" target="_blank" class="pricing-cta">
+                        Get a Quote <i class="fab fa-whatsapp ms-1"></i>
                     </a>
                 </div>
             </div>
@@ -664,11 +667,11 @@
                     <div style="height: 28px;"></div>
                     <div class="pricing-icon"><i class="fas fa-map-marked-alt"></i></div>
                     <h3>Tourists &amp; Casual</h3>
-                    <div class="pricing-amount">€50</div>
-                    <span class="pricing-period">per hour</span>
+                    <div class="pricing-amount">Negotiable</div>
+                    <span class="pricing-period">flexible rates available</span>
                     <p>Personalized guided tours and casual translation assistance throughout Senegal and beyond.</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="pricing-cta">
-                        Contact Me <i class="fa fa-arrow-right ms-1"></i>
+                    <a href="https://wa.me/221774666566?text=Hello%20Bassirou%2C%20I%20am%20looking%20for%20a%20tourist%20guide%20and%20translator%20in%20Senegal.%20Can%20we%20discuss%3F" target="_blank" class="pricing-cta">
+                        Contact Me <i class="fab fa-whatsapp ms-1"></i>
                     </a>
                 </div>
             </div>
@@ -804,7 +807,7 @@
                             </h3>
                             <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    My standard prices are completely transparent: interpretation is tracked at <strong>€100 per hour</strong> and professional document translation sits at <strong>€0.10 per word</strong>. I can also deliver customized quotes for extended deployments and specific travel packages or long-term partnerships.
+                                    My rates are fully negotiable and tailored to each project's scope, duration, and complexity. I offer competitive pricing for all services — simply reach out via WhatsApp to discuss your needs and receive a personalised quote.
                                 </div>
                             </div>
                         </div>
@@ -870,7 +873,11 @@
 
         <hr class="footer-divider">
         <div class="footer-bottom text-center">
-            <p class="mb-0">&copy; 2025 Bassirou Fall · TranslingoPro · All rights reserved.</p>
+            <p class="mb-2">&copy; 2025 Bassirou Fall &middot; TranslingoPro &middot; All rights reserved.</p>
+            <p class="mb-0 footer-credit">
+                Made with <span class="footer-credit-heart">&hearts;</span> by
+                <a href="https://horuservices.cloud/" target="_blank" class="footer-credit-link">HORUS GLOBAL SERVICE</a>
+            </p>
         </div>
     </div>
 </footer>
