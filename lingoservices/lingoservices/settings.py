@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'fakepassword'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.translingopro.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.translingopro.com', 'translingopro.com']
 
 # Application definition
 
@@ -128,10 +128,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-SECURE_HSTS_SECONDS = 31536000  # 1 an
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# ⚠️ Paramètres de sécurité — désactivés en développement local, à réactiver en production
+SECURE_HSTS_SECONDS = 0
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
 
 
 # Media Files
