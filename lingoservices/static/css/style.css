@@ -2201,7 +2201,7 @@ footer a:hover { color: var(--accent-gold); }
   section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
 
   /* Gallery grid mobile */
-  .gallery-img { height: 200px; }
+  .gallery-img { height: auto; }
 
   /* FAQ mobile */
   .faq-card .accordion-button { font-size: 0.95rem; padding: 1rem 1.2rem; }
