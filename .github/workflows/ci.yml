@@ -26,6 +26,10 @@ jobs:
       run:
         working-directory: lingoservices
 
+    # Clé factice propre au CI ; DEBUG reste coupé, comme en production.
+    env:
+      DJANGO_SECRET_KEY: ci-only-secret-key-not-used-in-production
+
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
