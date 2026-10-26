@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # Correctifs de sécurité regroupés en une seule PR : des PR séparées sur
+  # requirements.txt entrent en conflit. open-pull-requests-limit: 0 coupe les
+  # mises à jour de version ordinaires sans toucher aux mises à jour de sécurité.
+  - package-ecosystem: pip
+    directory: /lingoservices
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    groups:
+      securite:
+        applies-to: security-updates
+        patterns: ["*"]
+
+  # Actions GitHub tenues à jour, en une seule PR par mois. Une version doit
+  # avoir 7 jours avant d'être proposée : une release piégée est en général
+  # repérée et retirée avant.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 7
+    groups:
+      actions:
+        patterns: ["*"]
