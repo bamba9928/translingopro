@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# Mode debug : uniquement si DJANGO_DEBUG=True est défini (développement local).
-# Par défaut il est coupé, pour qu'un serveur sans configuration n'affiche
-# jamais les pages d'erreur détaillées de Django.
-DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
+# Mode debug : uniquement si DJANGO_DEBUG vaut 1, true ou yes (développement
+# local). Par défaut il est coupé, pour qu'un serveur sans configuration
+# n'affiche jamais les pages d'erreur détaillées de Django.
+DEBUG = os.environ.get("DJANGO_DEBUG", "False").lower() in {"1", "true", "yes"}
 
 # La clé secrète signe les sessions, les jetons CSRF et les liens de
 # réinitialisation : elle vient de l'environnement, jamais du dépôt (l'ancienne
@@ -139,11 +139,17 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# ⚠️ Paramètres de sécurité — désactivés en développement local, à réactiver en production
-SECURE_HSTS_SECONDS = 0
-SECURE_SSL_REDIRECT = False
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
+# Paramètres de sécurité : actifs hors développement (mêmes valeurs que la
+# production, où nginx termine le HTTPS et transmet X-Forwarded-Proto).
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_HSTS_SECONDS = int(os.environ.get("DJANGO_SECURE_HSTS_SECONDS", "0" if DEBUG else "31536000"))
+SECURE_SSL_REDIRECT = not DEBUG
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
+CSRF_TRUSTED_ORIGINS = [
+    "https://translingopro.com",
+    "https://www.translingopro.com",
+]
 
 
 # Media Files
