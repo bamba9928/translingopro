@@ -14,17 +14,28 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 
+from django.core.exceptions import ImproperlyConfigured
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'fakepassword'
+# Mode debug : uniquement si DJANGO_DEBUG=True est défini (développement local).
+# Par défaut il est coupé, pour qu'un serveur sans configuration n'affiche
+# jamais les pages d'erreur détaillées de Django.
+DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# La clé secrète signe les sessions, les jetons CSRF et les liens de
+# réinitialisation : elle vient de l'environnement, jamais du dépôt (l'ancienne
+# valeur, publique dans l'historique git, ne doit plus servir nulle part).
+# Générer : python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "")
+if not SECRET_KEY:
+    if not DEBUG:
+        raise ImproperlyConfigured("DJANGO_SECRET_KEY doit être défini hors développement.")
+    SECRET_KEY = "dev-only-insecure-key-ne-pas-utiliser-en-production"
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.translingopro.com', 'translingopro.com']
 
