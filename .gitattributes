@@ -1,2 +1,5 @@
 # Hook Gitleaks : exécuté par le sh de Git, il doit rester en LF même sous Windows.
 .githooks/* text eol=lf
+
+# Scripts lancés sur le serveur Linux.
+*.sh text eol=lf
